@@ -11,4 +11,15 @@
 <remove sel="//cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[1]" />
 
 <remove sel="//cue[@name='Sink_Effect_Zyarth_Stage2_TakeOverSectors']/actions/set_job_active" />
+
+<replace sel="//cue[@name='Start']/actions/find_sector[@name='$SplitSectors']">
+<find_sector name="$SplitSectors" multiple="true">
+	<match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" />
+</find_sector>
+</replace>
+<replace sel="//cue[@name='Start']/actions/find_sector[@name='$BaseSectors']">
+<find_sector name="$BaseSectors" multiple="true">
+	<match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" negate="true"/>
+</find_sector>
+</replace>
 </diff>

@@ -2167,5 +2167,9 @@
 <!--<connection name="ClusterGateXXToYY" ref="destination" path="../Cluster_XX_connection/Cluster_XX_Sector001_connection/ZoneDAGO#_Cluster_XX_Sector001_connection/connection_ClusterGateXXToYY">
 		<macro connection="destination" path="../../../../../Cluster_YY_connection/Cluster_YY_Sector001_connection/ZoneDAGO#_Cluster_YY_Sector001_connection/connection_ClusterGateYYToXX" />
 	</connection>-->
+<!-- SPLIT STORY -->
+	<connection name="ClusterGate411To425" ref="destination" path="../Cluster_411_connection/Cluster_411_Sector001_connection/Zone002_Cluster_411_Sector001_connection/connection_ClusterGate411To425">
+      <macro connection="destination" path="../../../../../Cluster_425_connection/Cluster_425_Sector001_connection/Zone005_Cluster_425_Sector001_connection/connection_ClusterGate425To411" />
+    </connection>
 </add>
 </diff>

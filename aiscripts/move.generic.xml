@@ -5,13 +5,18 @@
 <replace sel="//do_if[@value='not @$rotation']">
 	<do_if value="not @$rotation">
         <!-- Only move if is not very close -->
-		<do_if value="this.ship.distanceto.[$positionspace, $safepos] gt ([this.ship.size, 5km].max) ">
+		<do_if value="this.ship.distanceto.[$positionspace, $safepos] gt ([this.ship.size * 5, 10km].max) ">
 			<move_to object="this.ship" destination="$positionspace" uselocalhighways="$canuselocalhighways" abortpath="$abortpath" forcesteering="(not $bigship) and $forcesteering" forceposition="false" forcerotation="false" finishonapproach="false" travel="not $noboost">
 				<position value="$safepos"/>
 			</move_to>
 		</do_if>
+		<do_else>
+			<move_to object="this.ship" destination="$positionspace" uselocalhighways="$canuselocalhighways" abortpath="$abortpath" forcesteering="(not $bigship) and $forcesteering" forceposition="false" forcerotation="false" finishonapproach="false">
+				<position value="$safepos"/>
+			</move_to>
+		</do_else>
 	</do_if>
-	<do_elseif value="(this.ship.distanceto.[$positionspace, $safepos] gt ([this.ship.size, 5km].max)) and (@$rotation)">
+	<do_elseif value="(this.ship.distanceto.[$positionspace, $safepos] gt ([this.ship.size * 5, 10km].max)) and (@$rotation)">
 		<move_to object="this.ship" destination="$positionspace" uselocalhighways="$canuselocalhighways" abortpath="$abortpath" forcesteering="(not $bigship) and $forcesteering" forceposition="false" forcerotation="true" finishonapproach="false" travel="not $noboost">
 			<position value="$safepos" />
 			<rotation value="$rotation" />

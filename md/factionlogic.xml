@@ -9,7 +9,7 @@
           <param name="BaseAvariceLevel" value="moodlevel.low"/>
           <param name="BaseLawfulness" value="0.2"/>
           <param name="PreferredHQSpaceMacro" value="macro.cluster_DA3FAF1_sector001_macro" comment=""/>
-          <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'defencestation']"/>
+          <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
           <param name="SatelliteNetworkGoal" value="7"/>
           <param name="LasertowerNetworkGoal" value="5"/>
           <param name="MinefieldGoalPerSector" value="1" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>
@@ -36,6 +36,30 @@
     </cue>
 </replace>
 <remove sel="//cue[@name='CourtFactionLogic']/conditions" />
+<remove sel="//cue[@name='BuccaneersFactionLogic']/conditions" />
+
+<!-- Clean up faction HQ stuff -->
+<!-- HQ TYPES -->
+<replace sel="//cue[@name='ArgonFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='HolyOrderFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='GodrealmOfTheParanidFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='TeladiComapanyFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='BuccaneersFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='ScalePlatePactFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation', 'piratebase']</replace>
+<replace sel="//cue[@name='AllianceOfTheWordFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='MinistryOfFinanceFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='SplitFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='FreeSplitFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<replace sel="//cue[@name='CourtFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+<!-- HQ LOCATIONS -->
+<replace sel="//cue[@name='BuccaneersFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_419_sector001_macro</replace>
+<replace sel="//cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2HAT1_sector001_macro</replace>
+<replace sel="//cue[@name='ScalePlatePactFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2SCA1_sector001_macro</replace>
+<replace sel="//cue[@name='AllianceOfTheWordFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2ALI1_sector001_macro</replace>
+<replace sel="//cue[@name='MinistryOfFinanceFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_02_sector001_macro</replace>
 <replace sel="//cue[@name='FreeSplitFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_411_sector001_macro</replace>
 <replace sel="//cue[@name='CourtFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA3CAB1_sector001_macro</replace>
+<!-- WE DON'T NEED TO CHECK XENON OR KHAAK -->
+<replace sel="//cue[@name='Find_Faction_Headquarters']/actions/set_value[@name='$HQNecessary']/@exact">($Faction.isactive) and ($Faction != faction.xenon) and ($Faction != faction.khaak)</replace>
 </diff>

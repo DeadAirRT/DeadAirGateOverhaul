@@ -28,4 +28,4 @@
 
 ##### If not using, requires new game. If using old versions (v0.79 or older), then v0.80 or newer requires new game.
 
-##### Installation: extract to x4 foundations\extensions and do not rename folder
+##### Installation: extract to x4 foundations\extensions and make sure folder is named "deadairgateoverhaul" or you will have blacked out sectors.

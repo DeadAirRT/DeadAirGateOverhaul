@@ -133,15 +133,15 @@
 	<entry name="cluster_DA3CAB1_sector*" value="maps\xu_ep2_universe\sectors" />
 <!-- END SPLIT VENDETTA -->
 <!-- BEGIN STATIONS -->
-	<entry name="station_arg_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_arg_tradestation_dabase_01_macro" />
-	<entry name="station_par_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_par_tradestation_dabase_01_macro" />
-	<entry name="station_tel_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_tel_tradestation_dabase_01_macro" />
-	<entry name="station_arg_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_arg_shipyard_dabase_01_macro" />
-	<entry name="station_par_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_par_shipyard_dabase_01_macro" />
-	<entry name="station_tel_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_tel_shipyard_dabase_01_macro" />
-	<entry name="station_arg_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_arg_wharf_dabase_01_macro" />
-	<entry name="station_par_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_par_wharf_dabase_01_macro" />
-	<entry name="station_tel_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul-master\assets\structures\macros\station_tel_wharf_dabase_01_macro" />
+	<entry name="station_arg_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_arg_tradestation_dabase_01_macro" />
+	<entry name="station_par_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_par_tradestation_dabase_01_macro" />
+	<entry name="station_tel_tradestation_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_tel_tradestation_dabase_01_macro" />
+	<entry name="station_arg_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_arg_shipyard_dabase_01_macro" />
+	<entry name="station_par_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_par_shipyard_dabase_01_macro" />
+	<entry name="station_tel_shipyard_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_tel_shipyard_dabase_01_macro" />
+	<entry name="station_arg_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_arg_wharf_dabase_01_macro" />
+	<entry name="station_par_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_par_wharf_dabase_01_macro" />
+	<entry name="station_tel_wharf_dabase_01_macro" value="extensions\deadairgateoverhaul\assets\structures\macros\station_tel_wharf_dabase_01_macro" />
 <!-- END STATIONS -->
 </add>
 </diff>

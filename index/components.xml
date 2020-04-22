@@ -2,146 +2,146 @@
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 <add sel="//index">
 <!-- BEGIN DA1 -->
-	<entry name="Cluster_DA1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1" />
-	<entry name="Cluster_DA1E" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1e" />
-	<entry name="Cluster_DA1W" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1w" />
-	<entry name="Cluster_DA1ARG" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1arg" />
-	<entry name="Cluster_DA1HOP" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1hop" />
-	<entry name="Cluster_DA1PAR" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1par" />
-	<entry name="Cluster_DA1TEL" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da1tel" />
+	<entry name="Cluster_DA1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1" />
+	<entry name="Cluster_DA1E" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1e" />
+	<entry name="Cluster_DA1W" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1w" />
+	<entry name="Cluster_DA1ARG" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1arg" />
+	<entry name="Cluster_DA1HOP" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1hop" />
+	<entry name="Cluster_DA1PAR" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1par" />
+	<entry name="Cluster_DA1TEL" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da1tel" />
 <!-- END DA1 -->
 <!-- BEGIN DA2 NEUTRAL -->
-	<entry name="Cluster_DA2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2" />
-	<entry name="Cluster_DA2N" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2n" />
-	<entry name="Cluster_DA2E" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2e" />
-	<entry name="Cluster_DA2S" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2s" />
-	<entry name="Cluster_DA2W" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2w" />
+	<entry name="Cluster_DA2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2" />
+	<entry name="Cluster_DA2N" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2n" />
+	<entry name="Cluster_DA2E" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2e" />
+	<entry name="Cluster_DA2S" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2s" />
+	<entry name="Cluster_DA2W" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2w" />
 <!-- END DA2 NEUTRAL -->
 <!-- BEGIN DA2 ARG -->
-	<entry name="Cluster_DA2ARGNE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2argne" />
-	<entry name="Cluster_DA2ARGE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2arge" />
-	<entry name="Cluster_DA2ARGSE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2argse" />
-	<entry name="Cluster_DA2ARGS" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2args" />
-	<entry name="Cluster_DA2ARGNW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2argnw" />
-	<entry name="Cluster_DA2ARGC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2argc" />
+	<entry name="Cluster_DA2ARGNE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2argne" />
+	<entry name="Cluster_DA2ARGE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2arge" />
+	<entry name="Cluster_DA2ARGSE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2argse" />
+	<entry name="Cluster_DA2ARGS" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2args" />
+	<entry name="Cluster_DA2ARGNW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2argnw" />
+	<entry name="Cluster_DA2ARGC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2argc" />
 <!-- END DA2 ARG -->
 <!-- BEGIN DA2 HOP -->
-	<entry name="Cluster_DA2HOPNE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hopne" />
-	<entry name="Cluster_DA2HOPE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hope" />
-	<entry name="Cluster_DA2HOPSE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hopse" />
-	<entry name="Cluster_DA2HOPSW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hopsw" />
-	<entry name="Cluster_DA2HOPN" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hopn" />
-	<entry name="Cluster_DA2HOPC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hopc" />
+	<entry name="Cluster_DA2HOPNE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hopne" />
+	<entry name="Cluster_DA2HOPE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hope" />
+	<entry name="Cluster_DA2HOPSE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hopse" />
+	<entry name="Cluster_DA2HOPSW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hopsw" />
+	<entry name="Cluster_DA2HOPN" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hopn" />
+	<entry name="Cluster_DA2HOPC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hopc" />
 <!-- END DA2 HOP -->
 <!-- BEGIN DA2 PAR -->
-	<entry name="Cluster_DA2PARNW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parnw" />
-	<entry name="Cluster_DA2PARW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parw" />
-	<entry name="Cluster_DA2PARSW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parsw" />
-	<entry name="Cluster_DA2PARSE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parse" />
-	<entry name="Cluster_DA2PARN" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parn" />
-	<entry name="Cluster_DA2PARC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2parc" />
+	<entry name="Cluster_DA2PARNW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parnw" />
+	<entry name="Cluster_DA2PARW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parw" />
+	<entry name="Cluster_DA2PARSW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parsw" />
+	<entry name="Cluster_DA2PARSE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parse" />
+	<entry name="Cluster_DA2PARN" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parn" />
+	<entry name="Cluster_DA2PARC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2parc" />
 <!-- END DA2 PAR -->
 <!-- BEGIN DA2 TEL -->
-	<entry name="Cluster_DA2TELNW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2telnw" />
-	<entry name="Cluster_DA2TELW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2telw" />
-	<entry name="Cluster_DA2TELSW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2telsw" />
-	<entry name="Cluster_DA2TELS" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2tels" />
-	<entry name="Cluster_DA2TELNE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2telne" />
-	<entry name="Cluster_DA2TELC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2telc" />
+	<entry name="Cluster_DA2TELNW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2telnw" />
+	<entry name="Cluster_DA2TELW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2telw" />
+	<entry name="Cluster_DA2TELSW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2telsw" />
+	<entry name="Cluster_DA2TELS" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2tels" />
+	<entry name="Cluster_DA2TELNE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2telne" />
+	<entry name="Cluster_DA2TELC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2telc" />
 <!-- END DA2 TEL -->
 <!-- BEGIN DA2 HOP CORE -->
-	<entry name="Cluster_DA2HOP1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hop1" />
-	<entry name="Cluster_DA2HOP2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hop2" />
+	<entry name="Cluster_DA2HOP1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hop1" />
+	<entry name="Cluster_DA2HOP2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hop2" />
 <!-- END DA2 HOP CORE -->
 <!-- BEGIN DA2 XEN CORE -->
-	<entry name="Cluster_DA2XEN1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2xen1" />
+	<entry name="Cluster_DA2XEN1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2xen1" />
 <!-- END DA2 XEN CORE -->
 <!-- BEGIN HAT -->
-	<entry name="Cluster_DA2HAT1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hat1" />
-	<entry name="Cluster_DA2HAT2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2hat2" />
+	<entry name="Cluster_DA2HAT1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hat1" />
+	<entry name="Cluster_DA2HAT2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2hat2" />
 <!-- END HAT -->
 <!-- BEGIN ALI -->
-	<entry name="Cluster_DA2ALI1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2ali1" />
-	<entry name="Cluster_DA2ALI2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2ali2" />
+	<entry name="Cluster_DA2ALI1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2ali1" />
+	<entry name="Cluster_DA2ALI2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2ali2" />
 <!-- END ALI -->
 <!-- BEGIN SCA -->
-	<entry name="Cluster_DA2SCA1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2sca1" />
-	<entry name="Cluster_DA2SCA2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da2sca2" />
+	<entry name="Cluster_DA2SCA1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2sca1" />
+	<entry name="Cluster_DA2SCA2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da2sca2" />
 <!-- END SCA -->
 <!-- BEGIN DA3 -->
-	<entry name="Cluster_DA3NW1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw1" />
-	<entry name="Cluster_DA3NW2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw2" />
-	<entry name="Cluster_DA3NW3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw3" />
-	<entry name="Cluster_DA3NW4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw4" />
-	<entry name="Cluster_DA3NW5" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw5" />
-	<entry name="Cluster_DA3NW6" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw6" />
-	<entry name="Cluster_DA3NW7" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3nw7" />
-	<entry name="Cluster_DA3NE1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne1" />
-	<entry name="Cluster_DA3NE2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne2" />
-	<entry name="Cluster_DA3NE3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne3" />
-	<entry name="Cluster_DA3NE4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne4" />
-	<entry name="Cluster_DA3NE5" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne5" />
-	<entry name="Cluster_DA3NE6" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ne6" />
-	<entry name="Cluster_DA3SE1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se1" />
-	<entry name="Cluster_DA3SE2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se2" />
-	<entry name="Cluster_DA3SE3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se3" />
-	<entry name="Cluster_DA3SE4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se4" />
-	<entry name="Cluster_DA3SE5" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se5" />
-	<entry name="Cluster_DA3SE6" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se6" />
-	<entry name="Cluster_DA3SE7" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3se7" />
-	<entry name="Cluster_DA3SW1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw1" />
-	<entry name="Cluster_DA3SW2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw2" />
-	<entry name="Cluster_DA3SW3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw3" />
-	<entry name="Cluster_DA3SW4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw4" />
-	<entry name="Cluster_DA3SW5" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw5" />
-	<entry name="Cluster_DA3SW6" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw6" />
-	<entry name="Cluster_DA3SW7" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sw7" />
-	<entry name="Cluster_DA3W1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3w1" />
-	<entry name="Cluster_DA3W2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3w2" />
-	<entry name="Cluster_DA3W3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3w3" />
-	<entry name="Cluster_DA3E1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3e1" />
-	<entry name="Cluster_DA3E2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3e2" />
-	<entry name="Cluster_DA3E3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3e3" />
-	<entry name="Cluster_DA3HAT1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3hat1" />
-	<entry name="Cluster_DA3SCA1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sca1" />
-	<entry name="Cluster_DA3SCA2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3sca2" />
-	<entry name="Cluster_DA3ALI1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ali1" />
-	<entry name="Cluster_DA3ALI2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3ali2" />
-	<entry name="Cluster_DA3XEN1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3xen1" />
-	<entry name="Cluster_DA3XEN2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3xen2" />
-	<entry name="Cluster_DA3XEN3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3xen3" />
-	<entry name="Cluster_DA3XEN4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3xen4" />
+	<entry name="Cluster_DA3NW1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw1" />
+	<entry name="Cluster_DA3NW2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw2" />
+	<entry name="Cluster_DA3NW3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw3" />
+	<entry name="Cluster_DA3NW4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw4" />
+	<entry name="Cluster_DA3NW5" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw5" />
+	<entry name="Cluster_DA3NW6" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw6" />
+	<entry name="Cluster_DA3NW7" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3nw7" />
+	<entry name="Cluster_DA3NE1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne1" />
+	<entry name="Cluster_DA3NE2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne2" />
+	<entry name="Cluster_DA3NE3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne3" />
+	<entry name="Cluster_DA3NE4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne4" />
+	<entry name="Cluster_DA3NE5" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne5" />
+	<entry name="Cluster_DA3NE6" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ne6" />
+	<entry name="Cluster_DA3SE1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se1" />
+	<entry name="Cluster_DA3SE2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se2" />
+	<entry name="Cluster_DA3SE3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se3" />
+	<entry name="Cluster_DA3SE4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se4" />
+	<entry name="Cluster_DA3SE5" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se5" />
+	<entry name="Cluster_DA3SE6" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se6" />
+	<entry name="Cluster_DA3SE7" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3se7" />
+	<entry name="Cluster_DA3SW1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw1" />
+	<entry name="Cluster_DA3SW2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw2" />
+	<entry name="Cluster_DA3SW3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw3" />
+	<entry name="Cluster_DA3SW4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw4" />
+	<entry name="Cluster_DA3SW5" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw5" />
+	<entry name="Cluster_DA3SW6" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw6" />
+	<entry name="Cluster_DA3SW7" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sw7" />
+	<entry name="Cluster_DA3W1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3w1" />
+	<entry name="Cluster_DA3W2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3w2" />
+	<entry name="Cluster_DA3W3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3w3" />
+	<entry name="Cluster_DA3E1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3e1" />
+	<entry name="Cluster_DA3E2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3e2" />
+	<entry name="Cluster_DA3E3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3e3" />
+	<entry name="Cluster_DA3HAT1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3hat1" />
+	<entry name="Cluster_DA3SCA1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sca1" />
+	<entry name="Cluster_DA3SCA2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3sca2" />
+	<entry name="Cluster_DA3ALI1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ali1" />
+	<entry name="Cluster_DA3ALI2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3ali2" />
+	<entry name="Cluster_DA3XEN1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3xen1" />
+	<entry name="Cluster_DA3XEN2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3xen2" />
+	<entry name="Cluster_DA3XEN3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3xen3" />
+	<entry name="Cluster_DA3XEN4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3xen4" />
 <!-- END DA3 -->
 <!-- BEGIN SPLIT VENDETTA -->
-	<entry name="Cluster_DA3SPL1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3spl1" />
-	<entry name="Cluster_DA3SPL2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3spl2" />
-	<entry name="Cluster_DA3SPLSW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3splsw" />
-	<entry name="Cluster_DA3SPLSE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3splse" />
-	<entry name="Cluster_DA3SPLC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3splc" />
-	<entry name="Cluster_DA3FRF1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frf1" />
-	<entry name="Cluster_DA3FRF2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frf2" />
-	<entry name="Cluster_DA3FRFNW" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frfnw" />
-	<entry name="Cluster_DA3FRFNE" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frfne" />
-	<entry name="Cluster_DA3FRFN" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frfn" />
-	<entry name="Cluster_DA3FRFC" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frfc" />
-	<entry name="Cluster_DA3FAF1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3faf1" />
-	<entry name="Cluster_DA3FAF2" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3faf2" />
-	<entry name="Cluster_DA3FAF3" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3faf3" />
-	<entry name="Cluster_DA3FAF4" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3faf4" />
-	<entry name="Cluster_DA3SPL" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3spl" />
-	<entry name="Cluster_DA3FRF" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3frf" />
-	<entry name="Cluster_DA3CAB1" value="extensions\deadairgateoverhaul-master\assets\environments\cluster\cluster_da3cab1" />
+	<entry name="Cluster_DA3SPL1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3spl1" />
+	<entry name="Cluster_DA3SPL2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3spl2" />
+	<entry name="Cluster_DA3SPLSW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3splsw" />
+	<entry name="Cluster_DA3SPLSE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3splse" />
+	<entry name="Cluster_DA3SPLC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3splc" />
+	<entry name="Cluster_DA3FRF1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frf1" />
+	<entry name="Cluster_DA3FRF2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frf2" />
+	<entry name="Cluster_DA3FRFNW" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frfnw" />
+	<entry name="Cluster_DA3FRFNE" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frfne" />
+	<entry name="Cluster_DA3FRFN" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frfn" />
+	<entry name="Cluster_DA3FRFC" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frfc" />
+	<entry name="Cluster_DA3FAF1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3faf1" />
+	<entry name="Cluster_DA3FAF2" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3faf2" />
+	<entry name="Cluster_DA3FAF3" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3faf3" />
+	<entry name="Cluster_DA3FAF4" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3faf4" />
+	<entry name="Cluster_DA3SPL" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3spl" />
+	<entry name="Cluster_DA3FRF" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3frf" />
+	<entry name="Cluster_DA3CAB1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3cab1" />
 <!-- END SPLIT VENDETTA -->
 <!-- BEGIN STATIONS -->
-	<entry name="station_arg_shipyard_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_arg_shipyard_dabase_01"/>
-	<entry name="station_arg_tradestation_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_arg_tradestation_dabase_01"/>
-	<entry name="station_arg_wharf_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_arg_wharf_dabase_01"/>
-	<entry name="station_par_shipyard_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_par_shipyard_dabase_01"/>
-	<entry name="station_par_tradestation_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_par_tradestation_dabase_01"/>
-	<entry name="station_par_wharf_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_par_wharf_dabase_01"/>
-	<entry name="station_tel_shipyard_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_tel_shipyard_dabase_01"/>
-	<entry name="station_tel_tradestation_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_tel_tradestation_dabase_01"/>
-	<entry name="station_tel_wharf_dabase_01" value="extensions\deadairgateoverhaul-master\assets\structures\station_tel_wharf_dabase_01"/>
+	<entry name="station_arg_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_shipyard_dabase_01"/>
+	<entry name="station_arg_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_tradestation_dabase_01"/>
+	<entry name="station_arg_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_wharf_dabase_01"/>
+	<entry name="station_par_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_shipyard_dabase_01"/>
+	<entry name="station_par_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_tradestation_dabase_01"/>
+	<entry name="station_par_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_wharf_dabase_01"/>
+	<entry name="station_tel_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_shipyard_dabase_01"/>
+	<entry name="station_tel_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_tradestation_dabase_01"/>
+	<entry name="station_tel_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_wharf_dabase_01"/>
 <!-- END STATIONS -->
 </add>
 </diff>

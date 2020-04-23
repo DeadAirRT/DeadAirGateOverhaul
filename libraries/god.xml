@@ -6358,7 +6358,9 @@
     </product>
 </products>
 </replace>
-<replace sel="//god/stations/defaults/quota/@zone">4</replace>
+<replace sel="//god/stations/defaults/quota/@zone">5</replace>
+<replace sel="//god/stations/defaults/location/@newzonechance">0.15</replace>
+<replace sel="//god/stations/defaults/location/@coreboundaryzoneheight">4000</replace>
 <!-- END REPLACING -->
 <!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS --><!-- END PRODUCTS -->
 </diff>

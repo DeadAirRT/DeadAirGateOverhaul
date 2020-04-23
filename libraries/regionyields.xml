@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="regionyields.xsd">
+<!-- SOLID -->
+<replace sel="//resource[@ware='ore']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='ore']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='ore']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='ore']/yield[@name='high']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='ore']/yield[@name='veryhigh']/@resourcedensity">50000</replace>
+<replace sel="//resource[@ware='ore']/yield[@name='veryhigh']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='high']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='veryhigh']/@resourcedensity">50000</replace>
+<replace sel="//resource[@ware='silicon']/yield[@name='veryhigh']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='medium']/@resourcedensity">25</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='high']/@resourcedensity">250</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='high']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='veryhigh']/@resourcedensity">25000</replace>
+<replace sel="//resource[@ware='nividium']/yield[@name='veryhigh']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='high']/@replenishtime">180</replace>
+<!-- LIQUID -->
+<replace sel="//resource[@ware='hydrogen']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='hydrogen']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='hydrogen']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='hydrogen']/yield[@name='high']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='helium']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='helium']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='helium']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='helium']/yield[@name='high']/@replenishtime">180</replace>
+<replace sel="//resource[@ware='methane']/yield[@name='medium']/@resourcedensity">50</replace>
+<replace sel="//resource[@ware='methane']/yield[@name='medium']/@replenishtime">90</replace>
+<replace sel="//resource[@ware='methane']/yield[@name='high']/@resourcedensity">500</replace>
+<replace sel="//resource[@ware='methane']/yield[@name='high']/@replenishtime">180</replace>
+</diff>

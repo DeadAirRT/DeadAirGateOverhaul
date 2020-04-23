@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="regionobjectgroups.xsd">
+<replace sel="//group[@name='asteroid_highyield_v1']/@yield">4800</replace>
+<replace sel="//group[@name='asteroid_highyield_sil_v1']/@yield">4800</replace>
+<replace sel="//group[@name='asteroid_highyield_niv_v1']/@yield">4800</replace>
+<replace sel="//group[@name='asteroid_ore_xxl']/@yield">2400</replace>
+<replace sel="//group[@name='asteroid_ore_xl']/@yield">1600</replace>
+<replace sel="//group[@name='asteroid_ore_l']/@yield">800</replace>
+<replace sel="//group[@name='asteroid_ore_m']/@yield">400</replace>
+<replace sel="//group[@name='asteroid_ore_s']/@yield">200</replace>
+<replace sel="//group[@name='asteroid_ore_xs']/@yield">100</replace>
+<replace sel="//group[@name='asteroid_silicon_xl']/@yield">1600</replace>
+<replace sel="//group[@name='asteroid_silicon_l']/@yield">800</replace>
+<replace sel="//group[@name='asteroid_silicon_m']/@yield">400</replace>
+<replace sel="//group[@name='asteroid_silicon_s']/@yield">200</replace>
+<replace sel="//group[@name='asteroid_silicon_xs']/@yield">100</replace>
+<replace sel="//group[@name='asteroid_nividium_l']/@yield">800</replace>
+<replace sel="//group[@name='asteroid_nividium_m']/@yield">400</replace>
+<replace sel="//group[@name='asteroid_nividium_s']/@yield">200</replace>
+<replace sel="//group[@name='asteroid_nividium_xs']/@yield">100</replace>
+<replace sel="//group[@name='asteroid_ice_xl']/@yield">1600</replace>
+<replace sel="//group[@name='asteroid_ice_l']/@yield">800</replace>
+<replace sel="//group[@name='asteroid_ice_m']/@yield">400</replace>
+<replace sel="//group[@name='asteroid_ice_s']/@yield">200</replace>
+<replace sel="//group[@name='asteroid_ice_xs']/@yield">100</replace>
+</diff>

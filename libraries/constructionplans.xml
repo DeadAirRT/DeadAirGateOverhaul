@@ -2357,4 +2357,13 @@
 </entry>
 </plan>
 </add>
+<add sel="//plans/plan[@id='spl_wharf']">
+	<entry index="16" macro="pier_spl_harbor_01_macro" connection="connectionsnap001">
+	  <predecessor index="3" connection="connectionsnap002"/>
+	  <offset>
+		<position x="3660.374" z="265.328"/>
+		<rotation yaw="-179.99997"/>
+	  </offset>
+	</entry>
+</add>
 </diff>

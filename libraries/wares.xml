@@ -810,8 +810,6 @@
 
 <add sel="//wares/ware[@id='ship_tel_xs_police_03_a']"><owner faction="scaleplate" /></add>
 
-<add sel="//wares/ware[@id='ship_spl_xs_police_01_a']"><owner faction="fallensplit" /></add>
-
 <!-- HOLY SHIPS WE DID IT -->
 <!-- TURRETS -->
 
@@ -1080,7 +1078,7 @@
 <remove sel="//wares/ware[@id='weapon_tel_s_charge_01_mk2']/owner[@faction='alliance']" />
 <add sel="//wares/ware[@id='weapon_tel_s_charge_01_mk2']"><owner faction="scaleplate" /></add>
 
-<!-- FALLEN SPLIT -->
+<!-- FALLEN/FREE SPLIT -->
 <add sel="//wares/ware[@id='engine_spl_l_allround_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_l_travel_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_allround_01_mk1']"><owner faction="fallensplit" /></add>
@@ -1090,6 +1088,7 @@
 <add sel="//wares/ware[@id='engine_spl_m_combat_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_combat_01_mk3']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_combat_01_mk4']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='engine_spl_m_combat_01_mk4']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_travel_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_travel_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_m_travel_01_mk3']"><owner faction="fallensplit" /></add>
@@ -1100,6 +1099,7 @@
 <add sel="//wares/ware[@id='engine_spl_s_combat_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_s_combat_01_mk3']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_s_combat_01_mk4']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='engine_spl_s_combat_01_mk4']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_s_travel_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_s_travel_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='engine_spl_s_travel_01_mk3']"><owner faction="fallensplit" /></add>
@@ -1138,13 +1138,17 @@
 <add sel="//wares/ware[@id='module_spl_stor_solid_s_01']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_l_standard_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_l_standard_01_mk2']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='shield_spl_l_standard_01_mk2']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_m_standard_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_m_standard_01_mk2']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='shield_spl_m_standard_01_mk2']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_m_standard_02_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_m_standard_02_mk2']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='shield_spl_m_standard_02_mk2']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_s_standard_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_s_standard_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_s_standard_01_mk3']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='shield_spl_s_standard_01_mk3']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='shield_spl_xl_standard_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_l_destroyer_01_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_l_miner_liquid_01_a']"><owner faction="fallensplit" /></add>
@@ -1153,10 +1157,12 @@
 <add sel="//wares/ware[@id='ship_spl_m_corvette_01_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_m_corvette_01_b']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_m_frigate_01_a']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='ship_spl_m_frigate_01_a']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_m_miner_liquid_01_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_m_miner_solid_01_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_m_trans_container_01_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_s_fighter_01_a']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='ship_spl_s_fighter_01_a']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_s_fighter_02_a']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_s_fighter_02_b']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='ship_spl_s_heavyfighter_01_a']"><owner faction="fallensplit" /></add>
@@ -1197,6 +1203,8 @@
 <add sel="//wares/ware[@id='weapon_spl_m_gatling_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_m_railgun_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_m_railgun_01_mk2']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='weapon_spl_m_railgun_01_mk1']"><owner faction="freesplit" /></add>
+<add sel="//wares/ware[@id='weapon_spl_m_railgun_01_mk2']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_m_shotgun_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_m_shotgun_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_m_sticky_01_mk1']"><owner faction="fallensplit" /></add>
@@ -1205,6 +1213,8 @@
 <add sel="//wares/ware[@id='weapon_spl_s_gatling_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_s_railgun_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_s_railgun_01_mk2']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='weapon_spl_s_railgun_01_mk1']"><owner faction="freesplit" /></add>
+<add sel="//wares/ware[@id='weapon_spl_s_railgun_01_mk2']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_s_shotgun_01_mk1']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_s_shotgun_01_mk2']"><owner faction="fallensplit" /></add>
 <add sel="//wares/ware[@id='weapon_spl_s_sticky_01_mk1']"><owner faction="fallensplit" /></add>

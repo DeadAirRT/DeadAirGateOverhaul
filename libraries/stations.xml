@@ -2,7 +2,7 @@
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
 <add sel="//stations">
   <station id="datradestation_arg" group="datradestation_arg">
-    <category tags="datradestation" faction="[argon, antigone, hatikvah, split, freesplit, fallensplit, court]" />
+    <category tags="datradestation" faction="[argon, antigone, hatikvah]" />
   </station>
 
   <station id="datradestation_par" group="datradestation_par">
@@ -12,29 +12,9 @@
   <station id="datradestation_tel" group="datradestation_tel">
     <category tags="datradestation" faction="[teladi, ministry, scaleplate]" />
   </station>
-
-  <station id="dashipyard_arg" group="dashipyard_arg">
-    <category tags="dashipyard" faction="[argon, antigone, hatikvah, split, freesplit, fallensplit, court]" />
-  </station>
-
-  <station id="dawharf_arg" group="dawharf_arg">
-    <category tags="dawharf" faction="[argon, antigone, hatikvah, split, freesplit, fallensplit, court]" />
-  </station>
-
-  <station id="dashipyard_par" group="dashipyard_par">
-    <category tags="dashipyard" faction="[paranid, holyorder, alliance, buccaneers]" />
-  </station>
-
-  <station id="dawharf_par" group="dawharf_par">
-    <category tags="dawharf" faction="[paranid, holyorder, alliance, buccaneers]" />
-  </station>
-
-  <station id="dashipyard_tel" group="dashipyard_tel">
-    <category tags="dashipyard" faction="[teladi, ministry, scaleplate]" />
-  </station>
-
-  <station id="dawharf_tel" group="dawharf_tel">
-    <category tags="dawharf" faction="[teladi, ministry, scaleplate]" />
+  
+  <station id="datradestation_spl" group="datradestation_spl">
+    <category tags="datradestation" faction="[court, fallensplit, freesplit, split]" />
   </station>
 </add>
 <replace sel="//stations/station[@id='shipyard_par']/category/@faction">[paranid, holyorder, alliance, buccaneers]</replace>

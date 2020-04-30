@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported by: Matthias (192.168.3.149) at 30.05.2018_12-16-36-->
+<macros>
+  <macro name="station_spl_tradestation_dabase_01_macro" class="station">
+    <component ref="station_spl_tradestation_dabase_01" />
+    <properties>
+      <identification name="{20102,1711}" unique="0" icon="mapob_tradestation" factionhqicon="mapob_tradestation_headquarter" />
+      <build>
+        <sets>
+          <set ref="datradestation_split" />
+        </sets>
+      </build>
+      <ownership claim="1" />
+    </properties>
+    <connections>
+      <connection ref="controlroom">
+        <macro ref="control_room_macro" connection="Connection01" />
+      </connection>
+    </connections>
+  </macro>
+</macros>

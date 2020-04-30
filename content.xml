@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<content id="DeadAirGateOverhaul" name="DeadAir Gate Overhaul" description="New connections." author="DeadAir" version="304" date="2020-04-22" save="0" enabled="1">
+<content id="DeadAirGateOverhaul" name="DeadAir Gate Overhaul" description="New connections." author="DeadAir" version="305" date="2020-04-30" save="0" enabled="1">
 	<dependency id="ego_dlc_split" optional="false" name="Split Vendetta" />
 	<dependency id="ws_1668457361" optional="true" name="Faction Enhancer - War Module" />
 	<dependency id="ws_1668473070" optional="true" name="Faction Enhancer - Econ AI Module" />

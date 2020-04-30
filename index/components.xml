@@ -133,15 +133,10 @@
 	<entry name="Cluster_DA3CAB1" value="extensions\deadairgateoverhaul\assets\environments\cluster\cluster_da3cab1" />
 <!-- END SPLIT VENDETTA -->
 <!-- BEGIN STATIONS -->
-	<entry name="station_arg_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_shipyard_dabase_01"/>
 	<entry name="station_arg_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_tradestation_dabase_01"/>
-	<entry name="station_arg_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_arg_wharf_dabase_01"/>
-	<entry name="station_par_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_shipyard_dabase_01"/>
 	<entry name="station_par_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_tradestation_dabase_01"/>
-	<entry name="station_par_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_par_wharf_dabase_01"/>
-	<entry name="station_tel_shipyard_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_shipyard_dabase_01"/>
 	<entry name="station_tel_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_tradestation_dabase_01"/>
-	<entry name="station_tel_wharf_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_tel_wharf_dabase_01"/>
+	<entry name="station_spl_tradestation_dabase_01" value="extensions\deadairgateoverhaul\assets\structures\station_spl_tradestation_dabase_01"/>
 <!-- END STATIONS -->
 </add>
 </diff>

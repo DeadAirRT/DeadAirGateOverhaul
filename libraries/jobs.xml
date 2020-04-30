@@ -15916,7 +15916,7 @@
     </orders>
     <category faction="khaak" tags="[military, fighter]" size="ship_m"/>
     <quota galaxy="10" cluster="1" maxgalaxy="10"/>
-    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[ownerless]" relation="self" comparison="exact" matchextension="false"/>
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[xenon]" relation="self" comparison="not" matchextension="false"/>
     <environment buildatshipyard="false" gate="true" />
     <ship>
       <select faction="khaak" tags="[fighter]" size="ship_m"/>
@@ -19025,7 +19025,7 @@
     <task task="masstraffic.generic"/>
     <location class="station" faction="[argon, antigone, hatikvah]" matchextension="false"/>
     <quota sector="2" station="1"/>
-    <masstraffic ref="masstraffic_argon_civilian" respawndelay="300" relaunchdelay="60">
+    <masstraffic ref="masstraffic_argon_civilian" respawndelay="120" relaunchdelay="60">
       <owner exact="faction.criminal" overridenpc="true"/>
     </masstraffic>
   </job>
@@ -19097,7 +19097,7 @@
     <task task="masstraffic.generic"/>
     <location class="station" faction="[teladi, ministry, scaleplate]" matchextension="false"/>
     <quota sector="2" station="1"/>
-    <masstraffic ref="masstraffic_teladi_civilian" respawndelay="300" relaunchdelay="60">
+    <masstraffic ref="masstraffic_teladi_civilian" respawndelay="120" relaunchdelay="60">
       <owner exact="faction.criminal" overridenpc="true"/>
     </masstraffic>
   </job>
@@ -19175,7 +19175,7 @@
     <task task="masstraffic.generic"/>
     <location class="station" faction="[paranid, holyorder, alliance, buccaneers]" matchextension="false"/>
     <quota sector="2" station="1"/>
-    <masstraffic ref="masstraffic_paranid_civilian" respawndelay="300" relaunchdelay="60">
+    <masstraffic ref="masstraffic_paranid_civilian" respawndelay="120" relaunchdelay="60">
       <owner exact="faction.criminal" overridenpc="true"/>
     </masstraffic>
   </job>
@@ -19330,7 +19330,7 @@
     <task task="masstraffic.generic"/>
     <location class="station" faction="[split, freesplit, fallensplit, court]" matchextension="false"/>
     <quota sector="2" station="1"/>
-    <masstraffic ref="masstraffic_split_civilian" respawndelay="300" relaunchdelay="60">
+    <masstraffic ref="masstraffic_split_civilian" respawndelay="120" relaunchdelay="60">
       <owner exact="faction.criminal" overridenpc="true"/>
     </masstraffic>
   </job>

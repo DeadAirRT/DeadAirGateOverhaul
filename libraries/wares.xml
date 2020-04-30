@@ -144,33 +144,50 @@
 <add sel="//wares/ware[@id='module_arg_dock_m_01']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_01']"><owner faction="buccaneers" /></add>
 
 <add sel="//wares/ware[@id='module_arg_dock_m_01_hightech']"><owner faction="alliance" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_hightech']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_hightech']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_hightech']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_01_hightech']"><owner faction="buccaneers" /></add>
 
 <add sel="//wares/ware[@id='module_arg_dock_m_01_lowtech']"><owner faction="alliance" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_lowtech']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_lowtech']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_01_lowtech']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_01_lowtech']"><owner faction="buccaneers" /></add>
 
 <add sel="//wares/ware[@id='module_arg_dock_m_02']"><owner faction="alliance" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_02']"><owner faction="buccaneers" /></add>
 
 <add sel="//wares/ware[@id='module_arg_dock_m_02_hightech']"><owner faction="alliance" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_hightech']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_hightech']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_hightech']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_02_hightech']"><owner faction="buccaneers" /></add>
 
 <add sel="//wares/ware[@id='module_arg_dock_m_02_lowtech']"><owner faction="alliance" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_lowtech']"><owner faction="hatikvah" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_lowtech']"><owner faction="ministry" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_m_02_lowtech']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_m_02_lowtech']"><owner faction="buccaneers" /></add>
 
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="alliance" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="buccaneers" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="court" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="fallensplit" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="freesplit" /></add>
 <add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="hatikvah" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="holyorder" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="ministry" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="paranid" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="scaleplate" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="split" /></add>
+<add sel="//wares/ware[@id='module_arg_dock_tradestation_02']"><owner faction="teladi" /></add>
 
 <add sel="//wares/ware[@id='module_arg_hab_l_01']"><owner faction="hatikvah" /></add>
 
@@ -1408,9 +1425,13 @@
 <add sel="//wares/ware[@id='weapon_gen_s_torpedo_01_mk1']"><owner faction="buccaneers" /></add>
 <add sel="//wares/ware[@id='weapon_gen_s_torpedo_01_mk2']"><owner faction="buccaneers" /></add>
 <add sel="//wares/ware[@id='weapon_par_m_railgun_01_mk1']"><owner faction="buccaneers" /></add>
+<add sel="//wares/ware[@id='weapon_par_m_railgun_01_mk1']"><owner faction="holyorder" /></add>
 <add sel="//wares/ware[@id='weapon_par_m_railgun_01_mk2']"><owner faction="buccaneers" /></add>
+<add sel="//wares/ware[@id='weapon_par_m_railgun_01_mk2']"><owner faction="holyorder" /></add>
 <add sel="//wares/ware[@id='weapon_par_s_railgun_01_mk1']"><owner faction="buccaneers" /></add>
+<add sel="//wares/ware[@id='weapon_par_s_railgun_01_mk1']"><owner faction="holyorder" /></add>
 <add sel="//wares/ware[@id='weapon_par_s_railgun_01_mk2']"><owner faction="buccaneers" /></add>
+<add sel="//wares/ware[@id='weapon_par_s_railgun_01_mk2']"><owner faction="holyorder" /></add>
 <add sel="//wares/ware[@id='engine_par_l_allround_01_mk1']"><owner faction="buccaneers" /></add>
 <add sel="//wares/ware[@id='engine_par_l_travel_01_mk1']"><owner faction="buccaneers" /></add>
 <add sel="//wares/ware[@id='engine_par_m_combat_01_mk1']"><owner faction="buccaneers" /></add>

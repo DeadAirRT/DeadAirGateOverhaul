@@ -43,13 +43,28 @@
 				<do_if value="not $TELIntTradeStationGroup?">
 					<create_group groupname="$TELIntTradeStationGroup" />
 				</do_if>
-				<set_value name="$OwnerList" exact="[faction.alliance, faction.antigone, faction.argon, faction.hatikvah, faction.holyorder, faction.ministry, faction.paranid, faction.scaleplate, faction.teladi]" />
+				<do_if value="not $BUCIntTradeStationGroup?">
+					<create_group groupname="$BUCIntTradeStationGroup" />
+				</do_if>
+				<do_if value="not $CABIntTradeStationGroup?">
+					<create_group groupname="$CABIntTradeStationGroup" />
+				</do_if>
+				<do_if value="not $FAFIntTradeStationGroup?">
+					<create_group groupname="$FAFIntTradeStationGroup" />
+				</do_if>
+				<do_if value="not $FRFIntTradeStationGroup?">
+					<create_group groupname="$FRFIntTradeStationGroup" />
+				</do_if>
+				<do_if value="not $SPLIntTradeStationGroup?">
+					<create_group groupname="$SPLIntTradeStationGroup" />
+				</do_if>
+				<set_value name="$OwnerList" exact="[faction.alliance, faction.antigone, faction.argon, faction.buccaneers, faction.court, faction.fallensplit, faction.freesplit, faction.hatikvah, faction.holyorder, faction.ministry, faction.paranid, faction.scaleplate, faction.split, faction.teladi]" />
 				<set_value name="$ProductList" exact="[ware.antimattercells, ware.energycells, ware.graphene, ware.microchips, ware.missilecomponents, ware.quantumtubes, ware.refinedmetals, ware.siliconwafers, ware.smartchips, ware.superfluidcoolant, ware.teladianium, ware.water]" />
 			</actions>
 			<cues>
 				<cue name="FindIntStations" instantiate="true" checkinterval="60min" checktime="player.age + 15s">
 					<actions>
-						<do_if value="($IntTradeStationGroup.count lt 9)">
+						<do_if value="($IntTradeStationGroup.count lt 14)">
 							<!-- FIND STATIONS WITH INT PRODUCTS -->
 							<find_station groupname="$IntStationGroup" space="player.galaxy" multiple="true" canbuildships="false" canequipships="false">
 								<match_content class="class.production">
@@ -62,7 +77,7 @@
 				</cue>
 				<cue name="ProcessIntStations" instantiate="true" checkinterval="60min" checktime="player.age + 90s">
 					<actions>
-						<do_if value="($IntTradeStationGroup.count lt 9)">
+						<do_if value="($IntTradeStationGroup.count lt 14)">
 							<set_value name="$ALIWaresAmount" exact="0" />
 							<set_value name="$ALIMaxWaresAmount" exact="0" />
 							<set_value name="$ANTWaresAmount" exact="0" />
@@ -81,6 +96,16 @@
 							<set_value name="$SCAMaxWaresAmount" exact="0" />
 							<set_value name="$TELWaresAmount" exact="0" />
 							<set_value name="$TELMaxWaresAmount" exact="0" />
+							<set_value name="$BUCWaresAmount" exact="0" />
+							<set_value name="$BUCMaxWaresAmount" exact="0" />
+							<set_value name="$CABWaresAmount" exact="0" />
+							<set_value name="$CABMaxWaresAmount" exact="0" />
+							<set_value name="$FAFWaresAmount" exact="0" />
+							<set_value name="$FAFMaxWaresAmount" exact="0" />
+							<set_value name="$FRFWaresAmount" exact="0" />
+							<set_value name="$FRFMaxWaresAmount" exact="0" />
+							<set_value name="$SPLWaresAmount" exact="0" />
+							<set_value name="$SPLMaxWaresAmount" exact="0" />
 							<set_value name="$IntStationNeeded" exact="false" />
 							
 							<!-- SORT STATIONS INTO FACTIONS -->
@@ -99,7 +124,7 @@
 										</do_all>
 									</do_if>
 									
-									<do_if value="$IntStationOwner == faction.antigone and ($ANTIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.antigone and ($ANTIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$ANT">
 											<set_value name="$ware" exact="$IntStation.products.list.{$ANT}" />
 											<set_value name="$ANTWaresAmount" exact="$ANTWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -107,9 +132,9 @@
 											<set_value name="$WaresPercent" exact="((($ANTWaresAmount)f / ($ANTMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ANT, $ANTWaresAmount, $ANTMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.argon and ($ARGIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.argon and ($ARGIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$ARG">
 											<set_value name="$ware" exact="$IntStation.products.list.{$ARG}" />
 											<set_value name="$ARGWaresAmount" exact="$ARGWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -117,9 +142,9 @@
 											<set_value name="$WaresPercent" exact="((($ARGWaresAmount)f / ($ARGMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ARG, $ARGWaresAmount, $ARGMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.hatikvah and ($HATIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.hatikvah and ($HATIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$HAT">
 											<set_value name="$ware" exact="$IntStation.products.list.{$HAT}" />
 											<set_value name="$HATWaresAmount" exact="$HATWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -127,9 +152,9 @@
 											<set_value name="$WaresPercent" exact="((($HATWaresAmount)f / ($HATMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HAT, $HATWaresAmount, $HATMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.holyorder and ($HOPIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.holyorder and ($HOPIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$HOP">
 											<set_value name="$ware" exact="$IntStation.products.list.{$HOP}" />
 											<set_value name="$HOPWaresAmount" exact="$HOPWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -137,9 +162,9 @@
 											<set_value name="$WaresPercent" exact="((($HOPWaresAmount)f / ($HOPMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HOP, $HOPWaresAmount, $HOPMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.ministry and ($MINIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.ministry and ($MINIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$MIN">
 											<set_value name="$ware" exact="$IntStation.products.list.{$MIN}" />
 											<set_value name="$MINWaresAmount" exact="$MINWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -147,9 +172,9 @@
 											<set_value name="$WaresPercent" exact="((($MINWaresAmount)f / ($MINMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$MIN, $MINWaresAmount, $MINMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.paranid and ($PARIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.paranid and ($PARIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$PAR">
 											<set_value name="$ware" exact="$IntStation.products.list.{$PAR}" />
 											<set_value name="$PARWaresAmount" exact="$PARWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -157,9 +182,9 @@
 											<set_value name="$WaresPercent" exact="((($PARWaresAmount)f / ($PARMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$PAR, $PARWaresAmount, $PARMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.scaleplate and ($SCAIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.scaleplate and ($SCAIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$SCA">
 											<set_value name="$ware" exact="$IntStation.products.list.{$SCA}" />
 											<set_value name="$SCAWaresAmount" exact="$SCAWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -167,9 +192,9 @@
 											<set_value name="$WaresPercent" exact="((($SCAWaresAmount)f / ($SCAMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SCA, $SCAWaresAmount, $SCAMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
 									
-									<do_if value="$IntStationOwner == faction.teladi and ($TELIntTradeStationGroup.count lt 1)">
+									<do_elseif value="$IntStationOwner == faction.teladi and ($TELIntTradeStationGroup.count lt 1)">
 										<do_all exact="$IntStation.products.list.count" counter="$TEL">
 											<set_value name="$ware" exact="$IntStation.products.list.{$TEL}" />
 											<set_value name="$TELWaresAmount" exact="$TELWaresAmount + $IntStation.cargo.{$ware}.count" />
@@ -177,7 +202,57 @@
 											<set_value name="$WaresPercent" exact="((($TELWaresAmount)f / ($TELMaxWaresAmount)f) * 100.0)i" />
 											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$TEL, $TELWaresAmount, $TELMaxWaresAmount, $WaresPercent]" output="false" append="true" />
 										</do_all>
-									</do_if>
+									</do_elseif>
+									
+									<do_elseif value="$IntStationOwner == faction.buccaneers and ($BUCIntTradeStationGroup.count lt 1)">
+										<do_all exact="$IntStation.products.list.count" counter="$BUC">
+											<set_value name="$ware" exact="$IntStation.products.list.{$BUC}" />
+											<set_value name="$BUCWaresAmount" exact="$BUCWaresAmount + $IntStation.cargo.{$ware}.count" />
+											<set_value name="$BUCMaxWaresAmount" exact="$BUCMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
+											<set_value name="$WaresPercent" exact="((($BUCWaresAmount)f / ($BUCMaxWaresAmount)f) * 100.0)i" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$BUC, $BUCWaresAmount, $BUCMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+										</do_all>
+									</do_elseif>
+									
+									<do_elseif value="$IntStationOwner == faction.court and ($CABIntTradeStationGroup.count lt 1)">
+										<do_all exact="$IntStation.products.list.count" counter="$CAB">
+											<set_value name="$ware" exact="$IntStation.products.list.{$CAB}" />
+											<set_value name="$CABWaresAmount" exact="$CABWaresAmount + $IntStation.cargo.{$ware}.count" />
+											<set_value name="$CABMaxWaresAmount" exact="$CABMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
+											<set_value name="$WaresPercent" exact="((($CABWaresAmount)f / ($CABMaxWaresAmount)f) * 100.0)i" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$CAB, $CABWaresAmount, $CABMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+										</do_all>
+									</do_elseif>
+									
+									<do_elseif value="$IntStationOwner == faction.fallensplit and ($FAFIntTradeStationGroup.count lt 1)">
+										<do_all exact="$IntStation.products.list.count" counter="$FAF">
+											<set_value name="$ware" exact="$IntStation.products.list.{$FAF}" />
+											<set_value name="$FAFWaresAmount" exact="$FAFWaresAmount + $IntStation.cargo.{$ware}.count" />
+											<set_value name="$FAFMaxWaresAmount" exact="$FAFMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
+											<set_value name="$WaresPercent" exact="((($FAFWaresAmount)f / ($FAFMaxWaresAmount)f) * 100.0)i" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FAF, $FAFWaresAmount, $FAFMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+										</do_all>
+									</do_elseif>
+									
+									<do_elseif value="$IntStationOwner == faction.freesplit and ($FRFIntTradeStationGroup.count lt 1)">
+										<do_all exact="$IntStation.products.list.count" counter="$FRF">
+											<set_value name="$ware" exact="$IntStation.products.list.{$FRF}" />
+											<set_value name="$FRFWaresAmount" exact="$FRFWaresAmount + $IntStation.cargo.{$ware}.count" />
+											<set_value name="$FRFMaxWaresAmount" exact="$FRFMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
+											<set_value name="$WaresPercent" exact="((($FRFWaresAmount)f / ($FRFMaxWaresAmount)f) * 100.0)i" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FRF, $FRFWaresAmount, $FRFMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+										</do_all>
+									</do_elseif>
+									
+									<do_elseif value="$IntStationOwner == faction.split and ($SPLIntTradeStationGroup.count lt 1)">
+										<do_all exact="$IntStation.products.list.count" counter="$SPL">
+											<set_value name="$ware" exact="$IntStation.products.list.{$SPL}" />
+											<set_value name="$SPLWaresAmount" exact="$SPLWaresAmount + $IntStation.cargo.{$ware}.count" />
+											<set_value name="$SPLMaxWaresAmount" exact="$SPLMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
+											<set_value name="$WaresPercent" exact="((($SPLWaresAmount)f / ($SPLMaxWaresAmount)f) * 100.0)i" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SPL, $SPLWaresAmount, $SPLMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+										</do_all>
+									</do_elseif>
 								</do_all>
 							</do_if>
 							<do_else>
@@ -293,6 +368,66 @@
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
+							<do_if value="($BUCWaresAmount gt $BUCMaxWaresAmount * 0.75) and ($BUCIntTradeStationGroup.count lt 1)">
+								<set_value name="$IntStationOwner" exact="faction.buccaneers" />
+								<set_value name="$IntStationNeeded" exact="true" />
+								<find_sector name="$IntStationSector" space="player.galaxy">
+									<match owner="$IntStationOwner" />
+								</find_sector>
+								<do_if value="$IntStationNeeded and $IntStationSector">
+									<include_actions ref="BuildIntTradeStation" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<set_value name="$IntStationNeeded" exact="false" />
+								</do_if>
+							</do_if>
+							<do_if value="($CABWaresAmount gt $CABMaxWaresAmount * 0.75) and ($CABIntTradeStationGroup.count lt 1)">
+								<set_value name="$IntStationOwner" exact="faction.court" />
+								<set_value name="$IntStationNeeded" exact="true" />
+								<find_sector name="$IntStationSector" space="player.galaxy">
+									<match owner="$IntStationOwner" />
+								</find_sector>
+								<do_if value="$IntStationNeeded and $IntStationSector">
+									<include_actions ref="BuildIntTradeStation" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<set_value name="$IntStationNeeded" exact="false" />
+								</do_if>
+							</do_if>
+							<do_if value="($FAFWaresAmount gt $FAFMaxWaresAmount * 0.75) and ($FAFIntTradeStationGroup.count lt 1)">
+								<set_value name="$IntStationOwner" exact="faction.fallensplit" />
+								<set_value name="$IntStationNeeded" exact="true" />
+								<find_sector name="$IntStationSector" space="player.galaxy">
+									<match owner="$IntStationOwner" />
+								</find_sector>
+								<do_if value="$IntStationNeeded and $IntStationSector">
+									<include_actions ref="BuildIntTradeStation" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<set_value name="$IntStationNeeded" exact="false" />
+								</do_if>
+							</do_if>
+							<do_if value="($FRFWaresAmount gt $FRFMaxWaresAmount * 0.75) and ($FRFIntTradeStationGroup.count lt 1)">
+								<set_value name="$IntStationOwner" exact="faction.freesplit" />
+								<set_value name="$IntStationNeeded" exact="true" />
+								<find_sector name="$IntStationSector" space="player.galaxy">
+									<match owner="$IntStationOwner" />
+								</find_sector>
+								<do_if value="$IntStationNeeded and $IntStationSector">
+									<include_actions ref="BuildIntTradeStation" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<set_value name="$IntStationNeeded" exact="false" />
+								</do_if>
+							</do_if>
+							<do_if value="($SPLWaresAmount gt $SPLMaxWaresAmount * 0.75) and ($SPLIntTradeStationGroup.count lt 1)">
+								<set_value name="$IntStationOwner" exact="faction.split" />
+								<set_value name="$IntStationNeeded" exact="true" />
+								<find_sector name="$IntStationSector" space="player.galaxy">
+									<match owner="$IntStationOwner" />
+								</find_sector>
+								<do_if value="$IntStationNeeded and $IntStationSector">
+									<include_actions ref="BuildIntTradeStation" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<set_value name="$IntStationNeeded" exact="false" />
+								</do_if>
+							</do_if>
 							
 							<remove_value name="$IntStation" />
 							<remove_value name="$IntStationOwner" />
@@ -314,6 +449,16 @@
 							<remove_value name="$SCAMaxWaresAmount" />
 							<remove_value name="$TELWaresAmount" />
 							<remove_value name="$TELMaxWaresAmount" />
+							<remove_value name="$BUCWaresAmount" />
+							<remove_value name="$BUCMaxWaresAmount" />
+							<remove_value name="$FAFWaresAmount" />
+							<remove_value name="$FAFMaxWaresAmount" />
+							<remove_value name="$FRFWaresAmount" />
+							<remove_value name="$FRFMaxWaresAmount" />
+							<remove_value name="$CABWaresAmount" />
+							<remove_value name="$CABMaxWaresAmount" />
+							<remove_value name="$SPLWaresAmount" />
+							<remove_value name="$SPLMaxWaresAmount" />
 							<remove_value name="$IntStationNeeded" />
 							<remove_value name="$IntStationSector" />
 							
@@ -348,30 +493,45 @@
 									<do_if value="$IntStationOwner == faction.alliance">
 										<add_to_group groupname="$ALIIntTradeStationGroup" object="$IntTradeStation" />
 									</do_if>
-									<do_if value="$IntStationOwner == faction.antigone">
+									<do_elseif value="$IntStationOwner == faction.antigone">
 										<add_to_group groupname="$ANTIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.argon">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.argon">
 										<add_to_group groupname="$ARGIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.hatikvah">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.hatikvah">
 										<add_to_group groupname="$HATIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.holyorder">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.holyorder">
 										<add_to_group groupname="$HOPIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.ministry">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.ministry">
 										<add_to_group groupname="$MINIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.paranid">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.paranid">
 										<add_to_group groupname="$PARIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.scaleplate">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.scaleplate">
 										<add_to_group groupname="$SCAIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
-									<do_if value="$IntStationOwner == faction.teladi">
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.teladi">
 										<add_to_group groupname="$TELIntTradeStationGroup" object="$IntTradeStation" />
-									</do_if>
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.buccaneers">
+										<add_to_group groupname="$BUCIntTradeStationGroup" object="$IntTradeStation" />
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.court">
+										<add_to_group groupname="$CABIntTradeStationGroup" object="$IntTradeStation" />
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.fallensplit">
+										<add_to_group groupname="$FAFIntTradeStationGroup" object="$IntTradeStation" />
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.freesplit">
+										<add_to_group groupname="$FRFIntTradeStationGroup" object="$IntTradeStation" />
+									</do_elseif>
+									<do_elseif value="$IntStationOwner == faction.split">
+										<add_to_group groupname="$SPLIntTradeStationGroup" object="$IntTradeStation" />
+									</do_elseif>
 								</do_if>
 								<do_else>
 									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has construction plan but no macro'.[$IntStationOwner]" output="false" append="true" />

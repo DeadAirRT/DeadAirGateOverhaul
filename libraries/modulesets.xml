@@ -7,16 +7,6 @@
 
   <set id="datradestation_teladi"   name="{20112,4301}" race="teladi"  type="tradingstation" macro="station_tel_tradestation_dabase_01_macro" player="true" constructionvesselrequired="true" />
   
-  <set id="dashipyard_argon"    name="{20112,2201}" race="argon"   type="shipyard" macro="station_arg_shipyard_dabase_01_macro" player="true" constructionvesselrequired="true" />
-
-  <set id="dashipyard_paranid"  name="{20112,3201}" race="paranid" type="shipyard" macro="station_par_shipyard_dabase_01_macro" player="true" constructionvesselrequired="true" />
-
-  <set id="dashipyard_teladi"   name="{20112,4201}" race="teladi"  type="shipyard" macro="station_tel_shipyard_dabase_01_macro" player="true" constructionvesselrequired="true" />
-  
-  <set id="dawharf_argon"    name="{20112,2201}" race="argon"   type="wharf" macro="station_arg_wharf_dabase_01_macro" player="true" constructionvesselrequired="true" />
-
-  <set id="dawharf_paranid"  name="{20112,3201}" race="paranid" type="wharf" macro="station_par_wharf_dabase_01_macro" player="true" constructionvesselrequired="true" />
-
-  <set id="dawharf_teladi"   name="{20112,4201}" race="teladi"  type="wharf" macro="station_tel_wharf_dabase_01_macro" player="true" constructionvesselrequired="true" />
+  <set id="datradestation_split"   name="{20112,8301}" race="split"  type="tradingstation" macro="station_spl_tradestation_dabase_01_macro" player="true" constructionvesselrequired="true" />
 </add>
 </diff>

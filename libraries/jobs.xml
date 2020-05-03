@@ -785,6 +785,27 @@
       <owner exact="argon" overridenpc="true"/>
     </ship>
   </job>
+  <job id="argon_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="argon" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="argon" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="argon" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="argon_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -1724,6 +1745,27 @@
     </orders>
     <category faction="antigone" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[antigone]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="antigone" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="antigone" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="antigone_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="antigone" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[antigone]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>
@@ -2685,6 +2727,27 @@
       <owner exact="paranid" overridenpc="true"/>
     </ship>
   </job>
+  <job id="paranid_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="paranid" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="paranid" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="paranid" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="paranid_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -3635,6 +3698,27 @@
       <owner exact="holyorder" overridenpc="true"/>
     </ship>
   </job>
+  <job id="holyorder_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="holyorder" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="holyorder" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="holyorder" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="holyorder_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -4574,6 +4658,27 @@
     </orders>
     <category faction="teladi" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="teladi" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="teladi" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="teladi_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="teladi" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>
@@ -5636,6 +5741,27 @@
       <owner exact="hatikvah" overridenpc="true"/>
     </ship>
   </job>
+  <job id="hatikvah_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="hatikvah" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[hatikvah]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="hatikvah" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="hatikvah" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="hatikvah_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -6575,6 +6701,27 @@
     </orders>
     <category faction="alliance" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[alliance]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="alliance" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="alliance" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="alliance_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="alliance" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[alliance]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>
@@ -7562,6 +7709,27 @@
       <owner exact="scaleplate" overridenpc="true"/>
     </ship>
   </job>
+  <job id="scaleplate_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="scaleplate" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="scaleplate" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="scaleplate" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="scaleplate_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -8501,6 +8669,27 @@
     </orders>
     <category faction="ministry" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[ministry]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="ministry" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="ministry" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="ministry_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="ministry" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[ministry]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>
@@ -9463,6 +9652,27 @@
       <owner exact="split" overridenpc="true"/>
     </ship>
   </job>
+  <job id="zyarth_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="split" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="split" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="split" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="zyarth_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -10403,6 +10613,27 @@
     </orders>
     <category faction="freesplit" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="freesplit" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="freesplit" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="freesplit_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="freesplit" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>
@@ -11364,6 +11595,27 @@
       <owner exact="fallensplit" overridenpc="true"/>
     </ship>
   </job>
+  <job id="fallensplit_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="fallensplit" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[fallensplit]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="fallensplit" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="fallensplit" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="fallensplit_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -12314,6 +12566,27 @@
       <owner exact="court" overridenpc="true"/>
     </ship>
   </job>
+  <job id="court_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="court" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="court" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="court" overridenpc="true"/>
+    </ship>
+  </job>
 <!-- CRITICAL ECONOMY JOBS -->
   <job id="court_bio_trader_m2" name="{20204,1401}">
     <modifiers rebuild="true" commandeerable="true"/>
@@ -13253,6 +13526,27 @@
     </orders>
     <category faction="buccaneers" tags="[factionlogic, builder]" size="ship_xl"/>
     <quota galaxy="20" cluster="1"/><!--construction_vessel_xl-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="[buccaneers]" relation="self" comparison="exact" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+    <ship>
+      <select faction="buccaneers" tags="[builder]" size="ship_xl"/>
+      <loadout>
+        <level exact="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="buccaneers" overridenpc="true"/>
+    </ship>
+  </job>
+  <job id="buccaneers_construction_vessel_xl_player" name="{20204,5101}">
+    <modifiers rebuild="true" commandeerable="true"/>
+    <orders>
+      <order order="FindBuildTasks" default="true">
+        <param name="maxjumps" value="6"/>
+		<param name="playeronly" value="true"/>
+      </order>
+    </orders>
+    <category faction="buccaneers" tags="[factionlogic, builder]" size="ship_xl"/>
+    <quota galaxy="2" cluster="1"/><!--construction_vessel_xl_player-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[buccaneers]" relation="self" comparison="exact" matchextension="false"/>
     <environment buildatshipyard="true"/>
     <ship>

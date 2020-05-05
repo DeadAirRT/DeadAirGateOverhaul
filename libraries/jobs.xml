@@ -16026,7 +16026,8 @@
       <owner exact="xenon" overridenpc="true"/>
     </ship>
     <subordinates>
-      <subordinate job="xenon_frigate_escort_m"/>
+      <subordinate job="xenon_destroyer_escort_xl"/>
+	  <subordinate job="xenon_frigate_escort_m"/>
 	  <subordinate job="xenon_frigate_escort_m"/>
     </subordinates>
   </job>

@@ -413,4 +413,27 @@
 	</ship>
   
 </add>
+<add sel="//ships">
+  <ship id="faf_plunderer" group="faf_pirate_l">
+    <category tags="[military, plunderer, mission]" faction="[fallensplit]" size="ship_l"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="fallensplit" tags="commander"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_large_military"/>
+    <people ref="freesplit_veteran_military_crew"/>
+  </ship>
+
+  <ship id="faf_scavenger" group="faf_pirate_m">
+    <category tags="[military, plunderer, mission]" faction="[fallensplit]" size="ship_m"/>
+    <owner exact="fallensplit" overridenpc="true"/>
+    <pilot>
+      <select faction="fallensplit" tags="commander"/>
+    </pilot>
+    <basket basket="pirate_container"/>
+    <drop ref="ship_small_military"/>
+    <people ref="freesplit_military_crew"/>
+  </ship>
+</add>
 </diff>

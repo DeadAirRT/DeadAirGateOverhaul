@@ -58,6 +58,7 @@
 				<do_if value="not $SPLIntTradeStationGroup?">
 					<create_group groupname="$SPLIntTradeStationGroup" />
 				</do_if>
+				<set_value name="$IntTradeStationDebugChance" exact="false" />
 				<set_value name="$OwnerList" exact="[faction.alliance, faction.antigone, faction.argon, faction.buccaneers, faction.court, faction.fallensplit, faction.freesplit, faction.hatikvah, faction.holyorder, faction.ministry, faction.paranid, faction.scaleplate, faction.split, faction.teladi]" />
 				<set_value name="$ProductList" exact="[ware.antimattercells, ware.energycells, ware.graphene, ware.microchips, ware.missilecomponents, ware.quantumtubes, ware.refinedmetals, ware.siliconwafers, ware.smartchips, ware.superfluidcoolant, ware.teladianium, ware.water]" />
 			</actions>
@@ -120,7 +121,7 @@
 											<set_value name="$ALIWaresAmount" exact="$ALIWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$ALIMaxWaresAmount" exact="$ALIMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($ALIWaresAmount)f / ($ALIMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ALI, $ALIWaresAmount, $ALIMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ALI, $ALIWaresAmount, $ALIMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_if>
 									
@@ -130,7 +131,7 @@
 											<set_value name="$ANTWaresAmount" exact="$ANTWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$ANTMaxWaresAmount" exact="$ANTMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($ANTWaresAmount)f / ($ANTMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ANT, $ANTWaresAmount, $ANTMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ANT, $ANTWaresAmount, $ANTMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -140,7 +141,7 @@
 											<set_value name="$ARGWaresAmount" exact="$ARGWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$ARGMaxWaresAmount" exact="$ARGMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($ARGWaresAmount)f / ($ARGMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ARG, $ARGWaresAmount, $ARGMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$ARG, $ARGWaresAmount, $ARGMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -150,7 +151,7 @@
 											<set_value name="$HATWaresAmount" exact="$HATWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$HATMaxWaresAmount" exact="$HATMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($HATWaresAmount)f / ($HATMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HAT, $HATWaresAmount, $HATMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HAT, $HATWaresAmount, $HATMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -160,7 +161,7 @@
 											<set_value name="$HOPWaresAmount" exact="$HOPWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$HOPMaxWaresAmount" exact="$HOPMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($HOPWaresAmount)f / ($HOPMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HOP, $HOPWaresAmount, $HOPMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$HOP, $HOPWaresAmount, $HOPMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -170,7 +171,7 @@
 											<set_value name="$MINWaresAmount" exact="$MINWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$MINMaxWaresAmount" exact="$MINMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($MINWaresAmount)f / ($MINMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$MIN, $MINWaresAmount, $MINMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$MIN, $MINWaresAmount, $MINMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -180,7 +181,7 @@
 											<set_value name="$PARWaresAmount" exact="$PARWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$PARMaxWaresAmount" exact="$PARMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($PARWaresAmount)f / ($PARMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$PAR, $PARWaresAmount, $PARMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$PAR, $PARWaresAmount, $PARMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -190,7 +191,7 @@
 											<set_value name="$SCAWaresAmount" exact="$SCAWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$SCAMaxWaresAmount" exact="$SCAMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($SCAWaresAmount)f / ($SCAMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SCA, $SCAWaresAmount, $SCAMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SCA, $SCAWaresAmount, $SCAMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -200,7 +201,7 @@
 											<set_value name="$TELWaresAmount" exact="$TELWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$TELMaxWaresAmount" exact="$TELMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($TELWaresAmount)f / ($TELMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$TEL, $TELWaresAmount, $TELMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$TEL, $TELWaresAmount, $TELMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -210,7 +211,7 @@
 											<set_value name="$BUCWaresAmount" exact="$BUCWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$BUCMaxWaresAmount" exact="$BUCMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($BUCWaresAmount)f / ($BUCMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$BUC, $BUCWaresAmount, $BUCMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$BUC, $BUCWaresAmount, $BUCMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -220,7 +221,7 @@
 											<set_value name="$CABWaresAmount" exact="$CABWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$CABMaxWaresAmount" exact="$CABMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($CABWaresAmount)f / ($CABMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$CAB, $CABWaresAmount, $CABMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$CAB, $CABWaresAmount, $CABMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -230,7 +231,7 @@
 											<set_value name="$FAFWaresAmount" exact="$FAFWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$FAFMaxWaresAmount" exact="$FAFMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($FAFWaresAmount)f / ($FAFMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FAF, $FAFWaresAmount, $FAFMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FAF, $FAFWaresAmount, $FAFMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -240,7 +241,7 @@
 											<set_value name="$FRFWaresAmount" exact="$FRFWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$FRFMaxWaresAmount" exact="$FRFMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($FRFWaresAmount)f / ($FRFMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FRF, $FRFWaresAmount, $FRFMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$FRF, $FRFWaresAmount, $FRFMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 									
@@ -250,13 +251,13 @@
 											<set_value name="$SPLWaresAmount" exact="$SPLWaresAmount + $IntStation.cargo.{$ware}.count" />
 											<set_value name="$SPLMaxWaresAmount" exact="$SPLMaxWaresAmount + $IntStation.cargo.{$ware}.target" />
 											<set_value name="$WaresPercent" exact="((($SPLWaresAmount)f / ($SPLMaxWaresAmount)f) * 100.0)i" />
-											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SPL, $SPLWaresAmount, $SPLMaxWaresAmount, $WaresPercent]" output="false" append="true" />
+											<debug_to_file name="$IntStationOwner.knownname" directory="'DeadAir_Fill_Int_Station'" text="'Step %1 - Amount: %2 // Max: %3 // Percent: %4'.[$SPL, $SPLWaresAmount, $SPLMaxWaresAmount, $WaresPercent]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 										</do_all>
 									</do_elseif>
 								</do_all>
 							</do_if>
 							<do_else>
-								<debug_to_file name="'Fail'" directory="'DeadAir_Fill_Int_Station'" text="'No Stations Found -- ERROR'" output="false" append="true" />
+								<debug_to_file name="'Fail'" directory="'DeadAir_Fill_Int_Station'" text="'No Stations Found -- ERROR'" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 							</do_else>
 							
 							<!-- USE VALUES FROM ABOVE TO FIND IF WE WANT A STATION -->
@@ -268,7 +269,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -280,7 +281,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -292,7 +293,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -304,7 +305,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -316,7 +317,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -328,7 +329,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -340,7 +341,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -352,7 +353,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -364,7 +365,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -376,7 +377,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -388,7 +389,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -400,7 +401,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -412,7 +413,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -424,7 +425,7 @@
 								</find_sector>
 								<do_if value="$IntStationNeeded and $IntStationSector">
 									<include_actions ref="BuildIntTradeStation" />
-									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" />
+									<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1, %2, %3'.[$IntStationOwner, $IntStationNeeded, $IntStationSector.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<set_value name="$IntStationNeeded" exact="false" />
 								</do_if>
 							</do_if>
@@ -464,7 +465,7 @@
 							
 						</do_if>
 						<do_else>
-							<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1 : No stations needed'.[player.systemtime.{'%Y-%m-%d %H:%M:%S'}]" output="false" append="true" />
+							<debug_to_file name="'Station_Needed'" directory="'DeadAir_Fill_Int_Station'" text="'%1 : No stations needed'.[player.systemtime.{'%Y-%m-%d %H:%M:%S'}]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 						</do_else>
 					</actions>
 				</cue>
@@ -475,11 +476,11 @@
 						<set_value name="$StationType" exact="'tradingstation'" />
 						<get_construction_plan result="$IntTradeStationConstructionPlan" faction="$IntStationOwner" tags="$StationTag" />
 						<do_if value="$IntTradeStationConstructionPlan">
-							<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has construction plan: %2'.[$IntStationOwner, $IntTradeStationConstructionPlan]" output="false" append="true" />
+							<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has construction plan: %2'.[$IntStationOwner, $IntTradeStationConstructionPlan]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 							<get_module_set_macro result="$IntTradeStationMacro" race="$IntStationOwner.primaryrace" type="$StationType" />
 								<do_if value="$IntTradeStationConstructionPlan and $IntTradeStationMacro">
-									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has station macro: %2'.[$IntStationOwner, $IntTradeStationMacro]" output="false" append="true" />
-									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 will be built in %2 at %3'.[$IntStationOwner, $IntStationSector, $Position]" output="false" append="true" />
+									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has station macro: %2'.[$IntStationOwner, $IntTradeStationMacro]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
+									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 will be built in %2 at %3'.[$IntStationOwner, $IntStationSector, $Position]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<create_station groupname="$IntTradeStationGroup" name="$IntTradeStation" sector="$IntStationSector" owner="$IntStationOwner" macro="$IntTradeStationMacro">
 										<safepos value="$Position" includeplotbox="true"/>
 									</create_station>
@@ -488,7 +489,7 @@
 										<apply_loadout sequence="$IntTradeStationConstructionPlan" index="$l" loadout="$Loadouts.{$l}"  />
 									</do_all>
 									<add_build_to_expand_station object="$IntTradeStation.buildstorage" buildobject="$IntTradeStation" constructionplan="$IntTradeStationConstructionPlan" result="$BuildID" />
-									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 started construction on station %2 in sector %3. Build ID -- %4 at position %5'.[$IntStationOwner, $IntTradeStation.knownname, $IntStationSector.knownname, $BuildID, $Position]" output="false" append="true" />
+									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 started construction on station %2 in sector %3. Build ID -- %4 at position %5'.[$IntStationOwner, $IntTradeStation.knownname, $IntStationSector.knownname, $BuildID, $Position]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 									<add_to_group groupname="$IntTradeStationGroupBuildStorage" object="$IntTradeStation.buildstorage" />
 									<do_if value="$IntStationOwner == faction.alliance">
 										<add_to_group groupname="$ALIIntTradeStationGroup" object="$IntTradeStation" />
@@ -534,11 +535,11 @@
 									</do_elseif>
 								</do_if>
 								<do_else>
-									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has construction plan but no macro'.[$IntStationOwner]" output="false" append="true" />
+									<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 has construction plan but no macro'.[$IntStationOwner]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 								</do_else>
 						</do_if>
 						<do_else>
-							<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 Failed, no construction plan'.[$IntStationOwner]" output="false" append="true" />
+							<debug_to_file name="'BuildIntTradeStation'" directory="'DeadAir_Fill_Int_Station'" text="'%1 Failed, no construction plan'.[$IntStationOwner]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 						</do_else>
 						<remove_value name="$StationTag" />
 						<remove_value name="$StationType" />
@@ -567,7 +568,7 @@
 									<set_value name="$IntTradeStationWareDebug" exact="$IntTradeStationWareDebug + '//' + $IntTradeStationWare.name" />
 									<remove_tradeware object="$NewIntTradeStation" ware="$IntTradeStationWare" />
 								</do_all>
-								<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="$IntTradeStationWareDebug" output="false" append="true" />
+								<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="$IntTradeStationWareDebug" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 							</do_if>
 							<!-- [ware.antimattercells, ware.energycells, ware.graphene, ware.microchips, ware.missilecomponents, ware.quantumtubes, ware.refinedmetals, ware.siliconwafers, ware.smartchips, ware.superfluidcoolant, ware.teladianium, ware.water] -->
 							<add_tradeware object="$NewIntTradeStation" ware="ware.antimattercells" allowbuy="true" allowsell="true" lockavgprice="true" />
@@ -590,13 +591,13 @@
 								<set_value name="$IntTradeStationWare" exact="$NewIntTradeStation.tradewares.list.{$j}" />
 								<set_value name="$IntTradeStationWareDebug" exact="$IntTradeStationWareDebug + '//' + $IntTradeStationWare.name" />
 							</do_all>
-							<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="$IntTradeStationWareDebug" output="false" append="true" />
+							<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="$IntTradeStationWareDebug" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 							<remove_from_group group="$IntTradeStationGroupBuildStorage" object="$NewIntTradeStation.buildstorage" />
 							<remove_value name="$IntTradeStationWareDebug" />
 							<remove_value name="$IntTradeStationWare" />
 						</do_if>
 						<do_else>
-							<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="'%1 : %2 %3 not operational'.[player.systemtime.{'%Y-%m-%d %H:%M:%S'}, $NewIntTradeStationOwner, $NewIntTradeStation.knownname]" output="false" append="true" />
+							<debug_to_file name="'IntTradeStationWareCheck'" directory="'DeadAir_Fill_Int_Station'" text="'%1 : %2 %3 not operational'.[player.systemtime.{'%Y-%m-%d %H:%M:%S'}, $NewIntTradeStationOwner, $NewIntTradeStation.knownname]" output="false" append="true" chance="if @$IntTradeStationDebugChance then ($IntTradeStationDebugChance * 100) else 0"/>
 						</do_else>
 						<remove_value name="$NewIntTradeStation" />
 						<remove_value name="$NewIntTradeStationOwner" />

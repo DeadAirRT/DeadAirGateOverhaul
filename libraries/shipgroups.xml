@@ -397,4 +397,15 @@
     <select macro="ship_tel_s_scout_02_b_macro"/>
   </group>
 </add>
+
+<add sel="//groups">
+  <group name="faf_pirate_l">
+    <select macro="ship_spl_l_destroyer_01_a_macro"/>
+  </group>
+  <group name="faf_pirate_m">
+    <select macro="ship_spl_m_frigate_01_a_macro" weight="5"/>
+    <select macro="ship_spl_m_corvette_01_a_macro" weight="5"/>
+    <select macro="ship_spl_m_corvette_01_b_macro" weight="50"/>
+  </group>
+</add>
 </diff>

@@ -18574,6 +18574,56 @@
       <subordinate job="fallensplit_fighter_escort_s_frigate"/>
     </subordinates>
   </job>
+
+<!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER --><!-- BEGIN FAF PLUNDER -->
+  <job id="fallensplit_frigate_plunder_m_sector" name="{20204,4301}" comment="">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'cluster'" />
+        <param name="plundermode" value="1" />
+		<param name="checkrelation" value="true" />
+      </order>
+    </orders>
+    <category faction="fallensplit" tags="[plunderer]" size="ship_m"/>
+    <quota galaxy="5" sector="1"/><!--frigate_plunder_m_sector-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="fallensplit" relation="enemy" comparison="le" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+	<basket basket="pirate_container"/>
+    <ship>
+      <select faction="fallensplit" tags="[plunderer]" size="ship_m"/>
+      <loadout>
+        <level min="0.5" max="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="fallensplit" overridenpc="true"/>
+    </ship>
+  </job>
+  
+  <job id="fallensplit_destroyer_plunder_l_sector" name="{20204,4101}" comment="">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'cluster'" />
+        <param name="plundermode" value="1" />
+		<param name="checkrelation" value="true" />
+      </order>
+    </orders>
+    <category faction="fallensplit" tags="[plunderer]" size="ship_l"/>
+    <quota galaxy="5" sector="1"/><!--destroyer_plunder_l_sector-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="fallensplit" relation="enemy" comparison="le" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+	<basket basket="pirate_container"/>
+    <ship>
+      <select faction="fallensplit" tags="[plunderer]" size="ship_m"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="fallensplit" overridenpc="true"/>
+    </ship>
+  </job>
+<!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER --><!-- END FAF PLUNDER -->
 <!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR --><!-- END FAF WAR -->
 <!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR --><!-- BEGIN CAB WAR -->
   <job id="court_carrier_patrol_xl_sector" name="{20204,3201}" comment="">
@@ -19288,6 +19338,56 @@
       <subordinate job="buccaneers_fighter_escort_s_frigate"/>
     </subordinates>
   </job>
+  
+<!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER --><!-- BEGIN BUC PLUNDER -->
+  <job id="buccaneers_frigate_plunder_m_sector" name="{20204,4301}" comment="">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'cluster'" />
+        <param name="plundermode" value="1" />
+		<param name="checkrelation" value="true" />
+      </order>
+    </orders>
+    <category faction="buccaneers" tags="[plunderer]" size="ship_m"/>
+    <quota galaxy="5" sector="1"/><!--frigate_plunder_m_sector-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="buccaneers" relation="enemy" comparison="le" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+	<basket basket="pirate_container"/>
+    <ship>
+      <select faction="buccaneers" tags="[plunderer]" size="ship_m"/>
+      <loadout>
+        <level min="0.5" max="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="buccaneers" overridenpc="true"/>
+    </ship>
+  </job>
+  
+  <job id="buccaneers_destroyer_plunder_l_sector" name="{20204,4101}" comment="">
+    <modifiers commandeerable="false"/>
+    <orders>
+      <order order="Plunder" default="true">
+        <param name="range_internal" value="'cluster'" />
+        <param name="plundermode" value="1" />
+		<param name="checkrelation" value="true" />
+      </order>
+    </orders>
+    <category faction="buccaneers" tags="[plunderer]" size="ship_l"/>
+    <quota galaxy="5" sector="1"/><!--destroyer_plunder_l_sector-->
+    <location class="galaxy" macro="xu_ep2_universe_macro" faction="buccaneers" relation="enemy" comparison="le" matchextension="false"/>
+    <environment buildatshipyard="true"/>
+	<basket basket="pirate_container"/>
+    <ship>
+      <select faction="buccaneers" tags="[plunderer]" size="ship_m"/>
+      <loadout>
+        <level min="0.7" max="1.0"/>
+		<variation min="0.0" max="0.4"/>
+      </loadout>
+      <owner exact="buccaneers" overridenpc="true"/>
+    </ship>
+  </job>
+<!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER --><!-- END BUC PLUNDER -->
 <!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR --><!-- END BUC WAR -->
 <!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC --><!-- MASS TRAFFIC -->
   <!--argon sectors-->

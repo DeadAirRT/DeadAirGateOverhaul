@@ -1226,8 +1226,12 @@
 <remove sel="//god/stations/station[@id='shipyard_argon_01']/position" />
 <remove sel="//god/stations/station[@id='wharf_argon_01']/position" />
 <!-- HOP -->
+<remove sel="//god/stations/station[@id='hol_defence_cluster_12_sector001_extra']" />
+<remove sel="//god/stations/station[@id='hol_defence_cluster_24_sector001_extra']" />
+<remove sel="//god/stations/station[@id='hol_defence_cluster_11_sector001_extra']" />
 <!-- PAR -->
 <remove sel="//god/stations/station[@id='par_defence_cluster_47_sector001']/position" />
+<remove sel="//god/stations/station[@id='par_defence_cluster_22_sector001_extra']" />
 <!-- TEL -->
 <remove sel="//god/stations/station[@id='tel_dlc_split_ringstation_01']" />
 <remove sel="//god/stations/station[@id='ringstation_02']/position" />
@@ -1256,6 +1260,7 @@
 <!-- CAB -->
 <!-- BUC -->
 <!-- HAT -->
+<remove sel="//god/stations/station[@id='hat_defence_cluster_29_sector001_extra']" />
 <!-- SCA -->
 <!-- ALI -->
 <!-- MIN -->

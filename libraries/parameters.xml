@@ -13,6 +13,8 @@
 <replace sel="//parameters/aiflight/steering/linear/@start">1.8</replace>
 <replace sel="//parameters/aiflight/steering/linear/@end">10</replace>
 
+<replace sel="//parameters/jobs/cleanup/@maxfactor">1.0</replace>
+
 <replace sel="//parameters/aiflight/skills/skill[@level='0']/@strafespeed">0.5</replace>
 <replace sel="//parameters/aiflight/skills/skill[@level='0']/@strafeacc">0.5</replace>
 <replace sel="//parameters/aiflight/skills/skill[@level='0']/@steeringspeed">0.5</replace>

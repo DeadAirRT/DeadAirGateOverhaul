@@ -1,52 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
-	<!-- Back to basics
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0011']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0042']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0043']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0044']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0011']/@paintmod">paintmod_ALI1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0042']/@paintmod">paintmod_ALI2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0043']/@paintmod">paintmod_ALI3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='alliance']/select[@paintmod='paintmod_0044']/@paintmod">paintmod_ALI4</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0003']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0027']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0028']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0029']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0003']/@paintmod">paintmod_ANT1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0027']/@paintmod">paintmod_ANT2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0028']/@paintmod">paintmod_ANT3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='antigone']/select[@paintmod='paintmod_0029']/@paintmod">paintmod_ANT4</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0002']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0024']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0025']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0026']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0002']/@paintmod">paintmod_ARG1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0024']/@paintmod">paintmod_ARG2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0025']/@paintmod">paintmod_ARG3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='argon']/select[@paintmod='paintmod_0026']/@paintmod">paintmod_ARG4</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0007']/@weight">8</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0013']/@weight">23</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0021']/@weight">23</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0022']/@weight">23</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0023']/@weight">23</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='buccaneers']/select[@paintmod='paintmod_0103']/@paintmod">paintmod_BUC1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='buccaneers']/select[@paintmod='paintmod_0104']/@paintmod">paintmod_BUC1</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0010']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0039']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0040']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0041']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='court']/select[@paintmod='paintmod_0088']/@paintmod">paintmod_CAB1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='court']/select[@paintmod='paintmod_0095']/@paintmod">paintmod_CAB2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='court']/select[@paintmod='paintmod_0096']/@paintmod">paintmod_CAB3</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0012']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0045']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0046']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0047']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='fallensplit']/select[@paintmod='paintmod_0093']/@paintmod">paintmod_FAF1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='fallensplit']/select[@paintmod='paintmod_0089']/@paintmod">paintmod_FAF2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='fallensplit']/select[@paintmod='paintmod_0094']/@paintmod">paintmod_FAF3</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0009']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0036']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0037']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0038']/@weight">30</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='freesplit']/select[@paintmod='paintmod_0093']/@paintmod">paintmod_FRF1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='freesplit']/select[@paintmod='paintmod_0089']/@paintmod">paintmod_FRF2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='freesplit']/select[@paintmod='paintmod_0094']/@paintmod">paintmod_FRF3</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0005']/@weight">5</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0014']/@weight">19</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0020']/@weight">19</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0033']/@weight">19</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0034']/@weight">19</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0035']/@weight">19</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0007']/@paintmod">paintmod_HAT1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0013']/@paintmod">paintmod_HAT2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0021']/@paintmod">paintmod_HAT3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0022']/@paintmod">paintmod_HAT4</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='hatikvah']/select[@paintmod='paintmod_0023']/@paintmod">paintmod_HAT5</replace>
 	
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0004']/@weight">10</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0030']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0031']/@weight">30</replace>
-	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0032']/@weight">30</replace>
-	-->
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0010']/@paintmod">paintmod_HOP1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0039']/@paintmod">paintmod_HOP2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0040']/@paintmod">paintmod_HOP3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='holyorder']/select[@paintmod='paintmod_0041']/@paintmod">paintmod_HOP4</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0012']/@paintmod">paintmod_MIN1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0045']/@paintmod">paintmod_MIN2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0046']/@paintmod">paintmod_MIN3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='ministry']/select[@paintmod='paintmod_0047']/@paintmod">paintmod_MIN4</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0009']/@paintmod">paintmod_PAR1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0036']/@paintmod">paintmod_PAR2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0037']/@paintmod">paintmod_PAR3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='paranid']/select[@paintmod='paintmod_0038']/@paintmod">paintmod_PAR4</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0005']/@paintmod">paintmod_SCA1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0014']/@paintmod">paintmod_SCA2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0020']/@paintmod">paintmod_SCA3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0033']/@paintmod">paintmod_SCA4</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0034']/@paintmod">paintmod_SCA5</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='scaleplate']/select[@paintmod='paintmod_0035']/@paintmod">paintmod_SCA6</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='split']/select[@paintmod='paintmod_0090']/@paintmod">paintmod_SPL1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='split']/select[@paintmod='paintmod_0091']/@paintmod">paintmod_SPL2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='split']/select[@paintmod='paintmod_0092']/@paintmod">paintmod_SPL3</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0004']/@paintmod">paintmod_TEL1</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0030']/@paintmod">paintmod_TEL2</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0031']/@paintmod">paintmod_TEL3</replace>
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='teladi']/select[@paintmod='paintmod_0032']/@paintmod">paintmod_TEL4</replace>
+	
+	<replace sel="//themes/theme[@id='painttheme_race_ship']/group[@faction='trinity']/select[@paintmod='paintmod_0102']/@paintmod">paintmod_TRI1</replace>
 </diff>

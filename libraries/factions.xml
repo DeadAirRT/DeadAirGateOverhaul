@@ -33,12 +33,16 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
 <remove sel="//factions/faction[@id='antigone']/@policefaction" />
 
 <replace sel="//factions/faction[@id='buccaneers']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
+<add sel="//factions/faction[@id='buccaneers']">
+	<signals>
+      <response signal="policehalt" response="attack" />
+    </signals>
+</add>
 
 <replace sel="//factions/faction[@id='court']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship</replace>
 <remove sel="//factions/faction[@id='court']/@active" />
 
 <replace sel="//factions/faction[@id='fallensplit']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
-<remove sel="//factions/faction[@id='fallensplit']/signals" />
 
 <replace sel="//factions/faction[@id='freesplit']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
 <remove sel="//factions/faction[@id='freesplit']/signals" />
@@ -51,30 +55,40 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
 
 <replace sel="//factions/faction[@id='scaleplate']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
 <!--<remove sel="//factions/faction[@id='scaleplate']/policefaction" />-->
-<remove sel="//factions/faction[@id='scaleplate']/signals" />
+<remove sel="//factions/faction[@id='scaleplate']/signals/response[@signal='foundlockbox']" />
 
 <replace sel="//factions/faction[@id='teladi']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship</replace>
 <remove sel="//factions/faction[@id='teladi']/@policefaction" />
 
 
 
-
-<replace sel="//factions/faction[@id='player']/color"><color r="35" g="100" b="35" /></replace>
-<replace sel="//factions/faction[@id='alliance']/color"><color r="50" g="23" b="77" /></replace>
-<replace sel="//factions/faction[@id='antigone']/color"><color r="0" g="90" b="128" /></replace>
-<replace sel="//factions/faction[@id='argon']/color"><color r="0" g="0" b="255" /></replace>
-<replace sel="//factions/faction[@id='hatikvah']/color"><color r="0" g="204" b="255" /></replace>
-<replace sel="//factions/faction[@id='holyorder']/color"><color r="224" g="176" b="255" /></replace>
-<replace sel="//factions/faction[@id='khaak']/color"><color r="144" g="0" b="32" /></replace>
-<replace sel="//factions/faction[@id='ministry']/color"><color r="255" g="191" b="0" /></replace>
-<replace sel="//factions/faction[@id='paranid']/color"><color r="127" g="0" b="255" /></replace>
-<replace sel="//factions/faction[@id='scaleplate']/color"><color r="255" g="134" b="11" /></replace>
-<replace sel="//factions/faction[@id='teladi']/color"><color r="255" g="255" b="0" /></replace>
-<replace sel="//factions/faction[@id='xenon']/color"><color r="200" g="8" b="21" /></replace>
+<!--Let's see what the vanilla colors are...and they suck -->
+<replace sel="//factions/faction[@id='player']/color"><color r="0" g="255" b="0" /></replace><!--v4-->
+<replace sel="//factions/faction[@id='alliance']/color"><color r="249" g="147" b="121" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='antigone']/color"><color r="161" g="202" b="241" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='argon']/color"><color r="0" g="103" b="165" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='buccaneers']/color"><color r="96" g="78" b="151" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='court']/color"><color r="220" g="211" b="0" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='fallensplit']/color"><color r="194" g="178" b="128" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='freesplit']/color"><color r="136" g="45" b="23" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='hatikvah']/color"><color r="141" g="182" b="0" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='holyorder']/color"><color r="179" g="68" b="108" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='khaak']/color"><color r="190" g="0" b="50" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='ministry']/color"><color r="185" g="184" b="181" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='paranid']/color"><color r="135" g="86" b="146" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='scaleplate']/color"><color r="230" g="143" b="172" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='split']/color"><color r="243" g="132" b="0" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='teladi']/color"><color r="243" g="195" b="0" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='trinity']/color"><color r="246" g="166" b="0" /></replace><!--v3-->
+<replace sel="//factions/faction[@id='xenon']/color"><color r="255" g="0" b="0" /></replace><!--v4-->
 
 <!-- Player -->
 <remove sel="//factions/faction[@id='player']/licences/licence[@type='station_gen_basic'][2]" />
 <replace sel="//factions/faction[@id='player']/licences/licence[@type='station_gen_basic']/@factions">alliance antigone argon buccaneers court fallensplit freesplit hatikvah holyorder ministry paranid scaleplate split teladi trinity</replace>
+<remove sel="//factions/faction[@id='player']/licences/licence[@type='generaluseequipment'][2]" />
+<replace sel="//factions/faction[@id='player']/licences/licence[@type='generaluseequipment']/@factions">alliance antigone argon buccaneers court fallensplit freesplit hatikvah holyorder ministry paranid scaleplate split teladi trinity</replace>
+<remove sel="//factions/faction[@id='player']/licences/licence[@type='generaluseship'][2]" />
+<replace sel="//factions/faction[@id='player']/licences/licence[@type='generaluseship']/@factions">alliance antigone argon buccaneers court fallensplit freesplit hatikvah holyorder ministry paranid scaleplate split teladi trinity</replace>
 
 <!-- ALI // PAR // HOP // BUC-->
 <replace sel="//factions/faction[@id='alliance']/licences">
@@ -87,10 +101,10 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2321}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2131}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3101}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-	  <licence type="police" name="{3323247,1011}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+	  <licence type="police" name="{3323247,1011}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
 	  <licence type="subgroupfriend" name="{20207,6051}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4051}" minrelation="0.1" precursor="ceremonyally" price="500000" />
+      <licence type="tradesubscription" name="{20207,4051}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
 	  <licence type="station_equip_lxl" name="{3323247,1012}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{3323247,1013}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{3323247,1014}" minrelation="0.1" precursor="ceremonyally" price="0" />
@@ -119,14 +133,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2221}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2091}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3061}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{20207,1011}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
+      <licence type="police" name="{20207,1011}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{20207,7211}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7201}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7361}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_basic" name="{20207,7341}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7351}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4031}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4031}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
 	  <licence type="capitalequipment" factions="alliance" />
 	  <!--<licence type="capitalship" factions="alliance" />-->
 	  <licence type="generaluseequipment" factions="alliance" />
@@ -150,14 +164,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2271}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2111}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3081}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{20207,1021}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
+      <licence type="police" name="{20207,1021}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{20207,7231}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7221}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7391}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_basic" name="{20207,7371}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7381}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4041}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4041}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
       <licence type="capitalequipment" factions="paranid" />
       <licence type="generaluseequipment" factions="paranid" />
       <licence type="militaryequipment" factions="paranid" />
@@ -178,14 +192,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2491}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2501}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3241}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{20207,1061}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+      <licence type="police" name="{20207,1061}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{20207,7651}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7661}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7671}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_basic" name="{20207,7681}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7691}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4111}" minrelation="0.1" precursor="ceremonyally" price="12000000" />
+      <licence type="tradesubscription" name="{20207,4111}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
       <licence type="capitalequipment" factions="paranid argon antigone holyorder" />
       <licence type="capitalship" factions="paranid argon antigone holyorder" />
       <licence type="generaluseequipment" factions="paranid argon antigone holyorder" />
@@ -210,10 +224,10 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2341}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2071}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3041}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-	  <licence type="police" name="{3323247,1041}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+	  <licence type="police" name="{3323247,1041}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
       <licence type="station_illegal" name="{20207,7461}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="subgroupfriend" name="{20207,6021}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4021}" minrelation="0.1" precursor="ceremonyally" price="500000" />
+      <licence type="tradesubscription" name="{20207,4021}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
 	  <licence type="station_equip_lxl" name="{3323247,1042}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{3323247,1043}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{3323247,1044}" minrelation="0.1" precursor="ceremonyally" price="0" />
@@ -243,7 +257,7 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2211}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2031}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3001}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{20207,1001}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
+      <licence type="police" name="{20207,1001}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{20207,7171}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7161}" minrelation="0.1" precursor="ceremonyally" price="0" />
@@ -251,7 +265,7 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_basic" name="{20207,7281}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7291}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="subgroupfriend" name="{20207,6001}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4001}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4001}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
 	  <licence type="capitalequipment" factions="hatikvah" />
 	  <!--<licence type="capitalship" factions="hatikvah" />-->
 	  <licence type="generaluseequipment" factions="hatikvah" />
@@ -275,14 +289,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2251}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2051}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3021}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-	  <licence type="police" name="{3323247,1021}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+	  <licence type="police" name="{3323247,1021}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{20207,7191}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7181}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7331}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_basic" name="{20207,7311}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7321}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4011}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4011}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
       <licence type="capitalequipment" factions="argon" />
       <licence type="generaluseequipment" factions="argon" />
       <licence type="militaryequipment" factions="argon" />
@@ -304,10 +318,10 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2351}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2191}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3161}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-	  <licence type="police" name="{3323247,1081}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+	  <licence type="police" name="{3323247,1081}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
       <licence type="station_illegal" name="{20207,7491}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="subgroupfriend" name="{20207,6081}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4081}" minrelation="0.1" precursor="ceremonyally" price="500000" />
+      <licence type="tradesubscription" name="{20207,4081}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
 	  <licence type="station_equip_lxl" name="{3323247,1082}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{3323247,1083}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{3323247,1084}" minrelation="0.1" precursor="ceremonyally" price="0" />
@@ -337,7 +351,7 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2231}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2151}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3121}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-	  <licence type="police" name="{3323247,1091}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
+	  <licence type="police" name="{3323247,1091}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
       <licence type="station_equip_lxl" name="{20207,7251}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7241}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7421}" minrelation="0.1" precursor="ceremonyally" price="0" />
@@ -345,7 +359,7 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_intermediate" name="{20207,7411}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="station_illegal" name="{20207,7481}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="subgroupfriend" name="{20207,6061}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{20207,4061}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4061}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
       <licence type="capitalequipment" factions="ministry" />
       <licence type="generaluseequipment" factions="ministry" />
       <licence type="militaryequipment" factions="ministry" />
@@ -366,14 +380,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="generaluseship" name="{20207,2291}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{20207,2171}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{20207,3141}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{20207,1031}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+      <licence type="police" name="{20207,1031}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
       <licence type="station_equip_lxl" name="{20207,7271}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{20207,7261}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{20207,7451}" minrelation="0.1" precursor="ceremonyally" price="0" />
-      <licence type="station_gen_basic" name="{20207,7431}" price="0" />
+      <licence type="station_gen_basic" name="{20207,7431}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{20207,7441}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="station_illegal" name="{20207,7471}" minrelation="-0.01" price="0" hidden="1" />
-      <licence type="tradesubscription" name="{20207,4071}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{20207,4071}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
       <licence type="capitalequipment" factions="teladi" />
       <licence type="generaluseequipment" factions="teladi" />
       <licence type="militaryequipment" factions="teladi" />
@@ -396,14 +410,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
         <licence type="generaluseship" name="{20207,2411}" minrelation="-0.01" price="0" />
         <licence type="militaryequipment" name="{20207,2421}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
         <licence type="militaryship" name="{20207,3201}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="police" name="{20207,1051}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
+        <licence type="police" name="{20207,1051}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
 		<licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
         <licence type="station_equip_lxl" name="{20207,7551}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_equip_sm" name="{20207,7561}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_advanced" name="{20207,7571}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_basic" name="{20207,7581}" minrelation="-0.01" price="0" />
         <licence type="station_gen_intermediate" name="{20207,7591}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="tradesubscription" name="{20207,4101}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+        <licence type="tradesubscription" name="{20207,4101}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
         <licence type="capitalequipment" factions="freesplit" />
 		<licence type="generaluseequipment" factions="freesplit" />
 		<licence type="militaryequipment" factions="freesplit" />
@@ -424,14 +438,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
         <licence type="generaluseship" name="{20207,2371}" minrelation="-0.01" price="0" />
         <licence type="militaryequipment" name="{20207,2381}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
         <licence type="militaryship" name="{20207,3181}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="police" name="{20207,1041}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+        <licence type="police" name="{20207,1041}" minrelation="0.01" precursor="ceremonyfriend" price="250000" maxlegalscan="2" />
 		<licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
         <licence type="station_equip_lxl" name="{20207,7501}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_equip_sm" name="{20207,7511}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_advanced" name="{20207,7521}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_basic" name="{20207,7531}" minrelation="-0.01" price="0" />
         <licence type="station_gen_intermediate" name="{20207,7541}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="tradesubscription" name="{20207,4091}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+        <licence type="tradesubscription" name="{20207,4091}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
 		<licence type="capitalequipment" factions="split" />
 		<licence type="generaluseequipment" factions="split" />
 		<licence type="militaryequipment" factions="split" />
@@ -446,20 +460,20 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
 	<licences>
       <licence type="capitalequipment" name="{3323247,10101}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="capitalship" name="{3323247,10102}" icon="bse_star" minrelation="0.1" precursor="ceremonyally" price="0" />
-      <licence type="ceremonyally" name="{3323247,10103}" minrelation="0.1" price="0" />
-      <licence type="ceremonyfriend" name="{3323247,10104}" minrelation="0.01" price="0" />
+      <licence type="ceremonyally" name="{3323247,10104}" minrelation="0.1" price="0" />
+      <licence type="ceremonyfriend" name="{3323247,10103}" minrelation="0.01" price="0" />
       <licence type="generaluseequipment" name="{3323247,10105}" minrelation="-0.01" price="0" />
       <licence type="generaluseship" name="{3323247,10106}" minrelation="-0.01" price="0" />
       <licence type="militaryequipment" name="{3323247,10107}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="militaryship" name="{3323247,10108}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="police" name="{3323247,10109}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+      <licence type="police" name="{3323247,10109}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
 	  <licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
       <licence type="station_equip_lxl" name="{3323247,10110}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_equip_sm" name="{3323247,10111}" minrelation="0.1" precursor="ceremonyally" price="0" />
       <licence type="station_gen_advanced" name="{3323247,10112}" minrelation="0.1" precursor="ceremonyally" price="0" />
-      <licence type="station_gen_basic" name="{3323247,10113}" price="0" />
+      <licence type="station_gen_basic" name="{3323247,10113}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{3323247,10114}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-      <licence type="tradesubscription" name="{3323247,10115}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+      <licence type="tradesubscription" name="{3323247,10115}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
 	  <licence type="capitalequipment" factions="freesplit" />
       <licence type="capitalship" factions="freesplit" />
       <licence type="generaluseequipment" factions="freesplit" />
@@ -483,14 +497,14 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
         <licence type="generaluseship" name="{20207,2451}" minrelation="-0.01" price="0" />
         <licence type="militaryequipment" name="{20207,2461}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
         <licence type="militaryship" name="{20207,3221}" icon="bse_star" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="police" name="{20207,1081}" minrelation="0.01" precursor="ceremonyfriend" price="25000" maxlegalscan="2" />
+        <licence type="police" name="{20207,1081}" minrelation="0.01" precursor="ceremonyfriend" price="100000" maxlegalscan="2" />
 		<licence type="station_illegal" name="{20207,7141}" minrelation="-0.01" price="0" hidden="1" />
         <licence type="station_equip_lxl" name="{20207,7601}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_equip_sm" name="{20207,7611}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_advanced" name="{20207,7621}" minrelation="0.1" precursor="ceremonyally" price="0" />
         <licence type="station_gen_basic" name="{20207,7631}" minrelation="-0.01" price="0" />
         <licence type="station_gen_intermediate" name="{20207,7641}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
-        <licence type="tradesubscription" name="{20207,4131}" minrelation="0.1" precursor="ceremonyally" price="2000000" />
+        <licence type="tradesubscription" name="{20207,4131}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
         <licence type="capitalequipment" factions="split" />
         <licence type="capitalship" factions="split" />
         <licence type="generaluseequipment" factions="split" />

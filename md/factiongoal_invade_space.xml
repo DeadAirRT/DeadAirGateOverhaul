@@ -2,4 +2,10 @@
 <diff name="FactionGoal_Invade_Space" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
 <replace sel="//do_if[@value='$NumActiveInvasions gt 0 and $Faction != faction.xenon and $Faction != faction.khaak and $Faction != faction.scaleplate']/@value">$NumActiveInvasions gt 0 and $Faction != faction.xenon and $Faction != faction.khaak</replace>
 <replace sel="//do_if[@value='$Valid and $Faction != faction.khaak and $Faction != faction.hatikvah and $Faction != faction.scaleplate']/@value">$Valid and $Faction != faction.khaak</replace>
+<replace sel="//do_if[@value='$AdjacentSectors.{$i}.cluster == $TargetCluster']">
+		  <do_if value="$AdjacentSectors.{$i}.cluster == $TargetCluster">
+            <find_object name="$LocalEntryPoints" class="class.highwayentrygate" space="$AdjacentSectors.{$i}" destination="$Target" multiple="true"/>
+			<find_gate name="$LocalEntryPoints" append="true" destination="$Target" space="$AdjacentSectors.{$i}" multiple="true"/>
+          </do_if>
+</replace>
 </diff>

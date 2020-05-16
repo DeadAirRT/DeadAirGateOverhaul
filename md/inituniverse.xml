@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff name="InitUniverse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<add sel="//add_tradeware[@ware='ware.sojahusk']" pos="after">
-<add_tradeware object="$controllable" ware="ware.nividium" allowbuy="true" allowsell="false" lockavgprice="false" />
-</add>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@lowerlimit">25</replace>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@upperlimit">35</replace>
+  <remove sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@extremechance"/>
 </diff>

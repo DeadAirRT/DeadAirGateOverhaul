@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<diff name="FinaliseStations" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+<replace sel="//library[@name='DefaultCalculateDocks']/actions/set_value[@name='$TradesPerHour'][@exact='20']/@exact">30</replace>
+<replace sel="//library[@name='DefaultCalculatePiers']/actions/set_value[@name='$TradesPerHour'][@exact='5']/@exact">10</replace>
+<replace sel="//cue[@name='ConstructionSequenceCompleted']/actions/do_if[@value='$ConstructionSequence']/set_value[@name='$BBoxSize']/@exact">$Station.size / 1.5</replace>
+</diff>

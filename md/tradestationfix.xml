@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="DeadAirTradeStationFixv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="Init">
+			<actions>
+			</actions>
+			<cues>
+				<cue name="SignalFindTradeStations" instantiate="false">
+					<conditions>
+						<check_any>
+							<event_cue_signalled cue="md.Setup.GameStart"/>
+							<event_game_loaded/>
+						</check_any>
+					</conditions>
+					<delay exact="60s" />
+					<actions>
+						<signal_cue_instantly cue="FindTradeStations"/>
+					</actions>
+				</cue>
+				<cue name="FindTradeStations" instantiate="false">
+					<conditions>
+						<event_cue_signalled />
+					</conditions>
+					<actions>
+						<set_value name="$delayalpha" exact="2s" />
+						<set_value name="$TradeStationDebugChance" exact="true" />
+						<find_station groupname="$TradeStations" multiple="true" space="player.galaxy" functional="true" tradestation="true" shipyard="false" wharf="false" canequipships="false">
+							<match owner="faction.player" negate="true" />
+							<match_content class="class.buildmodule" negate="true"/>
+						</find_station>
+					</actions>
+					<cues>
+						<cue name="ProcessTradeStations">
+							<delay exact="$delayalpha" />
+							<actions>
+								<do_if value="$TradeStations.count">
+									<set_value name="$TradeStation" exact="$TradeStations.{1}" />
+									<debug_text text="'MOD: DeadAirTradeStationFix -- %1 -- Processing %2 in sector %3'.[player.age,$TradeStation.knownname,$TradeStation.sector.knownname]" 
+										context="false" filter="scripts" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
+									<include_actions ref="FixTradeStations" />
+									<remove_from_group group="$TradeStations" object="$TradeStation"/>
+									<reset_cue cue="this"/>
+								</do_if>
+								<do_else>
+									<remove_value name="$TradeStation" />
+								</do_else>
+							</actions>
+						</cue>
+					</cues>
+				</cue>
+				<library name="FixTradeStations">
+					<actions>
+						<do_if value="$TradeStation.isoperational">
+							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3 is operational.'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname]" output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
+							<do_if value="($TradeStation.isgodobject)">
+								<!-- Set up the trade lists to compare -->
+								<set_value name="$ArgonTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
+									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
+									ware.turretcomponents,ware.weaponcomponents,ware.foodrations,ware.spaceweed,ware.majadust,ware.nividium]"/>
+								<set_value name="$ParanidTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
+									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
+									ware.turretcomponents,ware.weaponcomponents,ware.sojahusk,ware.spaceweed,ware.spacefuel,ware.nividium]"/>
+								<set_value name="$SplitTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
+									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
+									ware.turretcomponents,ware.weaponcomponents,ware.cheltmeat,ware.scruffinfruits,ware.nividium]"/>
+								<set_value name="$TeladiTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
+									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
+									ware.turretcomponents,ware.weaponcomponents,ware.nostropoil,ware.majadust,ware.spacefuel,ware.nividium]"/> 
+								<!-- Figure out which race list we need -->
+								<do_if value="($TradeStation.trueowner == faction.teladi) or ($TradeStation.trueowner == faction.ministry) or ($TradeStation.trueowner == faction.scaleplate)">
+									<set_value name="$CorrectTradewaresList" exact="$TeladiTradeStationWares" />
+								</do_if>
+								<do_elseif value="($TradeStation.trueowner == faction.argon) or ($TradeStation.trueowner == faction.antigone) or ($TradeStation.trueowner == faction.hatikvah)">
+									<set_value name="$CorrectTradewaresList" exact="$ArgonTradeStationWares" />
+								</do_elseif>
+								<do_elseif value="($TradeStation.trueowner == faction.holyorder) or ($TradeStation.trueowner == faction.paranid) or ($TradeStation.trueowner == faction.alliance) or ($TradeStation.trueowner == faction.buccaneers)">
+									<set_value name="$CorrectTradewaresList" exact="$ParanidTradeStationWares" />
+								</do_elseif>
+								<do_elseif value="($TradeStation.trueowner == faction.court) or ($TradeStation.trueowner == faction.fallensplit) or ($TradeStation.trueowner == faction.freesplit) or ($TradeStation.trueowner == faction.split)">
+									<set_value name="$CorrectTradewaresList" exact="$SplitTradeStationWares" />
+								</do_elseif>
+								<!-- Lets test removing all trade wares -->
+								<do_all exact="$TradeStation.tradewares.list.count" counter="$z" reverse="true">
+									<remove_tradeware object="$TradeStation" ware="$TradeStation.tradewares.list.{$z}" />
+								</do_all>
+								<!-- Remove items not from the ideal list-->
+								<!--<do_all exact="$TradeStation.tradewares.list.count" counter="$a" reverse="true">
+									<do_if value="not $CorrectTradewaresList.indexof.{$TradeStation.tradewares.list.{$a}}">
+										<remove_tradeware object="$TradeStation" ware="$TradeStation.tradewares.list.{$a}" />
+									</do_if>
+								</do_all>-->
+								<!-- Add items not already present -->
+								<do_all exact="$CorrectTradewaresList.count" counter="$b">
+									<do_if value="not $TradeStation.tradewares.list.indexof.{$CorrectTradewaresList.{$b}}">
+										<do_if value="$CorrectTradewaresList.{$b} == ware.nividium">
+											<add_tradeware object="$TradeStation" ware="$CorrectTradewaresList.{$b}" allowbuy="true" allowsell="false" lockavgprice="false" />
+										</do_if>
+										<do_else>
+											<add_tradeware object="$TradeStation" ware="$CorrectTradewaresList.{$b}" allowbuy="true" allowsell="true" lockavgprice="true" />
+										</do_else>
+									</do_if>
+								</do_all>
+								<add_default_production_wares object="$TradeStation" lowerlimit="25" upperlimit="35" />
+								<remove_value name="$ArgonTradeStationWares" />
+								<remove_value name="$ParanidTradeStationWares" />
+								<remove_value name="$SplitTradeStationWares" />
+								<remove_value name="$TeladiTradeStationWares" />
+								<remove_value name="$CorrectTradewaresList" />
+							</do_if>
+							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3, %4 tradewares'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname, $TradeStation.tradewares.list.count]" output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
+						</do_if>
+					</actions>
+				</library>
+			</cues>
+		</cue>
+	</cues>
+</mdscript>

@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<diff name="order.mining.routine.advanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aiscripts.xsd">
-<replace sel="//order[@id='MiningRoutine_Advanced']/params/param[@name='maxsell']/input_param[@name='max']/@value">([([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3), 1].max) * 2</replace>
-<replace sel="//order[@id='MiningRoutine_Advanced']/skill/@min">40</replace>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Advanced'][@name='{1041, 591}']/params/param[@name='maxbuy']/@default">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max)-5,4].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Advanced'][@name='{1041, 591}']/params/param[@name='maxbuy']/input_param[@name='max'][@value='[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3) - 1, 0].max']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max)-5,4].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Advanced'][@name='{1041, 591}']/params/param[@name='maxsell']/@default">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max)-5,4].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Advanced'][@name='{1041, 591}']/params/param[@name='maxsell']/input_param[@name='max'][@value='[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max)-5,4].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Advanced'][@name='{1041, 591}']/skill[@min='60']/@min">40</replace>
 </diff>

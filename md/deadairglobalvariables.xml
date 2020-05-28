@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="DeadAirGlobalVariables" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="Storage">
+			<actions>
+				<debug_text text="'MOD: DeadAirGlobalVariables -- %1 -- Ready for variable storage'.[player.age]" context="false" filter="scripts"/>
+			</actions>
+		</cue>
+	</cues>
+</mdscript>

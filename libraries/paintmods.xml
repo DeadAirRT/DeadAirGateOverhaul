@@ -2,81 +2,81 @@
     <!-->paint  ware="warename" quality="1-3" hue="float" brightness="float" saturation="float" metal="float" smooth="float" dirt="float" extradirt="float" pattern="path\filename" scale="float" strength="float" sharpness="float" invert="bool" red="float" green="float" blue="float" alpha="float" personal="texture from personal folder?"-->
 <paintmods>
     <!-- alliance - paintmod_race_default-->
-	<paint ware="paintmod_ALI1" quality="1" hue="12" brightness="0.91" saturation="0.51" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
+	<paint ware="paintmod_ALI1" quality="1" hue="12" brightness="91" saturation="51" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
 	<!-- alliance camo - paintmod_race_ship_XX-->
-	<paint ware="paintmod_ALI2" quality="1" hue="12" brightness="0.91" saturation="0.51" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
-	<paint ware="paintmod_ALI3" quality="1" hue="12" brightness="0.91" saturation="0.51" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
-	<paint ware="paintmod_ALI4" quality="1" hue="12" brightness="0.91" saturation="0.51" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
+	<paint ware="paintmod_ALI2" quality="1" hue="12" brightness="91" saturation="51" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
+	<paint ware="paintmod_ALI3" quality="1" hue="12" brightness="91" saturation="51" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
+	<paint ware="paintmod_ALI4" quality="1" hue="12" brightness="91" saturation="51" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="249" green="147" blue="121" alpha="255"/>
 	<!-- antigone paintmod_race_default-->
-	<paint ware="paintmod_ANT1" quality="1" hue="209" brightness="0.94" saturation="0.33" metal="-0.4" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
+	<paint ware="paintmod_ANT1" quality="1" hue="209" brightness="94" saturation="33" metal="-0.4" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
 	<!-- antigone camo - paintmod_race_ship_s -->
-	<paint ware="paintmod_ANT2" quality="1" hue="209" brightness="0.94" saturation="0.33" metal="-0.4" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
-	<paint ware="paintmod_ANT3" quality="1" hue="209" brightness="0.94" saturation="0.33" metal="-0.4" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
-	<paint ware="paintmod_ANT4" quality="1" hue="209" brightness="0.94" saturation="0.33" metal="-0.4" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
+	<paint ware="paintmod_ANT2" quality="1" hue="209" brightness="94" saturation="33" metal="-0.4" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
+	<paint ware="paintmod_ANT3" quality="1" hue="209" brightness="94" saturation="33" metal="-0.4" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
+	<paint ware="paintmod_ANT4" quality="1" hue="209" brightness="94" saturation="33" metal="-0.4" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="161" green="202" blue="241" alpha="255"/>
 	<!-- argon - paintmod_race_default-->
-	<paint ware="paintmod_ARG1" quality="1" hue="203" brightness="0.65" saturation="1" metal="1.0" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
+	<paint ware="paintmod_ARG1" quality="1" hue="203" brightness="65" saturation="100" metal="1.0" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
 	<!-- argon camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_ARG2" quality="1" hue="203" brightness="0.65" saturation="1" metal="1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
-	<paint ware="paintmod_ARG3" quality="1" hue="203" brightness="0.65" saturation="1" metal="1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
-	<paint ware="paintmod_ARG4" quality="1" hue="203" brightness="0.65" saturation="1" metal="1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
+	<paint ware="paintmod_ARG2" quality="1" hue="203" brightness="65" saturation="100" metal="1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
+	<paint ware="paintmod_ARG3" quality="1" hue="203" brightness="65" saturation="100" metal="1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
+	<paint ware="paintmod_ARG4" quality="1" hue="203" brightness="65" saturation="100" metal="1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="0" green="103" blue="165" alpha="255"/>
 	<!--dukes buccaneers-->
-	<paint ware="paintmod_BUC1" quality="1" hue="255" brightness="0.59" saturation="0.48" metal="-0.5" pattern="assets\textures\pattern\pattern_05_diff" strength="0.95" scale="20" sharpness="100" invert="1" red="96" green="78" blue="151" alpha="255"/>
+	<paint ware="paintmod_BUC1" quality="1" hue="255" brightness="59" saturation="48" metal="-0.5" pattern="assets\textures\pattern\pattern_05_diff" strength="0.95" scale="20" sharpness="100" invert="1" red="96" green="78" blue="151" alpha="255"/>
 	<!--court/cabal-->
-	<paint ware="paintmod_CAB1" quality="1" hue="60" brightness="0.87" saturation="1" metal="-0.01" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
-	<paint ware="paintmod_CAB2" quality="1" hue="60" brightness="0.87" saturation="1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
-	<paint ware="paintmod_CAB3" quality="1" hue="60" brightness="0.87" saturation="1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
+	<paint ware="paintmod_CAB1" quality="1" hue="60" brightness="87" saturation="100" metal="-0.01" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
+	<paint ware="paintmod_CAB2" quality="1" hue="60" brightness="87" saturation="100" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
+	<paint ware="paintmod_CAB3" quality="1" hue="60" brightness="87" saturation="100" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="220" green="221" blue="0" alpha="255"/>
 	<!--fallensplit-->
-	<paint ware="paintmod_FAF1" quality="1" hue="45" brightness="0.76" saturation="0.34" metal="-0.01" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
-	<paint ware="paintmod_FAF2" quality="1" hue="45" brightness="0.76" saturation="0.34" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
-	<paint ware="paintmod_FAF3" quality="1" hue="45" brightness="0.76" saturation="0.34" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
+	<paint ware="paintmod_FAF1" quality="1" hue="45" brightness="76" saturation="34" metal="-0.01" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
+	<paint ware="paintmod_FAF2" quality="1" hue="45" brightness="76" saturation="34" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
+	<paint ware="paintmod_FAF3" quality="1" hue="45" brightness="76" saturation="34" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="194" green="178" blue="128" alpha="255"/>
 	<!--free families (split)-->
-	<paint ware="paintmod_FRF1" quality="1" hue="12" brightness="0.53" saturation="0.83" metal="0.19" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
-	<paint ware="paintmod_FRF2" quality="1" hue="12" brightness="0.53" saturation="0.83" metal="0.2" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
-	<paint ware="paintmod_FRF3" quality="1" hue="12" brightness="0.53" saturation="0.83" metal="0.2" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
+	<paint ware="paintmod_FRF1" quality="1" hue="12" brightness="53" saturation="83" metal="0.19" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
+	<paint ware="paintmod_FRF2" quality="1" hue="12" brightness="53" saturation="83" metal="0.2" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
+	<paint ware="paintmod_FRF3" quality="1" hue="12" brightness="53" saturation="83" metal="0.2" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="136" green="45" blue="23" alpha="255"/>
 	<!-- hatikvah - paintmod_race_default-->
-	<paint ware="paintmod_HAT1" quality="1" hue="74" brightness="0.71" saturation="1" metal="-0.2" smooth="-0.2" extradirt="0.6" strength="0.9" scale="15" sharpness="10" invert="0" red="141" green="182" blue="0" alpha="255"/>
+	<paint ware="paintmod_HAT1" quality="1" hue="74" brightness="71" saturation="100" metal="-0.2" smooth="-0.2" extradirt="0.6" strength="0.9" scale="15" sharpness="10" invert="0" red="141" green="182" blue="0" alpha="255"/>
 	<!-- hatikvah camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_HAT2" quality="1" hue="74" brightness="0.71" saturation="1" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_18_diff" strength="0.9" scale="15" sharpness="10" invert="0" red="141" green="182" blue="0" alpha="255"/>
-	<paint ware="paintmod_HAT3" quality="1" hue="74" brightness="0.71" saturation="1" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_19_diff" strength="0.9" scale="15" sharpness="100" invert="0" red="141" green="182" blue="0" alpha="255"/>
-	<paint ware="paintmod_HAT4" quality="1" hue="74" brightness="0.71" saturation="1" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_20_diff" strength="0.9" scale="15" sharpness="100" invert="0" red="141" green="182" blue="0" alpha="255"/>
-	<paint ware="paintmod_HAT5" quality="1" hue="74" brightness="0.71" saturation="1" metal="-0.2" smooth="-0.2" extradirt="0.59" pattern="assets\textures\pattern\pattern_40_diff" strength="1" scale="15" sharpness="100" invert="1" red="141" green="182" blue="0" alpha="255"/>
+	<paint ware="paintmod_HAT2" quality="1" hue="74" brightness="71" saturation="100" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_18_diff" strength="0.9" scale="15" sharpness="10" invert="0" red="141" green="182" blue="0" alpha="255"/>
+	<paint ware="paintmod_HAT3" quality="1" hue="74" brightness="71" saturation="100" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_19_diff" strength="0.9" scale="15" sharpness="100" invert="0" red="141" green="182" blue="0" alpha="255"/>
+	<paint ware="paintmod_HAT4" quality="1" hue="74" brightness="71" saturation="100" metal="-0.2" smooth="-0.2" extradirt="0.6" pattern="assets\textures\pattern\pattern_20_diff" strength="0.9" scale="15" sharpness="100" invert="0" red="141" green="182" blue="0" alpha="255"/>
+	<paint ware="paintmod_HAT5" quality="1" hue="74" brightness="71" saturation="100" metal="-0.2" smooth="-0.2" extradirt="0.59" pattern="assets\textures\pattern\pattern_40_diff" strength="1" scale="15" sharpness="100" invert="1" red="141" green="182" blue="0" alpha="255"/>
 	<!-- holy order - paintmod_race_default-->
-	<paint ware="paintmod_HOP1" quality="1" hue="338" brightness="0.7" saturation="0.62" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
+	<paint ware="paintmod_HOP1" quality="1" hue="338" brightness="70" saturation="62" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
 	<!-- holy order camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_HOP2" quality="1" hue="338" brightness="0.7" saturation="0.62" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
-	<paint ware="paintmod_HOP3" quality="1" hue="338" brightness="0.7" saturation="0.62" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
-	<paint ware="paintmod_HOP4" quality="1" hue="338" brightness="0.7" saturation="0.62" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
+	<paint ware="paintmod_HOP2" quality="1" hue="338" brightness="70" saturation="62" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
+	<paint ware="paintmod_HOP3" quality="1" hue="338" brightness="70" saturation="62" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
+	<paint ware="paintmod_HOP4" quality="1" hue="338" brightness="70" saturation="62" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="179" green="68" blue="108" alpha="255"/>
 	<!-- ministry - paintmod_race_default-->
-	<paint ware="paintmod_MIN1" quality="1" hue="45" brightness="0.73" saturation="0.02" metal="0.2" smooth="-0.11" extradirt="0.1" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
+	<paint ware="paintmod_MIN1" quality="1" hue="45" brightness="73" saturation="02" metal="0.2" smooth="-0.11" extradirt="0.1" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
 	<!-- ministry camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_MIN2" quality="1" hue="45" brightness="0.73" saturation="0.02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
-	<paint ware="paintmod_MIN3" quality="1" hue="45" brightness="0.73" saturation="0.02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
-	<paint ware="paintmod_MIN4" quality="1" hue="45" brightness="0.73" saturation="0.02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
+	<paint ware="paintmod_MIN2" quality="1" hue="45" brightness="73" saturation="02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
+	<paint ware="paintmod_MIN3" quality="1" hue="45" brightness="73" saturation="02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
+	<paint ware="paintmod_MIN4" quality="1" hue="45" brightness="73" saturation="02" metal="0.2" smooth="-0.1" extradirt="0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="185" green="184" blue="181" alpha="255"/>
 	<!-- paranid - paintmod_race_default-->
-	<paint ware="paintmod_PAR1" quality="1" hue="289" brightness="0.57" saturation="0.41" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
+	<paint ware="paintmod_PAR1" quality="1" hue="289" brightness="57" saturation="41" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
 	<!-- paranid camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_PAR2" quality="1" hue="289" brightness="0.57" saturation="0.41" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
-	<paint ware="paintmod_PAR3" quality="1" hue="289" brightness="0.57" saturation="0.41" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
-	<paint ware="paintmod_PAR4" quality="1" hue="289" brightness="0.57" saturation="0.41" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
+	<paint ware="paintmod_PAR2" quality="1" hue="289" brightness="57" saturation="41" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
+	<paint ware="paintmod_PAR3" quality="1" hue="289" brightness="57" saturation="41" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
+	<paint ware="paintmod_PAR4" quality="1" hue="289" brightness="57" saturation="41" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="135" green="86" blue="146" alpha="255"/>
 	<!-- scaleplate - paintmod_race_default-->
-	<paint ware="paintmod_SCA1" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="0.2" smooth="-0.3" extradirt="0.6" strength="0.9" scale="10" sharpness="10" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA1" quality="1" hue="340" brightness="90" saturation="38" metal="0.2" smooth="-0.3" extradirt="0.6" strength="0.9" scale="10" sharpness="10" invert="0" red="230" green="143" blue="172" alpha="255"/>
 	<!-- scaleplate camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_SCA2" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="0.2" smooth="-0.31" extradirt="0.6" pattern="assets\textures\pattern\pattern_05_diff" strength="0.9" scale="10" sharpness="10" invert="0" red="230" green="143" blue="172" alpha="255"/>
-	<paint ware="paintmod_SCA3" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="-0.2" smooth="-0.2" dirt="0.8" extradirt="0.8" pattern="assets\textures\pattern\pattern_26_diff" strength="0.95" scale="15" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
-	<paint ware="paintmod_SCA4" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
-	<paint ware="paintmod_SCA5" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
-	<paint ware="paintmod_SCA6" quality="1" hue="340" brightness="0.9" saturation="0.38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA2" quality="1" hue="340" brightness="90" saturation="38" metal="0.2" smooth="-0.31" extradirt="0.6" pattern="assets\textures\pattern\pattern_05_diff" strength="0.9" scale="10" sharpness="10" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA3" quality="1" hue="340" brightness="90" saturation="38" metal="-0.2" smooth="-0.2" dirt="0.8" extradirt="0.8" pattern="assets\textures\pattern\pattern_26_diff" strength="0.95" scale="15" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA4" quality="1" hue="340" brightness="90" saturation="38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA5" quality="1" hue="340" brightness="90" saturation="38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
+	<paint ware="paintmod_SCA6" quality="1" hue="340" brightness="90" saturation="38" metal="0.2" smooth="-0.3" extradirt="0.6" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="230" green="143" blue="172" alpha="255"/>
 	<!--split/rhak-->
-	<paint ware="paintmod_SPL1" quality="1" hue="33" brightness="0.95" saturation="1" metal="-0.1" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
-	<paint ware="paintmod_SPL2" quality="1" hue="33" brightness="0.95" saturation="1" metal="-0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
-	<paint ware="paintmod_SPL3" quality="1" hue="33" brightness="0.95" saturation="1" metal="-0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
+	<paint ware="paintmod_SPL1" quality="1" hue="33" brightness="95" saturation="100" metal="-0.1" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
+	<paint ware="paintmod_SPL2" quality="1" hue="33" brightness="95" saturation="100" metal="-0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
+	<paint ware="paintmod_SPL3" quality="1" hue="33" brightness="95" saturation="100" metal="-0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="15" sharpness="100" invert="0" red="243" green="132" blue="0" alpha="255"/>
 	<!-- teladi - paintmod_race_default-->
-	<paint ware="paintmod_TEL1" quality="1" hue="48" brightness="0.95" saturation="1" metal="1" smooth="-0.3" extradirt="0.1" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
+	<paint ware="paintmod_TEL1" quality="1" hue="48" brightness="95" saturation="100" metal="1" smooth="-0.3" extradirt="0.1" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
 	<!-- teladi camo - paintmod_race_ship_s-->
-	<paint ware="paintmod_TEL2" quality="1" hue="48" brightness="0.95" saturation="1" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
-	<paint ware="paintmod_TEL3" quality="1" hue="48" brightness="0.95" saturation="1" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
-	<paint ware="paintmod_TEL4" quality="1" hue="48" brightness="0.95" saturation="1" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
+	<paint ware="paintmod_TEL2" quality="1" hue="48" brightness="95" saturation="100" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_18_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
+	<paint ware="paintmod_TEL3" quality="1" hue="48" brightness="95" saturation="100" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_19_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
+	<paint ware="paintmod_TEL4" quality="1" hue="48" brightness="95" saturation="100" metal="1" smooth="-0.3" extradirt="0.1" pattern="assets\textures\pattern\pattern_20_diff" strength="1" scale="10" sharpness="100" invert="0" red="243" green="195" blue="0" alpha="255"/>
 	<!--realm of the trinity-->
-	<paint ware="paintmod_TRI1" quality="1" hue="40" brightness="0.96" saturation="1" metal="-0.26" smooth="-0.13" dirt="0.76" pattern="assets\textures\pattern\pattern_26_diff" strength="0.29" scale="10" sharpness="61.44" invert="0" red="246" green="166" blue="0" alpha="255"/>
+	<paint ware="paintmod_TRI1" quality="1" hue="40" brightness="96" saturation="100" metal="-0.26" smooth="-0.13" dirt="0.76" pattern="assets\textures\pattern\pattern_26_diff" strength="0.29" scale="10" sharpness="61.44" invert="0" red="246" green="166" blue="0" alpha="255"/>
 	
 </paintmods>

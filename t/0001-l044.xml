@@ -2,7 +2,7 @@
 <language id="44">
 
 <page id="3323247" title="DeadAir T Files" descr="names used in DeadAir Mods" voice="no">
- <t id="100">Licenses</t>
+ <t id="100">(Licenses)</t>
  <t id="1010">ALI</t>
  <t id="1011">Alliance Police Licence</t>
  <t id="1012">Alliance Capital Ship Building Module Licence</t>
@@ -48,5 +48,15 @@
  <t id="10113">Fallen Basic Module Licence</t>
  <t id="10114">Fallen Intermediate Module Licence</t>
  <t id="10115">Fallen Trade Offer Subscription</t>
+ <t id="200">(UI Stuff)</t>
+ <t id="201">DeadAir Gate Options</t>
+ <t id="202">Enable {20204,6201} invasions:</t>
+ <t id="203">Earliest invasion time:</t>
+ <t id="204">in minutes from start of game</t>
+ <t id="205">Time between possible invasions:</t>
+ <t id="206">in minutes from last invasion</t>
+ <t id="207">Time until next invasion:</t>
+ <t id="208">in minutes from now</t>
+ <t id="209">%1 {1001,103}</t>
 </page>
 </language>

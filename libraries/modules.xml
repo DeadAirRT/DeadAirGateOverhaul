@@ -53,11 +53,8 @@
   <replace sel="/modules/module[@id='prod_par_sojabeans']/category[@ware='sojabeans']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
   <replace sel="/modules/module[@id='prod_par_sojahusk']/category[@ware='sojahusk']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
   <replace sel="/modules/module[@id='prod_tel_spaceweed']/category[@ware='spaceweed']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_tel_teladianium']/compatibilities/production[@ware='teladianium']">
+  <add sel="/modules/module[@id='prod_tel_teladianium']/compatibilities/production[@ware='teladianium']" pos="before">
     <limits production="6"/>
-  </replace>
-  <add sel="/modules/module[@id='prod_tel_teladianium']/compatibilities">
-    <production ware="refinedmetals" chance="65"/>
   </add>
   <add sel="/modules/module[@id='prod_tel_teladianium']/compatibilities">
     <production ref="prod_gen_siliconwafers" chance="10"/>

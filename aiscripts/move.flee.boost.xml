@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/aiscript/params/param[@name='maxdistance']/@default">25km</replace>
+  <replace sel="/aiscript/params/param[@name='maxboostduration']/@default">[(25km / [this.ship.boost.maxspeed, 1m].max)s, 30s].max</replace>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='this.sector']/find_gravidar_contact">
+    <do_if value="this.ship">
+      <!-- Have to wrap changes in a do_if true for structure-->
+      <!-- if visible, we have to check for all obstacles -->
+      <!-- if not visible, we only care about enemies -->
+      <do_if value="this.attention ge attention.visible">
+        <find_gravidar_contact object="this.ship" class="[class.ship_l, class.ship_xl, class.station]" groupname="$obstacles" multiple="true">
+          <match_context macro="this.sector.macro"/>
+          <match_is_in_view_of vertical="90deg" horizontal="90deg" object="this.ship"/>
+          <match_distance max="$maxdistance" object="this.ship"/>
+        </find_gravidar_contact>
+      </do_if>
+      <do_else>
+        <find_gravidar_contact object="this.ship" class="[class.ship_l, class.ship_xl, class.station]" groupname="$obstacles" multiple="true" mayattack="this.ship">
+          <match_context macro="this.sector.macro"/>
+          <match_distance max="$maxdistance" object="this.ship"/>
+        </find_gravidar_contact>
+      </do_else>
+    </do_if>
+  </replace>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/comment()[3]">
+    <do_if value="this.ship">
+      <!-- Have to wrap changes in a do_if true for structure-->
+      <!-- UNITRADER CODE -->
+      <create_orientation name="$flee_direction" refposition="$resultpos" orientation="look_away">
+        <position object="this.ship"/>
+      </create_orientation>
+      <transform_position name="$finalpos" refposition="this.ship.position" refrotation="$flee_direction">
+        <position x="0" y="0" z="$maxdistance"/>
+      </transform_position>
+    </do_if>
+  </replace>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/set_value[@name='$distfactor'][@exact='[$maxdistance / this.ship.distanceto.{$resultpos}, 0.1].max']">
+    <debug_text text="'finalpos %1, dist %2'.[$finalpos, this.ship.distanceto.{$resultpos}]" chance="$debugchance"/>
+  </replace>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/debug_text[@chance='$debugchance'][4]"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/comment()[3]"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/create_position[@name='$finalpos']"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/debug_text[@chance='$debugchance'][4]"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/create_orientation[@name='$orientation']"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/comment()[3]"/>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='@$obstacles.count']/move_to"/>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/set_value[@name='$maxboostduration'][@exact='[this.assignedcontrolled.boost.maxduration * 0.9, $maxboostduration].min']/@exact">[this.assignedcontrolled.boost.maxduration * 0.75, $maxboostduration, ($maxdistance / [this.ship.boost.maxspeed, 1m].max)s].min</replace>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/do_if[@value='this.assignedcontrolled.shieldpercentage lt 50']/set_value[@name='$maxboostduration'][@exact='[($maxdistance / [this.ship.maxspeed, 1m].max)s, $maxboostduration].min']/@exact">($maxdistance / [this.ship.maxspeed, 1m].max)s</replace>
+  <replace sel="/aiscript/attention[@min='unknown']/actions/move_to">
+    <do_if value="this.ship">
+      <!-- Have to wrap changes in a do_if true for structure-->
+      <do_if value="@$finalpos">
+        <move_to object="this.ship" destination="this.zone" abortpath="true" forceposition="false" finishonapproach="false" boost="$boost" travel="not $boost">
+          <position value="$finalpos"/>
+          <rotation value="$flee_direction"/>
+          <interrupt_after_time time="$maxboostduration"/>
+        </move_to>
+      </do_if>
+      <do_else>
+        <move_to object="this.ship" destination="this.zone" abortpath="true" forceposition="false" finishonapproach="false" boost="$boost" travel="not $boost">
+          <position object="this.ship" z="$maxdistance"/>
+          <interrupt_after_time time="$maxboostduration"/>
+        </move_to>
+      </do_else>
+      <debug_text text="player.age + ' %1 (%2) done fleeing. moved %3 meters away from starting position to zone: %6. startzone: %7 startzone size: %5 maxdistance: %4 max boost duration: %8'.[this.ship.knownname, this.ship, this.ship.distanceto.{$startpos}, $maxdistance, $startzone.size, this.zone.knownname, $startzone.knownname, $maxboostduration]" chance="$debugchance"/>
+    </do_if>
+  </replace>
+  <remove sel="/aiscript/attention[@min='unknown']/actions/debug_text[@chance='$debugchance'][2]"/>
+</diff>

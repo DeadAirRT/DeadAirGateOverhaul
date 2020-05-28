@@ -74,6 +74,7 @@
 								<match owner="$OwnerList" />
 							</find_station>
 						</do_if>
+						<set_value name="$IntTradeStationDebugChance" exact="false" />
 					</actions>
 				</cue>
 				<cue name="ProcessIntStations" instantiate="true" checkinterval="60min" checktime="player.age + 90s">

@@ -23,7 +23,7 @@
 					</conditions>
 					<actions>
 						<set_value name="$delayalpha" exact="2s" />
-						<set_value name="$TradeStationDebugChance" exact="true" />
+						<set_value name="$TradeStationDebugChance" exact="false" />
 						<find_station groupname="$TradeStations" multiple="true" space="player.galaxy" functional="true" tradestation="true" shipyard="false" wharf="false" canequipships="false">
 							<match owner="faction.player" negate="true" />
 							<match_content class="class.buildmodule" negate="true"/>
@@ -51,7 +51,8 @@
 				<library name="FixTradeStations">
 					<actions>
 						<do_if value="$TradeStation.isoperational">
-							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3 is operational.'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname]" output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
+							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3 is operational.'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname]" 
+								output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
 							<do_if value="($TradeStation.isgodobject)">
 								<!-- Set up the trade lists to compare -->
 								<set_value name="$ArgonTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
@@ -107,7 +108,8 @@
 								<remove_value name="$TeladiTradeStationWares" />
 								<remove_value name="$CorrectTradewaresList" />
 							</do_if>
-							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3, %4 tradewares'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname, $TradeStation.tradewares.list.count]" output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
+							<debug_to_file name="'TradestationFix'" directory="'DeadAir_GateOverhaul'" text="'%1, %2, %3, %4 tradewares'.[$TradeStation.trueowner, $TradeStation.sector.knownname, $TradeStation.knownname, $TradeStation.tradewares.list.count]" 
+								output="false" append="true" chance="if @$TradeStationDebugChance then ($TradeStationDebugChance * 100) else 0"/>
 						</do_if>
 					</actions>
 				</library>

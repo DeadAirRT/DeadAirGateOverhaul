@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<diff name="order.mining.routine.expert" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aiscripts.xsd" version="1">
-<replace sel="//order[@id='MiningRoutine_Expert']/params/param[@name='maxsell']/input_param[@name='max']/@value">([([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max / 3), 1].max) * 3</replace>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='minbuy']/input_param[@name='max'][@value='[[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max - 1, 0].max']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max - 1</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='maxbuy']/@default">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='maxbuy']/input_param[@name='max'][@value='[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='minsell']/input_param[@name='max'][@value='[[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max - 1, 0].max']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max - 1</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='maxsell']/@default">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max</replace>
+  <replace sel="/aiscript/order[@id='MiningRoutine_Expert'][@name='{1041, 601}']/params/param[@name='maxsell']/input_param[@name='max'][@value='[@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max']/@value">[([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max</replace>
 </diff>

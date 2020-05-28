@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="DeadAirActivateJobs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="init">
+		<conditions>
+			<event_cue_signalled cue="md.Setup.Start" />
+		</conditions>
+		<actions>
+			<!-- By the power of unitrader, I will now storage my globals here -->
+			<set_value name="$DeadAirGlobal" exact="md.DeadAirGlobalVariables.Storage" />
+	
+			<do_if value="not $DeadAirGlobal.$DeadAirJobList?">
+				<create_list name="$DeadAirGlobal.$DeadAirJobList"/>
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirJobShipList?">
+				<create_group groupname="$DeadAirGlobal.$DeadAirJobShipList" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirJobInvasions?">
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasions" exact="true" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirJobInvasionsTime?">
+				<!-- first time it will check for invasion in minutes from script start, stored as interger-->
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsTime" exact="30" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirJobInvasionsInterval?">
+				<!-- time between invasions stored as interger -->
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsInterval" exact="30" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirJobNextInvasionsTime?">
+				<!-- match first time invasion to start, stored in seconds-->
+				<set_value name="$DeadAirGlobal.$DeadAirJobNextInvasionsTime" exact="[(player.age),($DeadAirGlobal.$DeadAirJobInvasionsTime)min].max + ($DeadAirGlobal.$DeadAirJobInvasionsInterval)min" />
+			</do_if>
+			<do_if value="not $DeadAirActivateJobsDebug?">
+				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirSupremacyJobList?">
+				<set_value name="$DeadAirGlobal.$DeadAirSupremacyJobList" exact="['argon_carrier_supremacy_fleet','antigone_carrier_supremacy_fleet','paranid_carrier_supremacy_fleet','holyorder_carrier_supremacy_fleet','teladi_carrier_supremacy_fleet',
+					'ministry_carrier_supremacy_fleet','hatikvah_carrier_supremacy_fleet','alliance_carrier_supremacy_fleet','scaleplate_carrier_supremacy_fleet','zyarth_carrier_supremacy_fleet','freesplit_carrier_supremacy_fleet',
+					'fallensplit_carrier_supremacy_fleet','court_carrier_supremacy_fleet','buccaneers_carrier_supremacy_fleet','xenon_supremacy_fleet','khaak_supremacy_fleet']" />
+			</do_if>
+			<set_value name="$initcompleted" exact="true" />
+		</actions>
+		<cues>
+		<cue name="Setup">
+			<actions>
+				<!--
+				<do_if value="player.galaxy.macro == macro.xu_ep2_universe_macro">
+					<set_job_active job="'argon_carrier_supremacy_fleet'"/>
+					<set_job_active job="'antigone_carrier_supremacy_fleet'"/>
+					<set_job_active job="'paranid_carrier_supremacy_fleet'"/>
+					<set_job_active job="'holyorder_carrier_supremacy_fleet'"/>
+					<set_job_active job="'teladi_carrier_supremacy_fleet'"/>
+					<set_job_active job="'ministry_carrier_supremacy_fleet'"/>
+					<set_job_active job="'hatikvah_carrier_supremacy_fleet'"/>
+					<set_job_active job="'alliance_carrier_supremacy_fleet'"/>
+					<set_job_active job="'scaleplate_carrier_supremacy_fleet'"/>
+					<set_job_active job="'zyarth_carrier_supremacy_fleet'"/>
+					<set_job_active job="'freesplit_carrier_supremacy_fleet'"/>
+					<set_job_active job="'fallensplit_carrier_supremacy_fleet'"/>
+					<set_job_active job="'court_carrier_supremacy_fleet'"/>
+					<set_job_active job="'buccaneers_carrier_supremacy_fleet'"/>
+					<set_job_active job="'xenon_supremacy_fleet'"/>
+					<set_job_active job="'khaak_supremacy_fleet'"/>
+				</do_if>
+				-->
+			</actions>
+		</cue>
+		<cue name="FindJobsAndShips" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
+			<actions>
+				<get_factions_by_tag tag="tag.privateship" result="$PrivateShipFactionList" />
+				<do_all exact="$PrivateShipFactionList.count" counter="$PrivateShipFactionCounter">
+					<!-- ALL DEADAIRJOBS -->
+					<get_suitable_job result="$TempJobList" multiple="true" faction="$PrivateShipFactionList.{$PrivateShipFactionCounter}" tags="tag.deadair" exceedquota="true" />
+					<do_all exact="$TempJobList.count" counter="$TempJobCounter">
+						<do_if value="not $DeadAirGlobal.$DeadAirJobList.indexof.{$TempJobList.{$TempJobCounter}}">
+							<append_to_list name="$DeadAirGlobal.$DeadAirJobList" exact="$TempJobList.{$TempJobCounter}" />
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindJobsAndShips -- Adding Job to $DeadAirGlobal.$DeadAirJobList -- Job: %2'.[player.age,$TempJobList.{$TempJobCounter}]" 
+								context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+						</do_if>
+					</do_all>
+					<!-- clean up -->
+					<remove_value name="$TempJobList" />
+					<!-- clean up -->
+					<do_if value="$DeadAirGlobal.$DeadAirJobList.count gt 0">
+						<find_ship name="$TempShipList" space="player.galaxy" job="$DeadAirGlobal.$DeadAirJobList" multiple="true" />
+						<do_all exact="$TempShipList.count" counter="$TempShipCounter">
+							<do_if value="not $DeadAirGlobal.$DeadAirJobShipList.indexof.{$TempShipList.{$TempShipCounter}}">
+								<add_to_group groupname="$DeadAirGlobal.$DeadAirJobShipList" object="$TempShipList.{$TempShipCounter}" />
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindJobsAndShips -- Adding Ship to $DeadAirGlobal.$DeadAirJobShipList -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
+									$TempShipList.{$TempShipCounter}.knownname,$TempShipList.{$TempShipCounter}.class,$TempShipList.{$TempShipCounter}.trueowner.knownname,$TempShipList.{$TempShipCounter}.job,$TempShipList.{$TempShipCounter}.jobmainzone.sector.knownname,$TempShipList.{$TempShipCounter}.defaultorder.id]" 
+									context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+							</do_if>
+						</do_all>
+						<!-- clean up -->
+						<remove_value name="$TempShipList" />
+						<!-- clean up -->
+					</do_if>
+				</do_all>
+				<!-- clean up -->
+				<remove_value name="$PrivateShipFactionList" />
+				<!-- clean up -->
+			</actions>
+		</cue>
+		<cue name="CaptureJobShips" instantiate="true">
+			<conditions>
+				<check_all>
+					<event_job_ship_activated />
+					<check_value value="event.param.isoperational" />
+					<check_value value="$DeadAirGlobal.$DeadAirJobList.indexof.{event.param.job}"/>
+					<check_value value="@$initcompleted == true" />
+				</check_all>
+			</conditions>
+			<actions>
+				<set_value name="$TempShip" exact="event.param" />
+				<do_if value="not $DeadAirGlobal.$DeadAirJobShipList.indexof.{$TempShip}">
+					<add_to_group groupname="$DeadAirGlobal.$DeadAirJobShipList" object="$TempShip" />
+					<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- CaptureJobShips -- Adding Ship to $DeadAirGlobal.$DeadAirJobShipList -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
+						$TempShip.knownname,$TempShip.class,$TempShip.trueowner.knownname,$TempShip.job,$TempShip.jobmainzone.sector.knownname,$TempShip.defaultorder.id]" 
+						context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				</do_if>
+				<!-- clean up -->
+				<remove_value name="$TempShip" />
+				<!-- clean up -->
+			</actions>
+		</cue>
+		<cue name="LaunchSupremacyFleet" instantiate="true" checktime="[player.age + 5min,30min].max" checkinterval="5min">
+			<conditions>
+				<check_value value="$DeadAirGlobal.$DeadAirJobInvasions == true" />
+			</conditions>
+			<actions>
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- LaunchSupremacyFleet Activated'.[player.age]"
+					context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				<do_if value="player.age gt ($DeadAirGlobal.$DeadAirJobInvasionsTime)min">
+					<do_if value="player.age gt $DeadAirGlobal.$DeadAirJobNextInvasionsTime">
+						<!-- check which fleets are fully staffed and not busy, then choose a random one to send on an attack of closest border system -->
+						<create_list name="$locDeadAirJobShipList" />
+						<!-- only spend time if we already captured a list -->
+						<do_if value="$DeadAirGlobal.$DeadAirJobShipList.count gt 0">
+							<do_all exact="$DeadAirGlobal.$DeadAirJobShipList.count" counter="$DATempShipCounter">
+								<set_value name="$DATempShip" exact="$DeadAirGlobal.$DeadAirJobShipList.{$DATempShipCounter}" />
+								<!-- job tags don't work, so we'll do an index check -->
+								<do_if value="$DeadAirGlobal.$DeadAirSupremacyJobList.indexof.{$DATempShip.job}">
+									<append_to_list name="$locDeadAirJobShipList" exact="$DATempShip" />
+								</do_if>
+								<do_else>
+									<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- DATempShip job is not an index of $DeadAirGlobal.$DeadAirSupremacyJobList -- Ship: %2 -- Ship.job %3'.[player.age,
+										$DATempShip.knownname,$DATempShip.job]" 
+										context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+								</do_else>
+							</do_all>
+							<!-- clean up -->
+							<remove_value name="$DATempShip" />
+							<remove_value name="$DATempShipCounter" />
+							<!-- clean up -->
+							<!-- time to check if the fleet is full -->
+							<do_if value="$locDeadAirJobShipList.count gt 0">
+								<create_list name="$locSupremacyReadyForInvasion" />
+								<do_all exact="$locDeadAirJobShipList.count" counter="$SFTempShipCounter">
+									<set_value name="$SFTempShip" exact="$locDeadAirJobShipList.{$SFTempShipCounter}" />
+									<get_subordinate_jobs jobs="$tempsubordinatejobs" amount="$tempsubordinateamounts" commander="$SFTempShip" />
+									<do_if value="$tempsubordinatejobs.count">
+										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet NOT ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
+											$SFTempShip.knownname,$SFTempShip.class,$SFTempShip.trueowner.knownname,$SFTempShip.job,$SFTempShip.jobmainzone.sector.knownname,$SFTempShip.defaultorder.id]" 
+											context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+									</do_if>
+									<do_elseif value="$SFTempShip.subordinates.count gt 1 and ($tempsubordinateamounts == null or $tempsubordinateamounts.count == 0)">
+										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet IS ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
+											$SFTempShip.knownname,$SFTempShip.class,$SFTempShip.trueowner.knownname,$SFTempShip.job,$SFTempShip.jobmainzone.sector.knownname,$SFTempShip.defaultorder.id]" 
+											context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+										<append_to_list name="$locSupremacyReadyForInvasion" exact="$SFTempShip" />
+									</do_elseif>
+									<do_else>
+										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Ship %2 -- $SFTempShip.subordinates.count %3 and ($tempsubordinateamounts != null or $tempsubordinateamounts.count %4)'.[player.age,
+											$SFTempShip.knownname,$SFTempShip.subordinates.list.count,$tempsubordinateamounts.count]" 
+											context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+									</do_else>
+								</do_all>
+								<!-- clean up -->
+								<remove_value name="$tempsubordinatejobs" />
+								<remove_value name="$tempsubordinateamounts" />
+								<remove_value name="$SFTempShip" />
+								<remove_value name="$SFTempShipCounter" />
+								<!-- clean up -->
+								<do_if value="$locSupremacyReadyForInvasion.count gt 0">
+									<set_value name="$DeadAirJobInvasionLastTimeFired" exact="player.age" />
+									<do_all exact="$locSupremacyReadyForInvasion.count" counter="$ReadySFTempShipCounter">
+										<set_value name="$ReadySFTempShip" exact="$locSupremacyReadyForInvasion.{$ReadySFTempShipCounter}" />
+										<get_factions_by_relation relation="kill" faction="$ReadySFTempShip.trueowner" result="$TempFactionKillList" />
+										<remove_from_list name="$TempFactionKillList" list="[faction.civilian,faction.criminal,faction.holyorderfanatic,faction.khaak,faction.ownerless,faction.smuggler,faction.visitor]" multiple="true" />
+										<do_if value="$TempFactionKillList.count">
+											<get_factions_by_tag tag="tag.claimspace" result="$ClaimspaceFactionList" />
+											<do_all exact="$TempFactionKillList.count" counter="$TempFactionKillCounter" reverse="true">
+												<do_if value="($ClaimspaceFactionList.indexof.{$TempFactionKillList.{$TempFactionKillCounter}} le 0) and (not $TempFactionKillList.{$TempFactionKillCounter}.isactive)">
+													<remove_value name="$TempFactionKillList.{$TempFactionKillCounter}" />
+												</do_if>
+											</do_all>
+											<do_if value="$TempFactionKillList.count">
+												<set_value name="$TempFaction" exact="$TempFactionKillList.random" />
+												
+												<!-- any. easiest to code -->
+												<find_sector name="$TempSectorList" space="player.galaxy" multiple="true" owner="$TempFaction">
+													<match_content class="class.station" owner="$TempFaction">
+														<match shipyard="true" negate="true"/>
+													</match_content>
+												</find_sector>
+												<set_value name="$TempSector" exact="$TempSectorList.random" />
+												<do_if value="$ReadySFTempShip and $TempFaction and $TempSector">
+													<do_if value="($ReadySFTempShip.order == $ReadySFTempShip.defaultorder)"><!-- or ($ReadySFTempShip.order.id != 'AttackInRange')-->
+														<signal_cue_instantly cue="GenerateAttackOrders" param="[$ReadySFTempShip,$TempFaction,$TempSector]" />
+													</do_if>
+													<do_elseif value="$ReadySFTempShip.order.id == 'AttackInRange'">
+														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy invading. -- %2'.[player.age,
+															$ReadySFTempShip.knownname]" 
+															context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+													</do_elseif>
+													<do_else>
+														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy with something other than invading. -- %2'.[player.age,
+															$ReadySFTempShip.knownname]" 
+															context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+													</do_else>
+												</do_if>
+												<do_else>
+													<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip %2 and $TempFaction %3 and $TempSector %4'.[player.age,
+														$ReadySFTempShip.knownname,$TempFaction.knownname,$TempSector.knownname]" 
+														context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+												</do_else>
+											</do_if>
+											<do_else>
+												<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $TempFaction has no valid enemies -- %2'.[player.age,
+													$TempFaction.knownname]" 
+													context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+											</do_else>
+										</do_if>
+										<do_else>
+											<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $TempFaction has no enemies -- %2'.[player.age,
+												$TempFaction.knownname]" 
+												context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+										</do_else>
+									</do_all>
+									<!-- clean up -->
+									<remove_value name="$ReadySFTempShip" />
+									<remove_value name="$ReadySFTempShipCounter" />
+									<remove_value name="$TempFactionKillList" />
+									<remove_value name="$ClaimspaceFactionList" />
+									<remove_value name="$TempFaction" />
+									<remove_value name="$TempSectorList" />
+									<remove_value name="$TempSector" />
+									<!-- clean up -->
+								</do_if>
+								<do_else>
+									<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $locSupremacyReadyForInvasion.count le 0 -- count: %2'.[player.age,
+										$locSupremacyReadyForInvasion.count]" 
+										context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+								</do_else>
+								<!-- clean up -->
+								<remove_value name="$locSupremacyReadyForInvasion" />
+								<!-- clean up -->
+							</do_if>
+							<do_else>
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $locDeadAirJobShipList.count le 0 -- count: %2'.[player.age,
+									$locDeadAirJobShipList.count]" 
+									context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+							</do_else>
+						</do_if>
+						<do_else>
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $DeadAirGlobal.$DeadAirJobShipList.count le 0 -- count: %2'.[player.age,
+								$DeadAirGlobal.$DeadAirJobShipList.count]" 
+								context="false" filter="error" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+						</do_else>
+						<!-- clean up -->
+						<remove_value name="$locDeadAirJobShipList" />
+						<!-- clean up -->
+						<do_if value="$DeadAirJobInvasionLastTimeFired?">
+							<set_value name="$DeadAirGlobal.$DeadAirJobNextInvasionsTime" exact="$DeadAirJobInvasionLastTimeFired + ($DeadAirGlobal.$DeadAirJobInvasionsInterval)min" />
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $DeadAirGlobal.$DeadAirJobNextInvasionsTime %2'.[player.age,$DeadAirGlobal.$DeadAirJobNextInvasionsTime]"
+								context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+						</do_if>
+						<do_else>
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- No invasion was launched, will try again in 5 minutes'.[player.age]"
+								context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+						</do_else>
+					</do_if>
+					<do_else>
+						<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- player.age le ($DeadAirGlobal.$DeadAirJobNextInvasionsTime)min -- $DeadAirGlobal.$DeadAirJobNextInvasionsTime: %2'.[player.age,
+							$DeadAirGlobal.$DeadAirJobNextInvasionsTime]" 
+							context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+					</do_else>
+				</do_if>
+				<do_else>
+					<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- player.age le ($DeadAirGlobal.$DeadAirJobInvasionsTime)min -- $DeadAirGlobal.$DeadAirJobInvasionsTime: %2'.[player.age,
+						$DeadAirGlobal.$DeadAirJobInvasionsTime]" 
+						context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				</do_else>
+			</actions>
+		</cue>
+		<cue name="GenerateAttackOrders" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<!-- temporary short delay for testing -->
+			<delay min="5s" max="5min" />
+			<actions>
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- GenerateAttackOrders -- Generating Attack Orders for Supremacy Fleet -- AttackingShip: %2 -- AttackedFaction %3 -- AttackedSector %4'.[player.age,
+					event.param.{1}.knownname,event.param.{2}.knownname,event.param.{3}.knownname]"
+					context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				<set_value name="$AttackingShip" exact="event.param.{1}" />
+				<set_value name="$AttackedFaction" exact="event.param.{2}" />
+				<set_value name="$AttackedSector" exact="event.param.{3}" />
+				<find_station name="$AttackedStations" space="$AttackedSector" multiple="true" owner="$AttackedFaction" />
+				<do_all exact="$AttackedStations.count" counter="$AttackedStationsCounter">
+					<set_value name="$AttackedStation" exact="$AttackedStations.{$AttackedStationsCounter}" />
+					<create_order id="'AttackInRange'" object="$AttackingShip">
+						<param name="destination" value="[$AttackedSector,$AttackedStation.relativeposition.{$AttackedSector}]"/>
+					</create_order>
+					<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- GenerateAttackOrders -- Attack Order Generated for Supremacy Fleet -- AttackingShip: %2 -- AttackedSector %3 -- AttackedStation %4 -- AttackedStationPosition %5'.[player.age,
+						$AttackingShip.knownname,$AttackedSector.knownname,$AttackedStation.knownname,$AttackedStation.relativeposition.{$AttackedSector}]"
+						context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				</do_all>
+				<!-- clean up -->
+				<remove_value name="$AttackingShip" />
+				<remove_value name="$AttackedFaction" />
+				<remove_value name="$AttackedSector" />
+				<remove_value name="$AttackedStation" />
+				<remove_value name="$AttackedStations" />
+				<!-- clean up -->
+			</actions>
+		</cue>
+		<cue name="Register_Options_Menu" instantiate="true">
+			<conditions>
+				<event_cue_signalled cue="md.Simple_Menu_API.Reloaded"/>
+			</conditions>
+			<actions>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Register_Options_Menu" param = "table[$id = 'deadairgate_options_menu', $columns = 4, $title   = {3323247,201}, $onOpen  = Main_Menu ]"/>
+			</actions>
+		</cue>
+		<cue name="Main_Menu" instantiate="true">
+			<conditions>
+				<event_cue_signalled/>
+			</conditions>
+			<actions>
+				<!--
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasions" exact="true" />
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsTime" exact="60" />
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsInterval" exact="30" />
+				<set_value name="$DeadAirGlobal.$DeadAirJobNextInvasionsTime" exact="60" />
+				-->
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
+					$col=1,
+					$colSpan=2,
+					$text = {3323247,202},
+					]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Button" param="table[
+                     $col = 3, 
+                     $text = table[
+                       $text   =  if $DeadAirGlobal.$DeadAirJobInvasions == true then 'true' else 'false', 
+                       $color  = 'Helper.color.brightyellow',
+                       $halign = 'center',
+                       ],
+                     $onClick = DeadAirJobInvasions,
+                     $onRightClick = DeadAirJobInvasions,
+                     ]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
+					$col=1,
+					$colSpan=2,
+					$mouseOverText= {3323247,204},
+					$text = {3323247,203},
+					]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Slider" param="table[
+					$col=3,
+					$colSpan=2,
+					$onSliderCellConfirm=DeadAirJobInvasionsTime,
+					$min=30,
+					$minSelect=30,
+					$max=120,
+					$maxSelect=120,
+					$exceedMaxValue=false,
+					$start=$DeadAirGlobal.$DeadAirJobInvasionsTime,
+					$step=15,
+					$suffix={1001,103},
+					]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
+					$col=1,
+					$colSpan=2,
+					$mouseOverText= {3323247,206},
+					$text = {3323247,205},
+					]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Slider" param="table[
+					$col=3,
+					$colSpan=2,
+					$onSliderCellConfirm=DeadAirJobInvasionsInterval,
+					$min=30,
+					$minSelect=30,
+					$max=120,
+					$maxSelect=120,
+					$exceedMaxValue=false,
+					$start=$DeadAirGlobal.$DeadAirJobInvasionsInterval,
+					$step=15,
+					$suffix={1001,103},
+					]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
+					$col=1,
+					$colSpan=2,
+					$mouseOverText= {3323247,208},
+					$text = {3323247,207},
+					]" />
+				<set_value name="$timeuntilinvasion" exact="{3323247,209}.[($DeadAirGlobal.$DeadAirJobNextInvasionsTime - (player.age))/60]" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
+					$col=3,
+					$colSpan=2,
+					$text = $timeuntilinvasion,
+					]" />
+			</actions>
+		</cue>
+		<cue name="DeadAirJobInvasions" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasions" exact="if $DeadAirGlobal.$DeadAirJobInvasions == true then false else true" />
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- Updated $DeadAirGlobal.$DeadAirJobInvasions to %2'.[player.age,$DeadAirGlobal.$DeadAirJobInvasions]" 
+					context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Refresh_Menu"/>
+			</actions>
+		</cue>
+		<cue name="DeadAirJobInvasionsTime" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsTime" exact="event.param.$value" />
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- Updated $DeadAirGlobal.$DeadAirJobInvasionsTime to %2'.[player.age,$DeadAirGlobal.$DeadAirJobInvasionsTime]" 
+					context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Refresh_Menu"/>
+			</actions>
+		</cue>
+		<cue name="DeadAirJobInvasionsInterval" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<set_value name="$DeadAirGlobal.$DeadAirJobInvasionsInterval" exact="event.param.$value" />
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- Updated $DeadAirGlobal.$DeadAirJobInvasionsInterval to %2'.[player.age,$DeadAirGlobal.$DeadAirJobInvasionsInterval]" 
+					context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Refresh_Menu"/>
+			</actions>
+		</cue>
+		</cues>
+		</cue>
+	</cues>
+</mdscript>

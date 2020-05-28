@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="DeadAirPirateFix" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="Init">
+			<actions>
+			</actions>
+			<cues>
+				<cue name="SignalFixPirates" instantiate="true">
+					<conditions>
+						<check_any>
+							<event_cue_signalled cue="md.Setup.GameStart"/>
+							<event_game_loaded/>
+						</check_any>
+					</conditions>
+					<actions>
+						<signal_cue_instantly cue="FixPirates"/>
+					</actions>
+				</cue>
+				<cue name="FixPirates" instantiate="true">
+					<conditions>
+						<event_cue_signalled />
+					</conditions>
+					<actions>
+						<set_value name="$PirateFixDebugChance" exact="false" />
+						<get_factions_by_tag result="$economicfactions" tag="tag.economic"/>
+						<set_value name="$LocalSmugglerCoverFactions" exact="global.$smugglercoverfactions" />
+						<do_all exact="$economicfactions.count" counter="$a">
+							<do_if value="($LocalSmugglerCoverFactions.indexof.{$economicfactions.{$a}} lt 1) and $economicfactions.{$a}.isactive">
+								<append_to_list name="global.$smugglercoverfactions" exact="$economicfactions.{$a}"/>
+								<debug_text text="'MOD: DeadAirPirateFix -- %1 -- Adding %2 to smuggler cover factions'.[player.age,$economicfactions.{$a}.knownname]" 
+										context="false" filter="scripts" chance="if @$PirateFixDebugChance then ($PirateFixDebugChance * 100) else 0"/>
+							</do_if>
+						</do_all>
+					</actions>
+				</cue>
+			</cues>
+		</cue>
+	</cues>
+</mdscript>

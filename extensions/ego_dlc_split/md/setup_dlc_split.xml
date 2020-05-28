@@ -5,4 +5,5 @@
 </add>
 <replace sel="//library[@name='Start_Actions']/actions/append_list_elements[@name='md.$SplitFactions']/@other">[faction.split, faction.freesplit, faction.court, faction.fallensplit]</replace>
 <remove sel="//cue[@name='Setup']/actions/do_if[@value='player.galaxy.macro == macro.xu_ep2_universe_macro']" />
+<remove sel="/mdscript/cues/cue[@name='Setup']/actions/do_if[@value='global.$smugglercoverfactions?']/remove_from_list[@name='global.$smugglercoverfactions']"/>
 </diff>

@@ -67,14 +67,15 @@
 		</cue>
 		<cue name="FindJobsAndShips" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
 			<actions>
+				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
 				<get_factions_by_tag tag="tag.privateship" result="$PrivateShipFactionList" />
-				<do_all exact="$PrivateShipFactionList.count" counter="$PrivateShipFactionCounter">
+				<do_all exact="$PrivateShipFactionList.count" counter="$a">
 					<!-- ALL DEADAIRJOBS -->
-					<get_suitable_job result="$TempJobList" multiple="true" faction="$PrivateShipFactionList.{$PrivateShipFactionCounter}" tags="tag.deadair" exceedquota="true" />
-					<do_all exact="$TempJobList.count" counter="$TempJobCounter">
-						<do_if value="not $DeadAirGlobal.$DeadAirJobList.indexof.{$TempJobList.{$TempJobCounter}}">
-							<append_to_list name="$DeadAirGlobal.$DeadAirJobList" exact="$TempJobList.{$TempJobCounter}" />
-							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindJobsAndShips -- Adding Job to $DeadAirGlobal.$DeadAirJobList -- Job: %2'.[player.age,$TempJobList.{$TempJobCounter}]" 
+					<get_suitable_job result="$TempJobList" multiple="true" faction="$PrivateShipFactionList.{$a}" tags="tag.deadair" exceedquota="true" />
+					<do_all exact="$TempJobList.count" counter="$b">
+						<do_if value="not $DeadAirGlobal.$DeadAirJobList.indexof.{$TempJobList.{$b}}">
+							<append_to_list name="$DeadAirGlobal.$DeadAirJobList" exact="$TempJobList.{$b}" />
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindJobsAndShips -- Adding Job to $DeadAirGlobal.$DeadAirJobList -- Job: %2'.[player.age,$TempJobList.{$b}]" 
 								context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
 						</do_if>
 					</do_all>
@@ -83,11 +84,11 @@
 					<!-- clean up -->
 					<do_if value="$DeadAirGlobal.$DeadAirJobList.count gt 0">
 						<find_ship name="$TempShipList" space="player.galaxy" job="$DeadAirGlobal.$DeadAirJobList" multiple="true" />
-						<do_all exact="$TempShipList.count" counter="$TempShipCounter">
-							<do_if value="not $DeadAirGlobal.$DeadAirJobShipList.indexof.{$TempShipList.{$TempShipCounter}}">
-								<add_to_group groupname="$DeadAirGlobal.$DeadAirJobShipList" object="$TempShipList.{$TempShipCounter}" />
+						<do_all exact="$TempShipList.count" counter="$c">
+							<do_if value="not $DeadAirGlobal.$DeadAirJobShipList.indexof.{$TempShipList.{$c}}">
+								<add_to_group groupname="$DeadAirGlobal.$DeadAirJobShipList" object="$TempShipList.{$c}" />
 								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindJobsAndShips -- Adding Ship to $DeadAirGlobal.$DeadAirJobShipList -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
-									$TempShipList.{$TempShipCounter}.knownname,$TempShipList.{$TempShipCounter}.class,$TempShipList.{$TempShipCounter}.trueowner.knownname,$TempShipList.{$TempShipCounter}.job,$TempShipList.{$TempShipCounter}.jobmainzone.sector.knownname,$TempShipList.{$TempShipCounter}.defaultorder.id]" 
+									$TempShipList.{$c}.knownname,$TempShipList.{$c}.class,$TempShipList.{$c}.trueowner.knownname,$TempShipList.{$c}.job,$TempShipList.{$c}.jobmainzone.sector.knownname,$TempShipList.{$c}.defaultorder.id]" 
 									context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
 							</do_if>
 						</do_all>
@@ -136,8 +137,8 @@
 						<create_list name="$locDeadAirJobShipList" />
 						<!-- only spend time if we already captured a list -->
 						<do_if value="$DeadAirGlobal.$DeadAirJobShipList.count gt 0">
-							<do_all exact="$DeadAirGlobal.$DeadAirJobShipList.count" counter="$DATempShipCounter">
-								<set_value name="$DATempShip" exact="$DeadAirGlobal.$DeadAirJobShipList.{$DATempShipCounter}" />
+							<do_all exact="$DeadAirGlobal.$DeadAirJobShipList.count" counter="$d">
+								<set_value name="$DATempShip" exact="$DeadAirGlobal.$DeadAirJobShipList.{$d}" />
 								<!-- job tags don't work, so we'll do an index check -->
 								<do_if value="$DeadAirGlobal.$DeadAirSupremacyJobList.indexof.{$DATempShip.job}">
 									<append_to_list name="$locDeadAirJobShipList" exact="$DATempShip" />
@@ -150,13 +151,12 @@
 							</do_all>
 							<!-- clean up -->
 							<remove_value name="$DATempShip" />
-							<remove_value name="$DATempShipCounter" />
 							<!-- clean up -->
 							<!-- time to check if the fleet is full -->
 							<do_if value="$locDeadAirJobShipList.count gt 0">
 								<create_list name="$locSupremacyReadyForInvasion" />
-								<do_all exact="$locDeadAirJobShipList.count" counter="$SFTempShipCounter">
-									<set_value name="$SFTempShip" exact="$locDeadAirJobShipList.{$SFTempShipCounter}" />
+								<do_all exact="$locDeadAirJobShipList.count" counter="$e">
+									<set_value name="$SFTempShip" exact="$locDeadAirJobShipList.{$e}" />
 									<get_subordinate_jobs jobs="$tempsubordinatejobs" amount="$tempsubordinateamounts" commander="$SFTempShip" />
 									<do_if value="$tempsubordinatejobs.count">
 										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet NOT ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
@@ -179,20 +179,24 @@
 								<remove_value name="$tempsubordinatejobs" />
 								<remove_value name="$tempsubordinateamounts" />
 								<remove_value name="$SFTempShip" />
-								<remove_value name="$SFTempShipCounter" />
 								<!-- clean up -->
 								<do_if value="$locSupremacyReadyForInvasion.count gt 0">
 									<set_value name="$DeadAirJobInvasionLastTimeFired" exact="player.age" />
-									<do_all exact="$locSupremacyReadyForInvasion.count" counter="$ReadySFTempShipCounter">
-										<set_value name="$ReadySFTempShip" exact="$locSupremacyReadyForInvasion.{$ReadySFTempShipCounter}" />
+									<do_all exact="$locSupremacyReadyForInvasion.count" counter="$f">
+										<set_value name="$ReadySFTempShip" exact="$locSupremacyReadyForInvasion.{$f}" />
 										<get_factions_by_relation relation="kill" faction="$ReadySFTempShip.trueowner" result="$TempFactionKillList" />
 										<remove_from_list name="$TempFactionKillList" list="[faction.civilian,faction.criminal,faction.holyorderfanatic,faction.khaak,faction.ownerless,faction.smuggler,faction.visitor]" multiple="true" />
+										<get_factions_by_tag tag="tag.visitor" result="$VisitorFactionList" />
+										<remove_from_list name="$TempFactionKillList" list="$VisitorFactionList" multiple="true" />
 										<do_if value="$TempFactionKillList.count">
 											<get_factions_by_tag tag="tag.claimspace" result="$ClaimspaceFactionList" />
-											<do_all exact="$TempFactionKillList.count" counter="$TempFactionKillCounter" reverse="true">
-												<do_if value="($ClaimspaceFactionList.indexof.{$TempFactionKillList.{$TempFactionKillCounter}} le 0) and (not $TempFactionKillList.{$TempFactionKillCounter}.isactive)">
-													<remove_value name="$TempFactionKillList.{$TempFactionKillCounter}" />
+											<do_all exact="$TempFactionKillList.count" counter="$g" reverse="true">
+												<do_if value="($ClaimspaceFactionList.indexof.{$TempFactionKillList.{$g}} le 0)">
+													<remove_value name="$TempFactionKillList.{$g}" />
 												</do_if>
+												<do_elseif value="(not $TempFactionKillList.{$g}.isactive)">
+													<remove_value name="$TempFactionKillList.{$g}" />
+												</do_elseif>
 											</do_all>
 											<do_if value="$TempFactionKillList.count">
 												<set_value name="$TempFaction" exact="$TempFactionKillList.random" />
@@ -239,7 +243,6 @@
 									</do_all>
 									<!-- clean up -->
 									<remove_value name="$ReadySFTempShip" />
-									<remove_value name="$ReadySFTempShipCounter" />
 									<remove_value name="$TempFactionKillList" />
 									<remove_value name="$ClaimspaceFactionList" />
 									<remove_value name="$TempFaction" />
@@ -307,8 +310,8 @@
 				<set_value name="$AttackedFaction" exact="event.param.{2}" />
 				<set_value name="$AttackedSector" exact="event.param.{3}" />
 				<find_station name="$AttackedStations" space="$AttackedSector" multiple="true" owner="$AttackedFaction" />
-				<do_all exact="$AttackedStations.count" counter="$AttackedStationsCounter">
-					<set_value name="$AttackedStation" exact="$AttackedStations.{$AttackedStationsCounter}" />
+				<do_all exact="$AttackedStations.count" counter="$h">
+					<set_value name="$AttackedStation" exact="$AttackedStations.{$h}" />
 					<create_order id="'AttackInRange'" object="$AttackingShip">
 						<param name="destination" value="[$AttackedSector,$AttackedStation.relativeposition.{$AttackedSector}]"/>
 					</create_order>

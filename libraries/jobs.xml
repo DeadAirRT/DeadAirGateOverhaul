@@ -17230,7 +17230,7 @@
       <order order="DAProtectShipyard" default="true" />
     </orders>
     <category faction="xenon" tags="[military, carrier, deadair, supremacyfleet]" size="ship_xl"/>
-    <quota maxgalaxy="1" galaxy="1" cluster="1" sector="1"/><!--supremacy_fleet-->
+    <quota maxgalaxy="3" galaxy="3" cluster="1" sector="1"/><!--supremacy_fleet-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[xenon]" relation="self" comparison="exact" matchextension="false">
 		<security min="1.0" />
 	</location>
@@ -17378,10 +17378,9 @@
       </order>
     </orders>
     <category faction="khaak" tags="[military, fighter, deadair, supremacyfleet]" size="ship_m"/>
-    <quota maxgalaxy="1" galaxy="1" cluster="1" sector="1"/><!--supremacy_fleet-->
+    <quota maxgalaxy="2" galaxy="2" cluster="1" sector="1"/><!--supremacy_fleet-->
     <location class="galaxy" macro="xu_ep2_universe_macro" faction="[xenon]" relation="self" comparison="not" matchextension="false">
 		<security max="0.1" />
-		<economy max="0.25" />
 	</location>
     <environment buildatshipyard="false" gate="true" />
     <ship>

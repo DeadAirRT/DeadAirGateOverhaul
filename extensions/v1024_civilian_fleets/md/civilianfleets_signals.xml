@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff name="CivilianFleets_Signals" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <replace sel="/mdscript/cues/cue[@name='Signal_SyncOrders']/actions/do_if[@value='$toShip.assignment == assignment.mining']/do_if[@value='$isMiningOrder']">
+                    <do_if value="$isMiningOrder">
+                        <!-- DeadAir * AutoMine behavior -->
+						<set_value name="$isUsingExpertAutoMine" exact="false" />
+						<set_value name="$isUsingAdvancedAutoMine" exact="false" />
+						<set_value name="$minBuy" exact="0" />
+                        <set_value name="$minSell" exact="0" />
+                        <set_value name="$maxBuy" exact="0" />
+                        <set_value name="$maxSell" exact="0" />
+                        <set_value name="$combinedSkill" exact="0" />
+						<set_value name="$maxBuymax" exact="0" />
+						<set_value name="$maxSellmax" exact="0" />
+						<set_value name="$minBuymax" exact="0" />
+						<set_value name="$minSellmax" exact="0" />
+                        <do_if value="$fromShip_DefaultOrder.id == 'MiningRoutine_Expert'">
+							<debug_text text="'MOD: CivilianFleets -- %1 -- Syncing Expert Mining'.[player.age]" 
+								context="false" filter="scripts" chance="0"/>
+							<set_value name="$assignmentSkillLevel" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting].max" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management, @this.ship.commander.pilot.skill.management, @this.ship.pilot.skill.piloting].max,12].max -->
+							<set_value name="$maxBuymax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 12].max" />
+							<set_value name="$maxBuy" exact="[$fromShip_DefaultOrder.$maxbuy, $maxBuymax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management, @this.ship.commander.pilot.skill.management, @this.ship.pilot.skill.piloting].max,12].max -->
+							<set_value name="$maxSellmax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 12].max" />
+							<set_value name="$maxSell" exact="[$fromShip_DefaultOrder.$maxsell, $maxSellmax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 1, @this.ship.commander.pilot.skill.management - 1, @this.ship.pilot.skill.piloting - 1].max,11].max -->
+							<set_value name="$minBuymax" exact="[$fromShip.pilot.skill.management - 1, $toShip.pilot.skill.piloting -1, 11].max" />
+							<set_value name="$minBuy" exact="[$fromShip_DefaultOrder.$minbuy, $maxBuy, $minBuymax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 1, @this.ship.commander.pilot.skill.management - 1, @this.ship.pilot.skill.piloting - 1].max,11].max -->
+							<set_value name="$minSellmax" exact="[$fromShip.pilot.skill.management - 1, $toShip.pilot.skill.piloting -1, 11].max" />
+							<set_value name="$minSell" exact="[$fromShip_DefaultOrder.$minsell, $maxSell, $minSellmax].min" />
+							<set_value name="$isUsingExpertAutoMine" exact="true" comment="Actual value not important." />
+						</do_if>
+						<do_elseif value="$fromShip_DefaultOrder.id == 'MiningRoutine_Advanced'">
+							<debug_text text="'MOD: CivilianFleets -- %1 -- Syncing Advanced Mining'.[player.age]" 
+								context="false" filter="scripts" chance="0"/>
+							<set_value name="$assignmentSkillLevel" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting].max" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 5, @this.ship.commander.pilot.skill.management - 5, @this.ship.pilot.skill.piloting - 5].max,4].max -->
+							<set_value name="$maxBuymax" exact="[$fromShip.pilot.skill.management - 5, $toShip.pilot.skill.piloting - 5, 4].max" />
+							<set_value name="$maxBuy" exact="[$fromShip_DefaultOrder.$maxbuy, $maxBuymax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 5, @this.ship.commander.pilot.skill.management - 5, @this.ship.pilot.skill.piloting - 5].max,4].max -->
+							<set_value name="$maxSellmax" exact="[$fromShip.pilot.skill.management - 5, $toShip.pilot.skill.piloting - 5, 4].max" />
+							<set_value name="$maxSell" exact="[$fromShip_DefaultOrder.$maxsell, $maxSellmax].min" />
+							<set_value name="$isUsingAdvancedAutoMine" exact="true" comment="Actual value not important." />
+						</do_elseif>
+						<do_elseif value="$fromShip_DefaultOrder.id != 'MiningRoutine_Expert' and $fromShip_DefaultOrder.id != 'MiningRoutine_Advanced'">
+							<debug_text text="'MOD: CivilianFleets -- %1 -- Syncing Other Mining'.[player.age]" 
+								context="false" filter="scripts" chance="0"/>
+							<set_value name="$assignmentSkillLevel" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting].max" />
+							<!-- [([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max -->
+							<set_value name="$maxBuymax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 12].max" />
+							<set_value name="$maxBuy" exact="[$fromShip_DefaultOrder.$maxbuy, $maxBuymax].min" />
+							<!-- [([@this.ship.commander.tradenpc.skill.management, @this.ship.pilot.skill.piloting].max),12].max -->
+							<set_value name="$maxSellmax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 12].max" />
+							<set_value name="$maxSell" exact="[$fromShip_DefaultOrder.$maxsell, $maxSellmax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 1, @this.ship.commander.pilot.skill.management - 1, @this.ship.pilot.skill.piloting - 1].max,11].max -->
+							<set_value name="$minBuymax" exact="[$fromShip.pilot.skill.management - 1, $toShip.pilot.skill.piloting -1, 11].max" />
+							<set_value name="$minBuy" exact="[$fromShip_DefaultOrder.$minbuy, $maxBuy, $minBuymax].min" />
+							<!-- [[@this.ship.commander.tradenpc.skill.management - 1, @this.ship.commander.pilot.skill.management - 1, @this.ship.pilot.skill.piloting - 1].max,11].max -->
+							<set_value name="$minSellmax" exact="[$fromShip.pilot.skill.management - 1, $toShip.pilot.skill.piloting -1, 11].max" />
+							<set_value name="$minSell" exact="[$fromShip_DefaultOrder.$minsell, $maxSell, $minSellmax].min" />
+						</do_elseif>
+						
+                        <set_value name="$combinedSkill" />
+                        <do_if value="$fromShip.combinedskill ge $toShip.combinedskill">
+                            <!-- If commander is better than subordinate, subordinate can do it themselves. -->
+                            <set_value name="$combinedSkill" exact="$toShip.combinedskill"/>
+                        </do_if>
+                        <do_else>
+                            <!-- Take average otherwise. -->
+                            <set_value name="$combinedSkill" exact="($fromShip.combinedskill + $toShip.combinedskill) / 2"/>
+                        </do_else>
+
+                        <!-- Fixing the ware basket for Sector AutoMine: weak typing hides the difference between arrays and objects. -->
+                        <set_value name="$wareBasket" exact="$fromShip_DefaultOrder.$warebasket" />
+                        <do_if value="not @$wareBasket.count">
+                            <!-- .count cannot be accessed, meaning that this is an object. -->
+                            <!-- "Cast" it back to an array with 1 objects. -->
+                            <set_value name="$wareBasket" exact="[$wareBasket]"/>
+                        </do_if>
+
+                        <do_if value="$isUsingExpertAutoMine == true">
+                            <!-- Expert AutoMine range detected. We must use Expert AutoMine. -->
+                            <create_order object="$toShip" id="'MiningRoutine_Expert'" default="true">
+                                <param name="warebasket" value="$wareBasket" />
+                                <param name="range" value="$fromShip_DefaultOrder.$range" />
+                                <param name="minbuy" value="$minBuy" />
+                                <param name="minsell" value="$minSell" />
+                                <param name="maxbuy" value="$maxBuy" />
+                                <param name="maxsell" value="$maxSell" />
+                            </create_order>
+                        </do_if>
+						<do_elseif value="$isUsingAdvancedAutoMine == true">
+							<create_order object="$toShip" id="'MiningRoutine_Advanced'" default="true">
+								<param name="warebasket" value="$wareBasket" />
+								<param name="range" value="$fromShip_DefaultOrder.$range" />
+								<param name="maxbuy" value="$maxBuy" />
+								<param name="maxsell" value="$maxSell" />
+							</create_order>
+						</do_elseif>
+                        <do_elseif value="$isUsingExpertAutoMine == false and $isUsingAdvancedAutoMine == false">
+							<!-- We stick to Pure AutoMine in all other cases. -->
+							<create_order object="$toShip" id="'MiningRoutine'" default="true">
+								<!-- In v2.5, only maxbuy and maxsell can be modified by the user. -->
+								<!-- Hence, configuring minbuy and minsell becomes meaningless. -->
+								<!-- Correction: Expert AutoMine manipulates minbuy and minsell so they are still meaningful to some extent. -->
+								<param name="warebasket" value="$wareBasket" />
+								<param name="range" value="$fromShip_DefaultOrder.$range" />
+								<param name="minbuy" value="$minBuy" />
+								<param name="minsell" value="$minSell" />
+								<param name="maxbuy" value="$maxBuy" />
+								<param name="maxsell" value="$maxSell" />
+								<param name="effectiveskill" value="$combinedSkill" />
+							</create_order>
+						</do_elseif>
+						
+                        <set_order_syncpoint_reached order="$toShip.order"/>
+                        <set_value name="$syncSuccessful" exact="true" />
+
+                        
+                        <remove_value name="$minBuy" />
+                        <remove_value name="$minSell" />
+                        <remove_value name="$maxBuy" />
+                        <remove_value name="$maxSell" />
+                        <remove_value name="$combinedSkill" />
+                        <remove_value name="$isUsingExpertAutoMine" />
+						<remove_value name="$isUsingAdvancedAutoMine" />
+						<remove_value name="$maxBuymax" />
+						<remove_value name="$maxSellmax" />
+						<remove_value name="$minBuymax" />
+						<remove_value name="$minSellmax" />
+                    </do_if>
+  </replace>
+  <replace sel="/mdscript/cues/cue[@name='Signal_SyncOrders']/actions/do_elseif[@value='$toShip.assignment == assignment.trade']/do_if[contains(@value,TradeRoutine)]">
+                    <do_if value="$fromShip_DefaultOrder.id == 'TradeRoutine'">
+                        <!-- DeadAir AutoTrade behavior -->
+						<!-- [([@this.ship.commander.tradenpc.skill.management, @this.ship.commander.pilot.skill.management, @this.ship.pilot.skill.piloting].max),3].max -->
+						<set_value name="$maxBuymax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 3].max" />
+						<set_value name="$maxBuy" exact="[$fromShip_DefaultOrder.$maxbuy, $maxBuymax].min" />
+						<!-- [([@this.ship.commander.tradenpc.skill.management, @this.ship.commander.pilot.skill.management, @this.ship.pilot.skill.piloting].max),3].max -->
+						<set_value name="$maxSellmax" exact="[$fromShip.pilot.skill.management, $toShip.pilot.skill.piloting, 3].max" />
+						<set_value name="$maxSell" exact="[$fromShip_DefaultOrder.$maxsell, $maxSellmax].min" />
+
+                        <do_if value="$haveSameDefaultOrder">
+                            <edit_order_param order="$toShip_DefaultOrder" param="'warebasket'" value="$fromShip_DefaultOrder.$warebasket" />
+                            <edit_order_param order="$toShip_DefaultOrder" param="'range'" value="$fromShip_DefaultOrder.$range" />
+                            <edit_order_param order="$toShip_DefaultOrder" param="'maxbuy'" value="$maxBuy" />
+                            <edit_order_param order="$toShip_DefaultOrder" param="'maxsell'" value="$maxSell" />
+                        </do_if>
+                        <do_else>
+                             <create_order object="$toShip" id="'TradeRoutine'" default="true">
+                                <!-- In v2.5, only maxbuy and maxsell can be modified by the user. -->
+                                <!-- Hence, configuring minbuy and minsell becomes meaningless. -->
+                                <param name="warebasket" value="$fromShip_DefaultOrder.$warebasket" />
+                                <param name="range" value="$fromShip_DefaultOrder.$range" />
+                                <param name="maxbuy" value="$maxBuy" />
+                                <param name="maxsell" value="$maxSell" />
+                            </create_order>
+                            <set_order_syncpoint_reached order="$toShip.order"/>
+                        </do_else>
+                        <set_value name="$syncSuccessful" exact="true" />
+
+                        <!-- Out of scope variable removal -->
+						<remove_value name="$maxBuy" />
+						<remove_value name="$maxBuymax" />
+						<remove_value name="$maxSell" />
+						<remove_value name="$maxSellmax" />
+                    </do_if>
+  </replace>
+  
+</diff>

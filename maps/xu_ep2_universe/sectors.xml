@@ -4538,9 +4538,34 @@
         </offset>
         <macro ref="ZoneDAGO7_Cluster_DA2_Sector001_macro" connection="sector" />
 	  </connection>
+	  <!-- Why am I doing this? -->
+	  <connection name="ZoneDAGO8_Cluster_DA2_Sector001_connection" ref="zones">
+        <offset>
+          <position x="82800" y="0" z="124200" />
+        </offset>
+        <macro ref="ZoneDAGO8_Cluster_DA2_Sector001_macro" connection="sector" />
+	  </connection>
+	  <connection name="ZoneDAGO9_Cluster_DA2_Sector001_connection" ref="zones">
+        <offset>
+          <position x="150000" y="0" z="0" />
+        </offset>
+        <macro ref="ZoneDAGO9_Cluster_DA2_Sector001_macro" connection="sector" />
+	  </connection>
+	  <connection name="ZoneDAGO10_Cluster_DA2_Sector001_connection" ref="zones">
+        <offset>
+          <position x="-82800" y="0" z="-124200" />
+        </offset>
+        <macro ref="ZoneDAGO10_Cluster_DA2_Sector001_macro" connection="sector" />
+	  </connection>
+	  <connection name="ZoneDAGO11_Cluster_DA2_Sector001_connection" ref="zones">
+        <offset>
+          <position x="-150000" y="0" z="0" />
+        </offset>
+        <macro ref="ZoneDAGO11_Cluster_DA2_Sector001_macro" connection="sector" />
+	  </connection>
     </connections>
   </macro>
-    <macro name="Cluster_DA2N_Sector001_macro" class="sector">
+  <macro name="Cluster_DA2N_Sector001_macro" class="sector">
     <component ref="standardsector" />
     <connections>
       <connection name="ZoneDAGO1_Cluster_DA2N_Sector001_connection" ref="zones">
@@ -4587,7 +4612,7 @@
 	  </connection>
     </connections>
   </macro>
-    <macro name="Cluster_DA2E_Sector001_macro" class="sector">
+  <macro name="Cluster_DA2E_Sector001_macro" class="sector">
     <component ref="standardsector" />
     <connections>
       <connection name="ZoneDAGO1_Cluster_DA2E_Sector001_connection" ref="zones">
@@ -4634,7 +4659,7 @@
 	  </connection>
     </connections>
   </macro>
-    <macro name="Cluster_DA2S_Sector001_macro" class="sector">
+  <macro name="Cluster_DA2S_Sector001_macro" class="sector">
     <component ref="standardsector" />
     <connections>
       <connection name="ZoneDAGO1_Cluster_DA2S_Sector001_connection" ref="zones">
@@ -4681,7 +4706,7 @@
 	  </connection>
     </connections>
   </macro>
-    <macro name="Cluster_DA2W_Sector001_macro" class="sector">
+  <macro name="Cluster_DA2W_Sector001_macro" class="sector">
     <component ref="standardsector" />
     <connections>
       <connection name="ZoneDAGO1_Cluster_DA2W_Sector001_connection" ref="zones">

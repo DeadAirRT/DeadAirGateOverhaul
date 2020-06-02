@@ -6640,6 +6640,30 @@
         </macro>
       </connection>
 </add>
+<add sel="//macros/macro[@name='Cluster_44_macro']/connections">
+	  <connection name="C44S01_RegionDA1_connection" ref="regions">
+        <offset>
+          <position x="1" y="1" z="1" />
+        </offset>
+        <macro name="C44S01_RegionDA1_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="dago_solid_high_all" />
+          </properties>
+        </macro>
+      </connection>
+	  <connection name="C44S01_RegionDA2_connection" ref="regions">
+        <offset>
+          <position x="1" y="1" z="1" />
+        </offset>
+        <macro name="C44S01_RegionDA2_macro">
+          <component connection="cluster" ref="standardregion" />
+          <properties>
+            <region ref="dago_liquid_white" />
+          </properties>
+        </macro>
+      </connection>
+</add>
 <!-- Let's try to solve the route problem -->
 <!-- v0.6 -->
 <remove sel="//macros/macro[@name='Cluster_01_macro']/connections/connection[@name='SuperHighway001_Cluster_01_connection']"/>

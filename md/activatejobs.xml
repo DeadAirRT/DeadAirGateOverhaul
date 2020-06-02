@@ -31,7 +31,7 @@
 				<set_value name="$DeadAirGlobal.$DeadAirJobNextInvasionsTime" exact="[(player.age),($DeadAirGlobal.$DeadAirJobInvasionsTime)min].max + ($DeadAirGlobal.$DeadAirJobInvasionsInterval)min" />
 			</do_if>
 			<do_if value="not $DeadAirActivateJobsDebug?">
-				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
+				<set_value name="$DeadAirActivateJobsDebug" exact="false" />
 			</do_if>
 			<do_if value="not $DeadAirGlobal.$DeadAirSupremacyJobList?">
 				<set_value name="$DeadAirGlobal.$DeadAirSupremacyJobList" exact="['argon_carrier_supremacy_fleet','antigone_carrier_supremacy_fleet','paranid_carrier_supremacy_fleet','holyorder_carrier_supremacy_fleet','teladi_carrier_supremacy_fleet',
@@ -67,7 +67,7 @@
 		</cue>
 		<cue name="FindJobsAndShips" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
 			<actions>
-				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
+				<set_value name="$DeadAirActivateJobsDebug" exact="false" />
 				<get_factions_by_tag tag="tag.privateship" result="$PrivateShipFactionList" />
 				<do_all exact="$PrivateShipFactionList.count" counter="$a">
 					<!-- ALL DEADAIRJOBS -->
@@ -159,11 +159,16 @@
 									<set_value name="$SFTempShip" exact="$locDeadAirJobShipList.{$e}" />
 									<get_subordinate_jobs jobs="$tempsubordinatejobs" amount="$tempsubordinateamounts" commander="$SFTempShip" />
 									<do_if value="$tempsubordinatejobs.count">
-										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet NOT ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
-											$SFTempShip.knownname,$SFTempShip.class,$SFTempShip.trueowner.knownname,$SFTempShip.job,$SFTempShip.jobmainzone.sector.knownname,$SFTempShip.defaultorder.id]" 
+										<set_value name="$neededsubordinates" exact="0" />
+										<do_all exact="$tempsubordinateamounts.count" counter="$i">
+											<set_value name="$neededsubordinates" exact="$neededsubordinates + $tempsubordinateamounts.{$i}" />
+										</do_all>
+										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet NOT ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7 -- Ship Needed Subordinates: %8'.[player.age,
+											$SFTempShip.knownname,$SFTempShip.class,$SFTempShip.trueowner.knownname,$SFTempShip.job,$SFTempShip.jobmainzone.sector.knownname,$SFTempShip.defaultorder.id, $neededsubordinates]" 
 											context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
+										<remove_value name="$neededsubordinates" />
 									</do_if>
-									<do_elseif value="$SFTempShip.subordinates.count gt 1 and ($tempsubordinateamounts == null or $tempsubordinateamounts.count == 0)">
+									<do_elseif value="$SFTempShip.subordinates.count ge 1 and ($tempsubordinateamounts == null or $tempsubordinateamounts.count == 0)">
 										<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- Supremacy Fleet IS ready for invasion -- Ship: %2 -- Ship.class %3 -- Ship.trueowner %4 -- Ship.job %5 -- Ship.jobmainzone %6 -- Ship.defaultorder %7'.[player.age,
 											$SFTempShip.knownname,$SFTempShip.class,$SFTempShip.trueowner.knownname,$SFTempShip.job,$SFTempShip.jobmainzone.sector.knownname,$SFTempShip.defaultorder.id]" 
 											context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
@@ -181,7 +186,6 @@
 								<remove_value name="$SFTempShip" />
 								<!-- clean up -->
 								<do_if value="$locSupremacyReadyForInvasion.count gt 0">
-									<set_value name="$DeadAirJobInvasionLastTimeFired" exact="player.age" />
 									<do_all exact="$locSupremacyReadyForInvasion.count" counter="$f">
 										<set_value name="$ReadySFTempShip" exact="$locSupremacyReadyForInvasion.{$f}" />
 										<get_factions_by_relation relation="kill" faction="$ReadySFTempShip.trueowner" result="$TempFactionKillList" />
@@ -201,25 +205,32 @@
 											<do_if value="$TempFactionKillList.count">
 												<set_value name="$TempFaction" exact="$TempFactionKillList.random" />
 												
-												<!-- any. easiest to code -->
 												<find_sector name="$TempSectorList" space="player.galaxy" multiple="true" owner="$TempFaction">
 													<match_content class="class.station" owner="$TempFaction">
 														<match shipyard="true" negate="true"/>
 													</match_content>
 												</find_sector>
+												<!-- any. easiest to code -->
 												<set_value name="$TempSector" exact="$TempSectorList.random" />
+												<!-- if xenon, attack closest sector -->
+												<do_if value="$TempFaction == faction.xenon">
+													<sort_list list="$TempSectorList" sortbyvalue="$ReadySFTempShip.gatedistance.{loop.element}" sortdescending="false" />
+													<set_value name="$TempSector" exact="$TempSectorList.{1}" />
+												</do_if>
+												
 												<do_if value="$ReadySFTempShip and $TempFaction and $TempSector">
 													<do_if value="($ReadySFTempShip.order == $ReadySFTempShip.defaultorder)"><!-- or ($ReadySFTempShip.order.id != 'AttackInRange')-->
+														<set_value name="$DeadAirJobInvasionLastTimeFired" exact="player.age" />
 														<signal_cue_instantly cue="GenerateAttackOrders" param="[$ReadySFTempShip,$TempFaction,$TempSector]" />
 													</do_if>
 													<do_elseif value="$ReadySFTempShip.order.id == 'AttackInRange'">
-														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy invading. -- %2'.[player.age,
-															$ReadySFTempShip.knownname]" 
+														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy invading. -- %2 -- %3'.[player.age,
+															$ReadySFTempShip.knownname,$ReadySFTempShip.order.id]" 
 															context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
 													</do_elseif>
 													<do_else>
-														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy with something other than invading. -- %2'.[player.age,
-															$ReadySFTempShip.knownname]" 
+														<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- LaunchSupremacyFleet -- $ReadySFTempShip is already busy with something other than invading. -- %2 -- %3'.[player.age,
+															$ReadySFTempShip.knownname,$ReadySFTempShip.order.id]" 
 															context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
 													</do_else>
 												</do_if>
@@ -319,12 +330,17 @@
 						$AttackingShip.knownname,$AttackedSector.knownname,$AttackedStation.knownname,$AttackedStation.relativeposition.{$AttackedSector}]"
 						context="false" filter="scripts" chance="if @$DeadAirActivateJobsDebug then ($DeadAirActivateJobsDebug * 100) else 0"/>
 				</do_all>
+				<set_value name="$Message" exact="$AttackingShip.trueowner.knownname + ' ' + {1011,1011} + ' ' + $AttackedFaction.knownname" />
+				<set_value name="$FlavorText" exact="$AttackingShip.knownname + ' ' + {1011,1011} + ' ' + $AttackedFaction.knownname + ' ' + {1001,2953} + ' ' + $AttackedSector.knownname + '.'" />
+				<write_to_logbook category="news" title="$Message" text="$FlavorText" />
 				<!-- clean up -->
 				<remove_value name="$AttackingShip" />
 				<remove_value name="$AttackedFaction" />
 				<remove_value name="$AttackedSector" />
 				<remove_value name="$AttackedStation" />
 				<remove_value name="$AttackedStations" />
+				<remove_value name="$Message" />
+				<remove_value name="$FlavorText" />
 				<!-- clean up -->
 			</actions>
 		</cue>
@@ -411,6 +427,9 @@
 					$text = {3323247,207},
 					]" />
 				<set_value name="$timeuntilinvasion" exact="{3323247,209}.[($DeadAirGlobal.$DeadAirJobNextInvasionsTime - (player.age))/60]" />
+				<do_if value="($DeadAirGlobal.$DeadAirJobNextInvasionsTime - (player.age))/60 le 0">
+					<set_value name="$timeuntilinvasion" exact="{1001,7203}" />
+				</do_if>
 				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[
 					$col=3,
 					$colSpan=2,

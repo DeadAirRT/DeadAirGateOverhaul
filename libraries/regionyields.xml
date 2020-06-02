@@ -19,9 +19,9 @@
 <replace sel="//resource[@ware='nividium']/yield[@name='high']/@replenishtime">180</replace>
 <replace sel="//resource[@ware='nividium']/yield[@name='veryhigh']/@resourcedensity">20000</replace>
 <replace sel="//resource[@ware='nividium']/yield[@name='veryhigh']/@replenishtime">180</replace>
-<replace sel="//resource[@ware='ice']/yield[@name='medium']/@resourcedensity">40</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='medium']/@resourcedensity">25</replace>
 <replace sel="//resource[@ware='ice']/yield[@name='medium']/@replenishtime">90</replace>
-<replace sel="//resource[@ware='ice']/yield[@name='high']/@resourcedensity">400</replace>
+<replace sel="//resource[@ware='ice']/yield[@name='high']/@resourcedensity">200</replace>
 <replace sel="//resource[@ware='ice']/yield[@name='high']/@replenishtime">180</replace>
 <!-- LIQUID -->
 <replace sel="//resource[@ware='hydrogen']/yield[@name='medium']/@resourcedensity">150</replace>

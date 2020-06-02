@@ -44,7 +44,7 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
 
 <replace sel="//factions/faction[@id='fallensplit']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
 
-<replace sel="//factions/faction[@id='freesplit']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
+<replace sel="//factions/faction[@id='freesplit']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship</replace>
 <remove sel="//factions/faction[@id='freesplit']/signals" />
 
 <replace sel="//factions/faction[@id='hatikvah']/@tags">claimspace economic police protective watchdoguser privateloadout publicloadout privateship publicship plunder</replace>
@@ -111,11 +111,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_basic" name="{3323247,1015}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{3323247,1016}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
 	  <licence type="capitalequipment" factions="paranid" />
-	  <!--<licence type="capitalship" factions="paranid" />-->
 	  <licence type="generaluseequipment" factions="paranid" />
-	  <!--<licence type="generaluseship" factions="paranid" />-->
 	  <licence type="militaryequipment" factions="paranid" />
-	  <!--<licence type="militaryship" factions="paranid" />-->
 	  <licence type="station_gen_basic" factions="paranid" />
 	  <licence type="station_gen_intermediate" factions="paranid" />
 	  <licence type="station_gen_advanced" factions="paranid" />
@@ -142,11 +139,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_intermediate" name="{20207,7351}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="tradesubscription" name="{20207,4031}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
 	  <licence type="capitalequipment" factions="alliance" />
-	  <!--<licence type="capitalship" factions="alliance" />-->
 	  <licence type="generaluseequipment" factions="alliance" />
-	  <!--<licence type="generaluseship" factions="alliance" />-->
 	  <licence type="militaryequipment" factions="alliance" />
-	  <!--<licence type="militaryship" factions="alliance" />-->
 	  <licence type="station_gen_basic" factions="alliance" />
 	  <licence type="station_gen_intermediate" factions="alliance" />
 	  <licence type="station_gen_advanced" factions="alliance" />
@@ -201,11 +195,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_intermediate" name="{20207,7691}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="tradesubscription" name="{20207,4111}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
       <licence type="capitalequipment" factions="paranid argon antigone holyorder" />
-      <licence type="capitalship" factions="paranid argon antigone holyorder" />
       <licence type="generaluseequipment" factions="paranid argon antigone holyorder" />
-      <licence type="generaluseship" factions="paranid argon antigone holyorder" />
       <licence type="militaryequipment" factions="paranid argon antigone holyorder" />
-      <licence type="militaryship" factions="paranid argon antigone holyorder" />
       <licence type="station_equip_lxl" factions="paranid holyorder" />
       <licence type="station_equip_sm" factions="paranid holyorder" />
       <licence type="station_gen_advanced" factions="paranid holyorder" />
@@ -234,11 +225,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_basic" name="{3323247,1045}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{3323247,1046}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="capitalequipment" factions="argon" />
-	  <!--<licence type="capitalship" factions="argon" />-->
 	  <licence type="generaluseequipment" factions="argon" />
-	  <!--<licence type="generaluseship" factions="argon" />-->
 	  <licence type="militaryequipment" factions="argon" />
-	  <!--<licence type="militaryship" factions="argon" />-->
 	  <licence type="station_gen_basic" factions="argon" />
 	  <licence type="station_gen_intermediate" factions="argon" />
 	  <licence type="station_gen_advanced" factions="argon" />
@@ -267,11 +255,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="subgroupfriend" name="{20207,6001}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="tradesubscription" name="{20207,4001}" minrelation="0.1" precursor="ceremonyally" price="10000000" />
 	  <licence type="capitalequipment" factions="hatikvah" />
-	  <!--<licence type="capitalship" factions="hatikvah" />-->
 	  <licence type="generaluseequipment" factions="hatikvah" />
-	  <!--<licence type="generaluseship" factions="hatikvah" />-->
 	  <licence type="militaryequipment" factions="hatikvah" />
-	  <!--<licence type="militaryship" factions="hatikvah" />-->
 	  <licence type="station_gen_basic" factions="hatikvah" />
 	  <licence type="station_gen_intermediate" factions="hatikvah" />
 	  <licence type="station_gen_advanced" factions="hatikvah" />
@@ -328,11 +313,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_basic" name="{3323247,1085}" minrelation="-0.01" price="0" />
       <licence type="station_gen_intermediate" name="{3323247,1086}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="capitalequipment" factions="teladi" />
-	  <!--<licence type="capitalship" factions="teladi" />-->
 	  <licence type="generaluseequipment" factions="teladi" />
-	  <!--<licence type="generaluseship" factions="teladi" />-->
 	  <licence type="militaryequipment" factions="teladi" />
-	  <!--<licence type="militaryship" factions="teladi" />-->
 	  <licence type="station_gen_basic" factions="teladi" />
 	  <licence type="station_gen_intermediate" factions="teladi" />
 	  <licence type="station_gen_advanced" factions="teladi" />
@@ -475,11 +457,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
       <licence type="station_gen_intermediate" name="{3323247,10114}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
       <licence type="tradesubscription" name="{3323247,10115}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
 	  <licence type="capitalequipment" factions="freesplit" />
-      <licence type="capitalship" factions="freesplit" />
       <licence type="generaluseequipment" factions="freesplit" />
-      <licence type="generaluseship" factions="freesplit" />
       <licence type="militaryequipment" factions="freesplit" />
-      <licence type="militaryship" factions="freesplit" />
 	  <licence type="station_gen_basic" factions="freesplit argon" />
 	  <licence type="station_gen_intermediate" factions="freesplit argon" />
 	  <licence type="station_gen_advanced" factions="freesplit argon" />
@@ -506,11 +485,8 @@ Note: Relations defined here apply only to gamestart. Relations may change throu
         <licence type="station_gen_intermediate" name="{20207,7641}" minrelation="0.01" precursor="ceremonyfriend" price="0" />
         <licence type="tradesubscription" name="{20207,4131}" minrelation="0.1" precursor="ceremonyally" price="5000000" />
         <licence type="capitalequipment" factions="split" />
-        <licence type="capitalship" factions="split" />
         <licence type="generaluseequipment" factions="split" />
-        <licence type="generaluseship" factions="split" />
         <licence type="militaryequipment" factions="split" />
-        <licence type="militaryship" factions="split" />
         <licence type="station_equip_lxl" factions="split" />
         <licence type="station_equip_sm" factions="split" />
         <licence type="station_gen_advanced" factions="split argon" />

@@ -9,6 +9,16 @@
     <group threshold="0.75" />
   </loadout>
 </replace>
+
+<!--<replace sel="/parameters/holomap/universe/camera/@max">50000000</replace>
+<replace sel="/parameters/holomap/universe/text/@scale">3.6</replace>
+<replace sel="/parameters/holomap/universe/sectorname/@fontsize">24</replace>
+<replace sel="/parameters/holomap/universe/sectorname/fading"><fading fadeinstart="1500000" fadeinend="1200000" /></replace>-->
+<replace sel="/parameters/holomap/jumpgate/line/@width">15</replace>
+<replace sel="/parameters/holomap/jumpgate/line/@cutoff">15</replace>
+<replace sel="/parameters/holomap/jumpgate/line/fading/@range">0.3</replace>
+<replace sel="/parameters/holomap/jumpgate/line/fading/@forceicon">0.3</replace>
+
 <replace sel="//parameters/navigation/travelspeed/@space">4000</replace>
 <replace sel="//parameters/aiflight/steering/linear/@start">1.8</replace>
 <replace sel="//parameters/aiflight/steering/linear/@end">10</replace>

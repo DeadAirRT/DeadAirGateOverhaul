@@ -10,10 +10,11 @@
   </loadout>
 </replace>
 
-<!--<replace sel="/parameters/holomap/universe/camera/@max">50000000</replace>
+<replace sel="/parameters/holomap/universe/camera/@max">7500000</replace>
+<replace sel="/parameters/holomap/universe/camera/@steps">180</replace>
 <replace sel="/parameters/holomap/universe/text/@scale">3.6</replace>
-<replace sel="/parameters/holomap/universe/sectorname/@fontsize">24</replace>
-<replace sel="/parameters/holomap/universe/sectorname/fading"><fading fadeinstart="1500000" fadeinend="1200000" /></replace>-->
+<replace sel="/parameters/holomap/universe/sectorname/@fontsize">28</replace>
+<replace sel="/parameters/holomap/universe/sectorname/fading"><fading fadeinstart="3000000" fadeinend="300000" /></replace>
 <replace sel="/parameters/holomap/jumpgate/line/@width">15</replace>
 <replace sel="/parameters/holomap/jumpgate/line/@cutoff">15</replace>
 <replace sel="/parameters/holomap/jumpgate/line/fading/@range">0.3</replace>

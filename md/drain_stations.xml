@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <diff name="Drain_Stations" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<replace sel="//mdscript[@name='Drain_Stations']/cues/cue[@name='Start']/cues/cue[@name='DrainLoop']/cues/cue[@name='DrainLoop_Reset']/delay"><delay min="[60min / $Clusters.count - 10, 15s].max" max="[60min / $Clusters.count + 10, 25s].max"/></replace>
+<replace sel="//mdscript[@name='Drain_Stations']/cues/cue[@name='Start']/cues/cue[@name='DrainLoop']/cues/cue[@name='DrainLoop_Reset']/delay"><delay min="[90min / $Clusters.count - 10, 15s].max" max="[90min / $Clusters.count + 10, 25s].max"/></replace>
 </diff>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@lowerlimit">25</replace>
-  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@upperlimit">35</replace>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@lowerlimit">45</replace>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@upperlimit">55</replace>
   <remove sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@extremechance"/>
 </diff>

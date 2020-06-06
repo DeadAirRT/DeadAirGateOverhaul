@@ -1297,7 +1297,7 @@
 
     <product id="arg_antimattercells" ware="antimattercells" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -1334,7 +1334,7 @@
 
     <product id="arg_dronecomponents" ware="dronecomponents" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -1346,11 +1346,11 @@
 
     <product id="arg_energycells" ware="energycells" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -1359,7 +1359,7 @@
 
     <product id="arg_engineparts" ware="engineparts" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -1420,7 +1420,7 @@
 
     <product id="arg_meat" ware="meat" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -1456,7 +1456,7 @@
 
     <product id="arg_missilecomponents" ware="missilecomponents" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -1480,7 +1480,7 @@
 
     <product id="arg_quantumtubes" ware="quantumtubes" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -1492,7 +1492,7 @@
 
     <product id="arg_refinedmetals" ware="refinedmetals" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -1517,7 +1517,7 @@
 
     <product id="arg_shieldcomponents" ware="shieldcomponents" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -1529,7 +1529,7 @@
 
     <product id="arg_siliconwafers" ware="siliconwafers" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -1566,7 +1566,7 @@
 
     <product id="arg_spices" ware="spices" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -1578,7 +1578,7 @@
 
     <product id="arg_superfluidcoolant" ware="superfluidcoolant" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -1628,7 +1628,7 @@
 
     <product id="arg_wheat" ware="wheat" owner="argon" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[argon]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -1714,11 +1714,11 @@
 
     <product id="ant_energycells" ware="energycells" owner="antigone" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[antigone]" relation="self" comparison="exact" matchextension="false">
         <economy max="0.8" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -2033,7 +2033,7 @@
 
     <product id="par_antimattercells" ware="antimattercells" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -2070,7 +2070,7 @@
 
     <product id="par_dronecomponents" ware="dronecomponents" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2082,11 +2082,11 @@
 
     <product id="par_energycells" ware="energycells" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="paranid"/>
@@ -2095,7 +2095,7 @@
 
     <product id="par_engineparts" ware="engineparts" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2144,7 +2144,7 @@
 
     <product id="par_majasnails" ware="majasnails" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2180,7 +2180,7 @@
 
     <product id="par_missilecomponents" ware="missilecomponents" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -2204,7 +2204,7 @@
 
     <product id="par_quantumtubes" ware="quantumtubes" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -2216,7 +2216,7 @@
 
     <product id="par_refinedmetals" ware="refinedmetals" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -2241,7 +2241,7 @@
 
     <product id="par_shieldcomponents" ware="shieldcomponents" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2253,7 +2253,7 @@
 
     <product id="par_siliconwafers" ware="siliconwafers" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -2278,7 +2278,7 @@
 
 	<product id="par_sojabeans" ware="sojabeans" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2302,7 +2302,7 @@
 
     <product id="par_spices" ware="spices" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2314,7 +2314,7 @@
 
     <product id="par_superfluidcoolant" ware="superfluidcoolant" owner="paranid" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[paranid]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -2389,7 +2389,7 @@
 
     <product id="hol_antimattercells" ware="antimattercells" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -2426,7 +2426,7 @@
 
     <product id="hol_dronecomponents" ware="dronecomponents" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2438,11 +2438,11 @@
 
     <product id="hol_energycells" ware="energycells" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="paranid"/>
@@ -2451,7 +2451,7 @@
 
     <product id="hol_engineparts" ware="engineparts" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2500,7 +2500,7 @@
 
     <product id="hol_majasnails" ware="majasnails" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2536,7 +2536,7 @@
 
     <product id="hol_missilecomponents" ware="missilecomponents" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -2560,7 +2560,7 @@
 
     <product id="hol_quantumtubes" ware="quantumtubes" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -2572,7 +2572,7 @@
 
     <product id="hol_refinedmetals" ware="refinedmetals" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -2597,7 +2597,7 @@
 
     <product id="hol_shieldcomponents" ware="shieldcomponents" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2609,7 +2609,7 @@
 
     <product id="hol_siliconwafers" ware="siliconwafers" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -2634,7 +2634,7 @@
 
 	<product id="hol_sojabeans" ware="sojabeans" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2658,7 +2658,7 @@
 
     <product id="hol_spices" ware="spices" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -2670,7 +2670,7 @@
 
     <product id="hol_superfluidcoolant" ware="superfluidcoolant" owner="holyorder" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[holyorder]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -2745,7 +2745,7 @@
 
     <product id="tel_antimattercells" ware="antimattercells" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -2782,7 +2782,7 @@
 
     <product id="tel_dronecomponents" ware="dronecomponents" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2794,11 +2794,11 @@
 
     <product id="tel_energycells" ware="energycells" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="teladi"/>
@@ -2807,7 +2807,7 @@
 
     <product id="tel_engineparts" ware="engineparts" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2880,7 +2880,7 @@
 
     <product id="tel_missilecomponents" ware="missilecomponents" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -2916,7 +2916,7 @@
 
     <product id="tel_quantumtubes" ware="quantumtubes" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -2940,7 +2940,7 @@
 
     <product id="tel_shieldcomponents" ware="shieldcomponents" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -2952,7 +2952,7 @@
 
     <product id="tel_siliconwafers" ware="siliconwafers" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -2989,7 +2989,7 @@
 
     <product id="tel_spices" ware="spices" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3001,7 +3001,7 @@
 	
 	<product id="tel_sunriseflowers" ware="sunriseflowers" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3013,7 +3013,7 @@
 
     <product id="tel_superfluidcoolant" ware="superfluidcoolant" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -3026,7 +3026,7 @@
 	
 	<product id="tel_swampplant" ware="swampplant" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3038,7 +3038,7 @@
 	
 	<product id="tel_teladianium" ware="teladianium" owner="teladi" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[teladi]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -3124,7 +3124,7 @@
 
     <product id="spl_antimattercells" ware="antimattercells" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -3149,7 +3149,7 @@
 	
 	<product id="spl_cheltmeat" ware="cheltmeat" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3173,7 +3173,7 @@
 
     <product id="spl_dronecomponents" ware="dronecomponents" owner="split" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3185,11 +3185,11 @@
 
     <product id="spl_energycells" ware="energycells" owner="split" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -3198,7 +3198,7 @@
 
     <product id="spl_engineparts" ware="engineparts" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3271,7 +3271,7 @@
 
     <product id="spl_missilecomponents" ware="missilecomponents" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -3295,7 +3295,7 @@
 
     <product id="spl_quantumtubes" ware="quantumtubes" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -3307,7 +3307,7 @@
 
     <product id="spl_refinedmetals" ware="refinedmetals" owner="split" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -3332,7 +3332,7 @@
 	
 	<product id="spl_scruffinfruits" ware="scruffinfruits" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3344,7 +3344,7 @@
 
     <product id="spl_shieldcomponents" ware="shieldcomponents" owner="split" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3356,7 +3356,7 @@
 
     <product id="spl_siliconwafers" ware="siliconwafers" owner="split" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -3381,7 +3381,7 @@
 
     <product id="spl_spices" ware="spices" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3393,7 +3393,7 @@
 
     <product id="spl_superfluidcoolant" ware="superfluidcoolant" owner="split" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[split]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -3469,7 +3469,7 @@
 
     <product id="frf_antimattercells" ware="antimattercells" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <region ware="hydrogen" max="80000" />
@@ -3494,7 +3494,7 @@
 	
 	<product id="frf_cheltmeat" ware="cheltmeat" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3518,7 +3518,7 @@
 
     <product id="frf_dronecomponents" ware="dronecomponents" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3530,11 +3530,11 @@
 
     <product id="frf_energycells" ware="energycells" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="12" sector="6" /><!--majorenergycells-->
+        <quota galaxy="16" sector="4" /><!--majorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -3543,7 +3543,7 @@
 
     <product id="frf_engineparts" ware="engineparts" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3616,7 +3616,7 @@
 
     <product id="frf_missilecomponents" ware="missilecomponents" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorantimattercells/engineparts/missilecomponents-->
+        <quota galaxy="3" /><!--majorantimattercells/engineparts/missilecomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.4" max="0.8" maxbound="true" />
@@ -3640,7 +3640,7 @@
 
     <product id="frf_quantumtubes" ware="quantumtubes" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.2" max="0.8" maxbound="true" />
@@ -3652,7 +3652,7 @@
 
     <product id="frf_refinedmetals" ware="refinedmetals" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <region ware="ore" max="80000" />
@@ -3677,7 +3677,7 @@
 	
 	<product id="frf_scruffinfruits" ware="scruffinfruits" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3689,7 +3689,7 @@
 
     <product id="frf_shieldcomponents" ware="shieldcomponents" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="3" /><!--majordronecomponents/shieldcomponents-->
+        <quota galaxy="4" /><!--majordronecomponents/shieldcomponents-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.7" max="1.0" maxbound="false" />
@@ -3701,7 +3701,7 @@
 
     <product id="frf_siliconwafers" ware="siliconwafers" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="4" sector="2" /><!--majorrefinedmetals/siliconwafers-->
+        <quota galaxy="6" sector="2" /><!--majorrefinedmetals/siliconwafers-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <region ware="silicon" max="80000"/>
@@ -3726,7 +3726,7 @@
 
     <product id="frf_spices" ware="spices" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsubfood/quantumtubes-->
+        <quota galaxy="3" /><!--majorsubfood/quantumtubes-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="true" />
@@ -3738,7 +3738,7 @@
 
     <product id="frf_superfluidcoolant" ware="superfluidcoolant" owner="freesplit" type="factory">
       <quotas>
-        <quota galaxy="2" /><!--majorsuperfluidcoolant-->
+        <quota galaxy="3" /><!--majorsuperfluidcoolant-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[freesplit]" relation="self" comparison="exact" matchextension="false">
         <region ware="helium" max="80000" />
@@ -3874,11 +3874,11 @@
 
     <product id="faf_energycells" ware="energycells" owner="fallensplit" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[fallensplit]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -4230,11 +4230,11 @@
 
     <product id="cab_energycells" ware="energycells" owner="court" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[court]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -4574,11 +4574,11 @@
 
     <product id="buc_energycells" ware="energycells" owner="buccaneers" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[buccaneers]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="paranid"/>
@@ -4930,11 +4930,11 @@
 
     <product id="hat_energycells" ware="energycells" owner="hatikvah" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[hatikvah]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="argon"/>
@@ -5310,11 +5310,11 @@
 
     <product id="sca_energycells" ware="energycells" owner="scaleplate" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[scaleplate]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="teladi"/>
@@ -5715,11 +5715,11 @@
 
     <product id="min_energycells" ware="energycells" owner="ministry" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[ministry]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="teladi"/>
@@ -6082,11 +6082,11 @@
 
     <product id="ali_energycells" ware="energycells" owner="alliance" type="factory">
       <quotas>
-        <quota galaxy="6" sector="6" /><!--minorenergycells-->
+        <quota galaxy="12" sector="4" /><!--minorenergycells-->
       </quotas>
       <location class="galaxy" macro="xu_ep2_universe_macro" faction="[alliance]" relation="self" comparison="exact" matchextension="false">
         <economy min="0.1" max="0.6" maxbound="false" />
-        <sunlight min="1" max="3" />
+        <sunlight min="0.5" />
       </location>
       <module>
         <select ware="energycells" race="paranid"/>

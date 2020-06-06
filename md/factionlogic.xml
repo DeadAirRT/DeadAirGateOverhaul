@@ -19,6 +19,7 @@
       </cues>
     </cue>
 </add>
+<remove sel="//cue[@name='FactionLogicManagers']/cues/cue[@name='FallenFamiliesFactionLogic']" />
 <replace sel="//cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']">
 	<cue name="SetupSplitDLC" version="3" comment="">
       <actions>

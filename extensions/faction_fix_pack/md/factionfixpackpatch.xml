@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff name="FactionFixPackPatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../extracted/md/md.xsd">
+<add sel="//cue[@name='PatchXenonStock']/conditions">
+	<check_value value="false"/>
+</add>
+</diff>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff name="FactionLogic_Economy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+<!-- undo court using freesplit -->
+<replace sel="//cue[@name='Request_Freighter']/actions/do_if[@value='$Miner']">
+            <do_if value="$Miner">
+              <get_suitable_job result="$Jobs" faction="$Faction" tags="[tag.factionlogic, tag.miner]" ware="$Ware" multiple="true"/>
+            </do_if>
+</replace>
+<replace sel="//cue[@name='Request_Freighter']/actions/do_else[3]">
+            <do_else>
+              <get_suitable_job result="$Jobs" faction="$Faction" tags="[tag.factionlogic, tag.trader]" ware="$Ware" multiple="true"/>
+            </do_else>
+</replace>
+</diff>

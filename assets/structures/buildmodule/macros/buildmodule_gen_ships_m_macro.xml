@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+<replace sel="//macros/macro/properties/storage/@unit">60</replace>
+</diff>
+<!--
+<macros>
+  <macro name="buildmodule_gen_ships_m_macro" class="buildmodule">
+    <component ref="buildmodule_arg_ships_m" />
+    <properties>
+      <identification name="{20104,60201}" shortname="{20104,60203}" description="{20104,60202}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+        </sets>
+      </build>
+      <explosiondamage value="100000" />
+      <storage unit="30" />
+      <hull max="176000" />
+      <secrecy level="3" />
+      <builder classes="ship_m" optimalprocessorunits="10" usemasstraffic="0" />
+      <equip classes="ship_m" />
+      <supply classes="ship_m" />
+      <ownership claim="1" />
+    </properties>
+    <connections>
+      <connection name="buildprocessorconnection_01" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_02" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_03" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+    </connections>
+  </macro>
+</macros>-->

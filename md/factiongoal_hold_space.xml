@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff name="FactionGoal_Hold_Space" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
 <replace sel="//do_if[@value='$Faction != faction.hatikvah']/@value">$Faction?</replace>
+<replace sel="//cue[@name='Start']/actions/find_cluster_in_range[@name='$LocalClusters']/@maxdistance">4</replace>
+<add sel="//cue[@name='Start']/actions/do_all/do_else/find_gate[count(@active)=0]" type="@active">true</add>
 </diff>

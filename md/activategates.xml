@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="DeadAirActivateGates" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="init">
+		<conditions>
+			<event_cue_signalled cue="md.Setup.Start" />
+		</conditions>
+		<actions>
+			<!-- By the power of unitrader, I will now storage my globals here -->
+			<set_value name="$DeadAirGlobal" exact="md.DeadAirGlobalVariables.Storage" />
+	
+			<do_if value="not $DeadAirGlobal.$DeadAirGateList?">
+				<create_list name="$DeadAirGlobal.$DeadAirGateList"/>
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirGateActivation?">
+				<set_value name="$DeadAirGlobal.$DeadAirGateActivation" exact="true" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirGateActivationTime?">
+				<!-- first time it will check for gate activation in minutes from script start, stored as interger-->
+				<set_value name="$DeadAirGlobal.$DeadAirGateActivationTime" exact="180" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirGateActivationInterval?">
+				<!-- time between gate activation stored as interger -->
+				<set_value name="$DeadAirGlobal.$DeadAirGateActivationInterval" exact="180" />
+			</do_if>
+			<do_if value="not $DeadAirGlobal.$DeadAirGateNextActivationTime?">
+				<!-- match first time gate activation to start, stored in seconds-->
+				<set_value name="$DeadAirGlobal.$DeadAirGateNextActivationTime" exact="[(player.age),($DeadAirGlobal.$DeadAirGateActivationTime)min].max + ($DeadAirGlobal.$DeadAirGateActivationInterval)min" />
+			</do_if>
+			<do_if value="not $DeadAirActivateGatesDebug?">
+				<set_value name="$DeadAirActivateGatesDebug" exact="true" />
+			</do_if>
+			<set_value name="$initcompleted" exact="true" />
+		</actions>
+		<cues>
+		<cue name="Setup">
+			<actions>
+			</actions>
+		</cue>
+		<cue name="FindGates" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
+			<actions>
+				<set_value name="$DeadAirActivateGatesDebug" exact="true" />
+				<find_sector name="$Sectors" space="player.galaxy" multiple="true" />
+				<do_all exact="$Sectors.count" counter="$a">
+					<set_value name="$Sector" exact="$Sectors.{$a}" />
+					<find_gate name="$Gates" multiple="true" space="$Sector" active="false"/>
+					<do_if value="$Gates?">
+						<do_all exact="$Gates.count" counter="$b">
+							<set_value name="$Gate" exact="$Gates.{$b}" />
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- FindGates -- Gate: %2 -- Gate Active: %3 -- Gate Destination Zone Macro: %4 -- Gate Exit: %5 -- Gate Exit Sector: %6 -- Gate IDCODE: %7 -- Gate Exit IDCODE %8 -- Gate Extension: %9'.[player.age,
+								$Gate.knownname,$Gate.isactive,$Gate.destination.macro,$Gate.exit.knownname,$Gate.exit.sector.knownname,$Gate.idcode,$Gate.exit.idcode,$Gate.extension]" 
+								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+							<do_if value="$Gate.isactive == false">
+								<do_if value="$DeadAirGlobal.$DeadAirGateList.indexof.{$Gate} lt 1 and $DeadAirGlobal.$DeadAirGateList.indexof.{$Gate.exit} lt 1">
+									<append_to_list name="$DeadAirGlobal.$DeadAirGateList" exact="$Gate" />
+								</do_if>
+							</do_if>
+							<remove_value name="$Gate" />
+						</do_all>
+					</do_if>
+					<remove_value name="$Sector" />
+				</do_all>
+			</actions>
+		</cue>
+		<cue name="ActivateGates" instantiate="true" checktime="[player.age + 5min,30min].max" checkinterval="5min">
+			<conditions>
+				<check_value value="$DeadAirGlobal.$DeadAirGateActivation == true" />
+			</conditions>
+			<actions>
+				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- ActivateGates Activated'.[player.age]"
+					context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+				<do_if value="player.age gt ($DeadAirGlobal.$DeadAirGateActivationTime)min">
+					<do_if value="player.age gt $DeadAirGlobal.$DeadAirGateNextActivationTime">
+						<set_value name="$DeadAirGateActivationLastTimeFired" exact="player.age" />
+						<do_if value="$DeadAirGlobal.$DeadAirGateList.count ge 1">
+							<set_value name="$Gate" exact="$DeadAirGlobal.$DeadAirGateList.random" />
+							<set_value name="$ExitGate" exact="$Gate.exit" />
+							<do_if value="$Gate.isactive == false">
+								<set_object_active object="$Gate" activate="true"/>
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- Gate: %2 -- Gate Active: %3 -- Gate Destination Zone Macro: %4 -- Gate Exit: %5 -- Gate Exit Sector: %6 -- Gate IDCODE: %7 -- Gate Exit IDCODE %8 -- Gate Extension: %9'.[player.age,
+									$Gate.knownname,$Gate.isactive,$Gate.destination.macro,$Gate.exit.knownname,$Gate.exit.sector.knownname,$Gate.idcode,$Gate.exit.idcode,$Gate.extension]" 
+									context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$Gate" multiple="true" />
+							</do_if>
+							<do_else>
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $Gate %2 .isactive, removing from list '.[player.age,$Gate.idcode]"
+								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$Gate" multiple="true" />
+							</do_else>
+							
+							<do_if value="$ExitGate.isactive == false">
+								<set_object_active object="$ExitGate" activate="true"/>
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- Gate: %2 -- Gate Active: %3 -- Gate Destination Zone Macro: %4 -- Gate Exit: %5 -- Gate Exit Sector: %6 -- Gate IDCODE: %7 -- Gate Exit IDCODE %8 -- Gate Extension: %9'.[player.age,
+									$ExitGate.knownname,$ExitGate.isactive,$ExitGate.destination.macro,$ExitGate.exit.knownname,$ExitGate.exit.sector.knownname,$ExitGate.idcode,$ExitGate.exit.idcode,$ExitGate.extension]" 
+									context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$ExitGate" multiple="true" />
+							</do_if>
+							<do_else>
+								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $ExitGate %2 .isactive, removing from list '.[player.age,$ExitGate.idcode]"
+								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$ExitGate" multiple="true" />
+							</do_else>
+							
+							<set_value name="$DeadAirGlobal.$DeadAirGateNextActivationTime" exact="$DeadAirGateActivationLastTimeFired + ($DeadAirGlobal.$DeadAirGateActivationInterval)min" />
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $DeadAirGlobal.$DeadAirGateNextActivationTime %2'.[player.age,$DeadAirGlobal.$DeadAirGateNextActivationTime]"
+								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+						</do_if>
+						<do_else>
+							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $DeadAirGlobal.$DeadAirGateList.count lt 1 -- $DeadAirGlobal.$DeadAirGateList: %2'.[player.age,
+								$DeadAirGlobal.$DeadAirGateList.count]" 
+								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+						</do_else>
+					</do_if>
+					<do_else>
+						<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- player.age le ($DeadAirGlobal.$DeadAirGateNextActivationTime)min -- $DeadAirGlobal.$DeadAirGateNextActivationTime: %2'.[player.age,
+							$DeadAirGlobal.$DeadAirGateNextActivationTime]" 
+							context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+					</do_else>
+				</do_if>
+				<do_else>
+					<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- player.age le ($DeadAirGlobal.$DeadAirGateActivationTime)min -- $DeadAirGlobal.$DeadAirGateActivationTime: %2'.[player.age,
+						$DeadAirGlobal.$DeadAirGateActivationTime]" 
+						context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
+				</do_else>
+			</actions>
+		</cue>
+		</cues>
+		</cue>
+	</cues>
+</mdscript>

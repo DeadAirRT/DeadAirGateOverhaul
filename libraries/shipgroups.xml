@@ -1,411 +1,411 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
-<!--
-<replace sel="//groups/group[@name='XXX']">
-
-</replace>
--->
-<replace sel="//groups/group[@name='arg_trader_container_l']">
-  <group name="arg_trader_container_l">
-    <select macro="ship_arg_l_trans_container_01_a_macro" weight="4"/>
-    <select macro="ship_arg_l_trans_container_02_a_macro" weight="4"/>
-    <select macro="ship_arg_l_trans_container_03_a_macro" weight="25"/>
-    <select macro="ship_arg_l_trans_container_04_a_macro" weight="25"/>
-    <select macro="ship_arg_l_trans_container_05_a_macro" weight="25"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_trader_container_m']">
-  <group name="arg_trader_container_m">
-    <select macro="ship_arg_m_trans_container_01_a_macro" weight="4"/>
-    <select macro="ship_arg_m_trans_container_02_a_macro" weight="4"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_trader_container_s']">
-  <group name="arg_trader_container_s">
-    <select macro="ship_arg_s_trans_container_01_a_macro" weight="4"/>
-    <select macro="ship_arg_s_trans_container_02_a_macro" weight="4"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_solid_l']">
-  <group name="arg_miner_solid_l">
-    <select macro="ship_arg_l_miner_solid_01_a_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_liquid_l']">
-  <group name="arg_miner_liquid_l">
-    <select macro="ship_arg_l_miner_liquid_01_a_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_solid_m']">
-  <group name="arg_miner_solid_m">
-    <select macro="ship_arg_m_miner_solid_01_a_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_liquid_m']">
-  <group name="arg_miner_liquid_m">
-    <select macro="ship_arg_m_miner_liquid_01_a_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_solid_mixed']">
-  <group name="arg_miner_solid_mixed">
-    <!--weight is 30/70 times 95/5-->
-    <select macro="ship_arg_l_miner_solid_01_a_macro" weight="2800"/>
-    <select macro="ship_arg_m_miner_solid_01_a_macro" weight="6500"/>
-    <select macro="ship_arg_s_miner_solid_01_a_macro" weight="200"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_miner_liquid_mixed']">
-  <group name="arg_miner_liquid_mixed">
-    <!--weight is 30/70 times 95/5-->
-    <select macro="ship_arg_l_miner_liquid_01_a_macro" weight="2850"/>
-    <select macro="ship_arg_m_miner_liquid_01_a_macro" weight="6650"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_fighter_s']">
-  <group name="arg_fighter_s">
-    <select macro="ship_arg_s_heavyfighter_01_a_macro" weight="10"/>
-	<select macro="ship_arg_s_heavyfighter_02_a_macro" weight="10"/>
-    <select macro="ship_arg_s_fighter_01_a_macro" weight="40"/>
-    <select macro="ship_arg_s_fighter_02_a_macro" weight="25"/>
-    <select macro="ship_arg_s_fighter_04_a_macro" weight="15"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_fighter_light_s']">
-  <group name="arg_fighter_light_s">
-    <select macro="ship_arg_s_fighter_01_a_macro" weight="25"/>
-    <select macro="ship_arg_s_fighter_02_a_macro" weight="50"/>
-    <select macro="ship_arg_s_fighter_04_a_macro" weight="15"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='arg_scout_s']">
-  <group name="arg_scout_s">
-    <select macro="ship_arg_s_scout_01_a_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_trader_container_l']">
-  <group name="ant_trader_container_l">
-    <select macro="ship_arg_l_trans_container_01_b_macro" weight="4"/>
-    <select macro="ship_arg_l_trans_container_02_b_macro" weight="4"/>
-    <select macro="ship_arg_l_trans_container_03_b_macro" weight="25"/>
-    <select macro="ship_arg_l_trans_container_04_b_macro" weight="25"/>
-    <select macro="ship_arg_l_trans_container_05_b_macro" weight="25"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_trader_container_m']">
-  <group name="ant_trader_container_m">
-    <select macro="ship_arg_m_trans_container_01_b_macro" weight="4"/>
-    <select macro="ship_arg_m_trans_container_02_b_macro" weight="4"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_trader_container_s']">
-  <group name="ant_trader_container_s">
-    <select macro="ship_arg_s_trans_container_01_b_macro" weight="4"/>
-    <select macro="ship_arg_s_trans_container_02_b_macro" weight="4"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_solid_l']">
-  <group name="ant_miner_solid_l">
-    <select macro="ship_arg_l_miner_solid_01_b_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_liquid_l']">
-  <group name="ant_miner_liquid_l">
-    <select macro="ship_arg_l_miner_liquid_01_b_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_solid_m']">
-  <group name="ant_miner_solid_m">
-    <select macro="ship_arg_m_miner_solid_01_b_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_liquid_m']">
-  <group name="ant_miner_liquid_m">
-    <select macro="ship_arg_m_miner_liquid_01_b_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_solid_mixed']">
-  <group name="ant_miner_solid_mixed">
-    <!--weight is 30/70 times 95/5-->
-    <select macro="ship_arg_l_miner_solid_01_b_macro" weight="2800"/>
-    <select macro="ship_arg_m_miner_solid_01_b_macro" weight="6500"/>
-    <select macro="ship_arg_s_miner_solid_01_a_macro" weight="200"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_miner_liquid_mixed']">
-  <group name="ant_miner_liquid_mixed">
-    <!--weight is 30/70 times 95/5-->
-    <select macro="ship_arg_l_miner_liquid_01_b_macro" weight="2850"/>
-    <select macro="ship_arg_m_miner_liquid_01_b_macro" weight="6650"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_fighter_s']">
-  <group name="ant_fighter_s">
-    <select macro="ship_arg_s_heavyfighter_01_b_macro" weight="20"/>
-    <select macro="ship_arg_s_fighter_01_b_macro" weight="30"/>
-    <select macro="ship_arg_s_fighter_02_b_macro" weight="35"/>
-    <select macro="ship_arg_s_fighter_03_a_macro" weight="5"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_fighter_heavy_s']">
-  <group name="ant_fighter_heavy_s">
-    <select macro="ship_arg_s_heavyfighter_01_b_macro" weight="8"/>
-    <select macro="ship_arg_s_fighter_03_a_macro" weight="2"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_fighter_light_s']">
-  <group name="ant_fighter_light_s">
-    <select macro="ship_arg_s_fighter_01_b_macro" weight="3"/>
-    <select macro="ship_arg_s_fighter_02_b_macro" weight="4"/>
-    <select macro="ship_arg_s_fighter_03_a_macro" weight="1"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='ant_scout_s']">
-  <group name="ant_scout_s">
-    <select macro="ship_arg_s_scout_01_b_macro" weight="95"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_builder_xl']">
-  <group name="tel_builder_xl">
-    <select macro="ship_tel_xl_builder_01_a_macro" />
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_resupplier_xl']">
-  <group name="tel_resupplier_xl">
-    <select macro="ship_tel_xl_resupplier_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_trader_container_l']">
-  <group name="tel_trader_container_l">
-    <select macro="ship_tel_l_trans_container_01_a_macro"/>
-    <select macro="ship_tel_l_trans_container_02_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_trader_container_m']">
-  <group name="tel_trader_container_m">
-    <select macro="ship_tel_m_trans_container_01_a_macro"/>
-    <select macro="ship_tel_m_trans_container_02_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_trader_container_s']">
-  <group name="tel_trader_container_s">
-    <select macro="ship_tel_s_trans_container_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_solid_l']">
-  <group name="tel_miner_solid_l">
-    <select macro="ship_tel_l_miner_solid_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_liquid_l']">
-  <group name="tel_miner_liquid_l">
-    <select macro="ship_tel_l_miner_liquid_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_solid_m']">
-  <group name="tel_miner_solid_m">
-    <select macro="ship_tel_m_miner_solid_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_liquid_m']">
-  <group name="tel_miner_liquid_m">
-    <select macro="ship_tel_m_miner_liquid_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_solid_mixed']">
-  <group name="tel_miner_solid_mixed">
-    <select macro="ship_tel_l_miner_solid_01_a_macro" weight="10"/>
-    <select macro="ship_tel_m_miner_solid_01_a_macro" weight="30"/>
-    <select macro="ship_tel_s_miner_solid_01_a_macro" weight="20"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_miner_liquid_mixed']">
-  <group name="tel_miner_liquid_mixed">
-    <select macro="ship_tel_l_miner_liquid_01_a_macro" weight="15"/>
-    <select macro="ship_tel_m_miner_liquid_01_a_macro" weight="35"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_carrier_xl']">
-  <group name="tel_carrier_xl">
-    <select macro="ship_tel_xl_carrier_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_destroyer_l']">
-  <group name="tel_destroyer_l">
-    <select macro="ship_tel_l_destroyer_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_frigate_m']">
-  <group name="tel_frigate_m">
-    <select macro="ship_tel_m_frigate_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_gunboat_m']">
-  <group name="tel_gunboat_m">
-    <select macro="ship_tel_m_bomber_01_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_fighter_s']">
-  <group name="tel_fighter_s">
-    <select macro="ship_tel_s_fighter_01_a_macro" weight="25"/>
-    <select macro="ship_tel_s_fighter_02_a_macro" weight="25"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='tel_scout_s']">
-  <group name="tel_scout_s">
-    <select macro="ship_tel_s_scout_01_a_macro"/>
-    <select macro="ship_tel_s_scout_02_a_macro"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='sca_pirate_l']">
-  <group name="sca_pirate_l">
-    <select macro="ship_arg_l_destroyer_01_a_macro" weight="2"/>
-    <select macro="ship_par_l_destroyer_01_a_macro" weight="2"/>
-    <select macro="ship_tel_l_destroyer_01_a_macro" weight="100"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='sca_pirate_sm']">
-  <group name="sca_pirate_sm">
-    <select macro="ship_arg_m_bomber_02_a_macro" weight="1"/>
-	<select macro="ship_tel_m_bomber_01_a" weight="1"/>
-	<select macro="ship_tel_m_frigate_01_a" weight="1"/>
-    <select macro="ship_tel_s_scout_01_a_macro" weight="54"/>
-	<select macro="ship_tel_s_scout_02_a_macro" weight="54"/>
-    <select macro="ship_tel_s_fighter_01_a_macro" weight="9"/>
-	<select macro="ship_tel_s_fighter_02_a_macro" weight="9"/>
-  </group>
-</replace>
-
-<replace sel="//groups/group[@name='sca_pirate_s']">
-  <group name="sca_pirate_s">
-    <select macro="ship_tel_s_scout_01_a_macro" weight="70"/>
-    <select macro="ship_tel_s_scout_02_a_macro" weight="70"/>
-    <select macro="ship_tel_s_fighter_01_a_macro" weight="1"/>
-    <select macro="ship_tel_s_fighter_02_a_macro" weight="1"/>
-  </group>
-</replace>
-
-<add sel="//groups">
-<!-- MIN -->
-  <group name="min_builder_xl">
-    <select macro="ship_tel_xl_builder_01_b_macro" />
-  </group>
-  <group name="min_resupplier_xl">
-    <select macro="ship_tel_xl_resupplier_01_b_macro"/>
-  </group>
-
-  <!-- Transporters -->
-  <group name="min_trader_container_l">
-    <select macro="ship_tel_l_trans_container_01_b_macro"/>
-    <select macro="ship_tel_l_trans_container_02_b_macro"/>
-  </group>
-  <group name="min_trader_container_m">
-    <select macro="ship_tel_m_trans_container_01_b_macro"/>
-    <select macro="ship_tel_m_trans_container_02_b_macro"/>
-  </group>
-  <group name="min_trader_container_s">
-    <select macro="ship_tel_s_trans_container_01_b_macro"/>
-  </group>
-
-  <!-- Miners -->
-  <group name="min_miner_solid_l">
-    <select macro="ship_tel_l_miner_solid_01_b_macro"/>
-  </group>
-  <group name="min_miner_liquid_l">
-    <select macro="ship_tel_l_miner_liquid_01_b_macro"/>
-  </group>
-  <group name="min_miner_solid_m">
-    <select macro="ship_tel_m_miner_solid_01_b_macro"/>
-  </group>
-  <group name="min_miner_liquid_m">
-    <select macro="ship_tel_m_miner_liquid_01_b_macro"/>
-  </group>
-  <group name="min_miner_solid_s">
-    <select macro="ship_tel_s_miner_solid_01_a_macro"/>
-  </group>
-  <group name="min_miner_solid_mixed">
-    <select macro="ship_tel_l_miner_solid_01_b_macro" weight="10"/>
-    <select macro="ship_tel_m_miner_solid_01_b_macro" weight="30"/>
-    <select macro="ship_tel_s_miner_solid_01_a_macro" weight="20"/>
-  </group>
-  <group name="min_miner_liquid_mixed">
-    <select macro="ship_tel_l_miner_liquid_01_b_macro" weight="15"/>
-    <select macro="ship_tel_m_miner_liquid_01_b_macro" weight="35"/>
-  </group>
-
-  <!-- Military / Combat -->
-  <group name="min_carrier_xl">
-    <select macro="ship_tel_xl_carrier_01_b_macro"/>
-  </group>
-  <group name="min_destroyer_l">
-    <select macro="ship_tel_l_destroyer_01_b_macro"/>
-  </group>
-  <group name="min_frigate_m">
-    <select macro="ship_tel_m_frigate_01_b_macro"/>
-  </group>
-  <group name="min_gunboat_m">
-    <select macro="ship_tel_m_bomber_01_b_macro"/>
-  </group>
-  <group name="min_fighter_s">
-    <select macro="ship_tel_s_fighter_01_b_macro" weight="25"/>
-    <select macro="ship_tel_s_fighter_02_b_macro" weight="25"/>
-  </group>
-  <group name="min_scout_s">
-    <select macro="ship_tel_s_scout_01_b_macro"/>
-    <select macro="ship_tel_s_scout_02_b_macro"/>
-  </group>
-</add>
-
-<add sel="//groups">
-  <group name="faf_pirate_l">
-    <select macro="ship_spl_l_destroyer_01_a_macro"/>
-  </group>
-  <group name="faf_pirate_m">
-    <select macro="ship_spl_m_frigate_01_a_macro" weight="5"/>
-    <select macro="ship_spl_m_corvette_01_a_macro" weight="5"/>
-    <select macro="ship_spl_m_corvette_01_b_macro" weight="50"/>
-  </group>
-</add>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <add sel="/groups/group[@name='arg_builder_xl']/select[@macro='ship_arg_xl_builder_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='arg_resupplier_xl']/select[@macro='ship_arg_xl_resupplier_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_01_b_macro']/@macro">ship_arg_l_trans_container_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_a_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_a_macro'][@weight='4']/@macro">ship_arg_l_trans_container_03_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_a_macro'][@weight='4']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_b_macro']/@macro">ship_arg_l_trans_container_04_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_a_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_a_macro'][@weight='25']/@macro">ship_arg_l_trans_container_05_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_a_macro'][@weight='25'][1]/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_b_macro']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_a_macro'][@weight='25']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_b_macro']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_a_macro'][@weight='25']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_trader_container_m']/select[@macro='ship_arg_m_trans_container_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_m']/select[@macro='ship_arg_m_trans_container_01_b_macro']/@macro">ship_arg_m_trans_container_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_a_macro'][@weight='1']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_a_macro'][@weight='4']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_trader_container_s']/select[@macro='ship_arg_s_trans_container_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_s']/select[@macro='ship_arg_s_trans_container_01_b_macro']/@macro">ship_arg_s_trans_container_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_a_macro'][@weight='1']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_a_macro'][@weight='4']"/>
+  <remove sel="/groups/group[@name='arg_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_miner_solid_l']/select[@macro='ship_arg_l_miner_solid_01_a_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_miner_solid_l']/select[@macro='ship_arg_l_miner_solid_01_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_miner_liquid_l']/select[@macro='ship_arg_l_miner_liquid_01_a_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_miner_liquid_l']/select[@macro='ship_arg_l_miner_liquid_01_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_miner_solid_m']/select[@macro='ship_arg_m_miner_solid_01_a_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_miner_solid_m']/select[@macro='ship_arg_m_miner_solid_01_b_macro']"/>
+  <replace sel="/groups/group[@name='arg_miner_liquid_m']/select[@macro='ship_arg_m_miner_liquid_01_a_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_miner_liquid_m']/select[@macro='ship_arg_m_miner_liquid_01_b_macro']"/>
+  <add sel="/groups/group[@name='arg_miner_solid_s']/select[@macro='ship_arg_s_miner_solid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='arg_miner_solid_mixed']/select[@macro='ship_arg_l_miner_solid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='arg_miner_solid_mixed']/select[@macro='ship_arg_m_miner_solid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='arg_miner_liquid_mixed']/select[@macro='ship_arg_l_miner_liquid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='arg_miner_liquid_mixed']/select[@macro='ship_arg_m_miner_liquid_01_b_macro']"/>
+  <add sel="/groups/group[@name='arg_carrier_xl']/select[@macro='ship_arg_xl_carrier_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='arg_destroyer_l']/select[@macro='ship_arg_l_destroyer_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='arg_frigate_m']/select[@macro='ship_arg_m_frigate_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='arg_gunboat_m']/select[@macro='ship_arg_m_bomber_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@macro">ship_arg_s_heavyfighter_01_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_heavyfighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_01_a_macro']/@macro">ship_arg_s_heavyfighter_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_01_b_macro']/@macro">ship_arg_s_fighter_01_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_02_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_02_b_macro']/@macro">ship_arg_s_fighter_04_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_04_a_macro'][@weight='5']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_fighter_s']/select[@macro='ship_arg_s_fighter_04_a_macro'][@weight='15']"/>
+  <replace sel="/groups/group[@name='arg_fighter_heavy_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@macro">ship_arg_s_heavyfighter_01_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_heavy_s']/select[@macro='ship_arg_s_heavyfighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_heavy_s']/select[@macro='ship_arg_s_fighter_04_a_macro']/@macro">ship_arg_s_heavyfighter_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_heavy_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_01_b_macro']/@macro">ship_arg_s_fighter_02_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_a_macro'][@weight='5'][1]/@weight">20</replace>
+  <replace sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_a_macro'][@weight='50']/@macro">ship_arg_s_fighter_04_a_macro</replace>
+  <replace sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_04_a_macro'][@weight='50']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_a_macro'][@weight='5']"/>
+  <remove sel="/groups/group[@name='arg_fighter_light_s']/select[@macro='ship_arg_s_fighter_04_a_macro'][@weight='15']"/>
+  <replace sel="/groups/group[@name='arg_scout_s']/select[@macro='ship_arg_s_scout_01_a_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='arg_scout_s']/select[@macro='ship_arg_s_scout_01_b_macro']"/>
+  <add sel="/groups/group[@name='ant_builder_xl']/select[@macro='ship_arg_xl_builder_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='ant_resupplier_xl']/select[@macro='ship_arg_xl_resupplier_01_b_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_01_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_01_a_macro']/@macro">ship_arg_l_trans_container_02_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_b_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_b_macro'][@weight='4']/@macro">ship_arg_l_trans_container_03_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_b_macro'][@weight='4']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_02_a_macro']/@macro">ship_arg_l_trans_container_04_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_b_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_b_macro'][@weight='25']/@macro">ship_arg_l_trans_container_05_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_b_macro'][@weight='25'][1]/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_03_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_b_macro'][@weight='25']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_04_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_b_macro'][@weight='25']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_l']/select[@macro='ship_arg_l_trans_container_05_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_trader_container_m']/select[@macro='ship_arg_m_trans_container_01_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_m']/select[@macro='ship_arg_m_trans_container_01_a_macro']/@macro">ship_arg_m_trans_container_02_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_b_macro'][@weight='1']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_b_macro'][@weight='4']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_m']/select[@macro='ship_arg_m_trans_container_02_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_01_a_macro']/@macro">ship_arg_s_trans_container_01_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_01_b_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_01_b_macro'][@weight='4']/@macro">ship_arg_s_trans_container_02_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_b_macro'][@weight='4'][1]/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_trader_container_s']/select[@macro='ship_arg_s_trans_container_02_b_macro'][@weight='4']"/>
+  <replace sel="/groups/group[@name='ant_miner_solid_l']/select[@macro='ship_arg_l_miner_solid_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_miner_solid_l']/select[@macro='ship_arg_l_miner_solid_01_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_miner_liquid_l']/select[@macro='ship_arg_l_miner_liquid_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_miner_liquid_l']/select[@macro='ship_arg_l_miner_liquid_01_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_miner_solid_m']/select[@macro='ship_arg_m_miner_solid_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_miner_solid_m']/select[@macro='ship_arg_m_miner_solid_01_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_miner_liquid_m']/select[@macro='ship_arg_m_miner_liquid_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_miner_liquid_m']/select[@macro='ship_arg_m_miner_liquid_01_a_macro']"/>
+  <add sel="/groups/group[@name='ant_miner_solid_s']/select[@macro='ship_arg_s_miner_solid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='ant_miner_solid_mixed']/select[@macro='ship_arg_l_miner_solid_01_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_miner_solid_mixed']/select[@macro='ship_arg_m_miner_solid_01_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_miner_liquid_mixed']/select[@macro='ship_arg_l_miner_liquid_01_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_miner_liquid_mixed']/select[@macro='ship_arg_m_miner_liquid_01_a_macro']"/>
+  <add sel="/groups/group[@name='ant_carrier_xl']/select[@macro='ship_arg_xl_carrier_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='ant_destroyer_l']/select[@macro='ship_arg_l_destroyer_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='ant_frigate_m']/select[@macro='ship_arg_m_frigate_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='ant_gunboat_m']/select[@macro='ship_arg_m_bomber_01_b_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@macro">ship_arg_s_heavyfighter_01_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_01_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_01_a_macro']/@macro">ship_arg_s_fighter_02_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_02_b_macro'][@weight='5']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_02_b_macro'][@weight='35']/@macro">ship_arg_s_fighter_03_a_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_03_a_macro'][@weight='35']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_02_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_fighter_s']/select[@macro='ship_arg_s_fighter_03_a_macro'][@weight='5']"/>
+  <replace sel="/groups/group[@name='ant_fighter_heavy_s']/select[@macro='ship_arg_s_heavyfighter_02_a_macro']/@macro">ship_arg_s_heavyfighter_01_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_heavy_s']/select[@macro='ship_arg_s_heavyfighter_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_fighter_heavy_s']/select[@macro='ship_arg_s_fighter_03_a_macro']"/>
+  <replace sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_01_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_01_a_macro']/@macro">ship_arg_s_fighter_02_b_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_b_macro'][@weight='1']/@weight">20</replace>
+  <replace sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_b_macro'][@weight='4']/@macro">ship_arg_s_fighter_03_a_macro</replace>
+  <replace sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_03_a_macro'][@weight='4']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_02_a_macro']"/>
+  <remove sel="/groups/group[@name='ant_fighter_light_s']/select[@macro='ship_arg_s_fighter_03_a_macro'][@weight='1']"/>
+  <replace sel="/groups/group[@name='ant_scout_s']/select[@macro='ship_arg_s_scout_01_b_macro']/@weight">20</replace>
+  <remove sel="/groups/group[@name='ant_scout_s']/select[@macro='ship_arg_s_scout_01_a_macro']"/>
+  <add sel="/groups/group[@name='par_builder_xl']/select[@macro='ship_par_xl_builder_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_resupplier_xl']/select[@macro='ship_par_xl_resupplier_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_trader_container_l']/select[@macro='ship_par_l_trans_container_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_trader_container_l']/select[@macro='ship_par_l_trans_container_02_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_trader_container_m']/select[@macro='ship_par_m_trans_container_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_trader_container_m']/select[@macro='ship_par_m_trans_container_02_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_trader_container_s']/select[@macro='ship_par_s_trans_container_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_miner_solid_l']/select[@macro='ship_par_l_miner_solid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_miner_liquid_l']/select[@macro='ship_par_l_miner_liquid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_miner_solid_m']/select[@macro='ship_par_m_miner_solid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_miner_liquid_m']/select[@macro='ship_par_m_miner_liquid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_miner_solid_s']/select[@macro='ship_par_s_miner_solid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_carrier_xl']/select[@macro='ship_par_xl_carrier_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_destroyer_l']/select[@macro='ship_par_l_destroyer_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_frigate_m']/select[@macro='ship_par_m_frigate_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='par_corvette_m']/select[@macro='ship_par_m_corvette_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='par_fighter_s']/select[@macro='ship_par_s_fighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='par_fighter_s']/select[@macro='ship_par_s_fighter_02_a_macro']/@weight">20</replace>
+  <add sel="/groups/group[@name='par_scout_s']/select[@macro='ship_par_s_scout_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_builder_xl']/select[@macro='ship_par_xl_builder_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_resupplier_xl']/select[@macro='ship_par_xl_resupplier_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_trader_container_l']/select[@macro='ship_par_l_trans_container_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_trader_container_l']/select[@macro='ship_par_l_trans_container_02_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_trader_container_m']/select[@macro='ship_par_m_trans_container_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_trader_container_m']/select[@macro='ship_par_m_trans_container_02_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_trader_container_s']/select[@macro='ship_par_s_trans_container_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_miner_solid_l']/select[@macro='ship_par_l_miner_solid_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_miner_liquid_l']/select[@macro='ship_par_l_miner_liquid_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_miner_solid_m']/select[@macro='ship_par_m_miner_solid_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_miner_liquid_m']/select[@macro='ship_par_m_miner_liquid_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_miner_solid_s']/select[@macro='ship_par_s_miner_solid_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_carrier_xl']/select[@macro='ship_par_xl_carrier_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_destroyer_l']/select[@macro='ship_par_l_destroyer_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_frigate_m']/select[@macro='ship_par_m_frigate_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_corvette_m']/select[@macro='ship_par_m_corvette_01_b_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='hol_fighter_s']/select[@macro='ship_par_s_fighter_01_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='hol_fighter_s']/select[@macro='ship_par_s_fighter_02_b_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='hol_fighter_s']/select[@macro='ship_par_s_heavyfighter_01_a_macro']/@weight">20</replace>
+  <add sel="/groups/group[@name='hol_fighter_heavy_s']/select[@macro='ship_par_s_heavyfighter_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_fighter_light_s']/select[@macro='ship_par_s_fighter_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_fighter_light_s']/select[@macro='ship_par_s_fighter_02_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='hol_scout_s']/select[@macro='ship_par_s_scout_01_b_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='tel_builder_xl']/select[@macro='ship_tel_xl_builder_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_builder_xl']/select[@macro='ship_tel_xl_builder_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_resupplier_xl']/select[@macro='ship_tel_xl_resupplier_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_resupplier_xl']/select[@macro='ship_tel_xl_resupplier_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_trader_container_l']/select[@macro='ship_tel_l_trans_container_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='tel_trader_container_l']/select[@macro='ship_tel_l_trans_container_01_b_macro']/@macro">ship_tel_l_trans_container_02_a_macro</replace>
+  <add sel="/groups/group[@name='tel_trader_container_l']/select[@macro='ship_tel_l_trans_container_02_a_macro'][1]" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_trader_container_l']/select[@macro='ship_tel_l_trans_container_02_a_macro'][2]"/>
+  <remove sel="/groups/group[@name='tel_trader_container_l']/select[@macro='ship_tel_l_trans_container_02_b_macro']"/>
+  <add sel="/groups/group[@name='tel_trader_container_m']/select[@macro='ship_tel_m_trans_container_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='tel_trader_container_m']/select[@macro='ship_tel_m_trans_container_01_b_macro']/@macro">ship_tel_m_trans_container_02_a_macro</replace>
+  <add sel="/groups/group[@name='tel_trader_container_m']/select[@macro='ship_tel_m_trans_container_02_a_macro'][1]" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_trader_container_m']/select[@macro='ship_tel_m_trans_container_02_a_macro'][2]"/>
+  <remove sel="/groups/group[@name='tel_trader_container_m']/select[@macro='ship_tel_m_trans_container_02_b_macro']"/>
+  <add sel="/groups/group[@name='tel_trader_container_m_ministry']/select[@macro='ship_tel_m_trans_container_03_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='tel_trader_container_s']/select[@macro='ship_tel_s_trans_container_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_trader_container_s']/select[@macro='ship_tel_s_trans_container_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_miner_solid_l']/select[@macro='ship_tel_l_miner_solid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_miner_solid_l']/select[@macro='ship_tel_l_miner_solid_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_miner_liquid_l']/select[@macro='ship_tel_l_miner_liquid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_miner_liquid_l']/select[@macro='ship_tel_l_miner_liquid_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_miner_solid_m']/select[@macro='ship_tel_m_miner_solid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_miner_solid_m']/select[@macro='ship_tel_m_miner_solid_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_miner_liquid_m']/select[@macro='ship_tel_m_miner_liquid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_miner_liquid_m']/select[@macro='ship_tel_m_miner_liquid_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_miner_solid_s']/select[@macro='ship_tel_s_miner_solid_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_miner_solid_mixed']/select[@macro='ship_tel_l_miner_solid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='tel_miner_solid_mixed']/select[@macro='ship_tel_m_miner_solid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='tel_miner_liquid_mixed']/select[@macro='ship_tel_l_miner_liquid_01_b_macro']"/>
+  <remove sel="/groups/group[@name='tel_miner_liquid_mixed']/select[@macro='ship_tel_m_miner_liquid_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_carrier_xl']/select[@macro='ship_tel_xl_carrier_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_carrier_xl']/select[@macro='ship_tel_xl_carrier_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_destroyer_l']/select[@macro='ship_tel_l_destroyer_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_destroyer_l']/select[@macro='ship_tel_l_destroyer_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_frigate_m']/select[@macro='ship_tel_m_frigate_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_frigate_m']/select[@macro='ship_tel_m_frigate_01_b_macro']"/>
+  <add sel="/groups/group[@name='tel_gunboat_m']/select[@macro='ship_tel_m_bomber_01_a_macro']" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_gunboat_m']/select[@macro='ship_tel_m_bomber_01_b_macro']"/>
+  <replace sel="/groups/group[@name='tel_fighter_s']/select[@macro='ship_tel_s_fighter_01_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='tel_fighter_s']/select[@macro='ship_tel_s_fighter_01_b_macro']/@macro">ship_tel_s_fighter_02_a_macro</replace>
+  <replace sel="/groups/group[@name='tel_fighter_s']/select[@macro='ship_tel_s_fighter_02_a_macro'][@weight='25'][1]/@weight">20</replace>
+  <remove sel="/groups/group[@name='tel_fighter_s']/select[@macro='ship_tel_s_fighter_02_a_macro'][@weight='25']"/>
+  <remove sel="/groups/group[@name='tel_fighter_s']/select[@macro='ship_tel_s_fighter_02_b_macro']"/>
+  <add sel="/groups/group[@name='tel_scout_s']/select[@macro='ship_tel_s_scout_01_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='tel_scout_s']/select[@macro='ship_tel_s_scout_01_b_macro']/@macro">ship_tel_s_scout_02_a_macro</replace>
+  <add sel="/groups/group[@name='tel_scout_s']/select[@macro='ship_tel_s_scout_02_a_macro'][1]" type="@weight">20</add>
+  <remove sel="/groups/group[@name='tel_scout_s']/select[@macro='ship_tel_s_scout_02_a_macro'][2]"/>
+  <remove sel="/groups/group[@name='tel_scout_s']/select[@macro='ship_tel_s_scout_02_b_macro']"/>
+  <add sel="/groups/group[@name='xen_miner_m']/select[@macro='ship_xen_m_miner_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='xen_carrier_xl']/select[@macro='ship_xen_xl_carrier_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='xen_destroyer_xl']/select[@macro='ship_xen_xl_destroyer_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='xen_fighter_m']/select[@macro='ship_xen_m_fighter_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='xen_fighter_s']/select[@macro='ship_xen_s_fighter_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='xen_fighter_s']/select[@macro='ship_xen_s_fighter_02_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='xen_fighter_heavy_s']/select[@macro='ship_xen_s_fighter_02_a_macro']/@weight">20</replace>
+  <replace sel="/groups/group[@name='xen_fighter_light_s']/select[@macro='ship_xen_s_fighter_01_a_macro']/@weight">20</replace>
+  <add sel="/groups/group[@name='xen_scout_s']/select[@macro='ship_xen_s_scout_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='kha_fighter_m']/select[@macro='ship_kha_m_fighter_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='kha_fighter_m']/select[@macro='ship_kha_m_fighter_02_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='kha_fighter_leader']/select[@macro='ship_kha_s_fighter_01_a_macro']" type="@weight">20</add>
+  <add sel="/groups/group[@name='kha_fighter_escort']/select[@macro='ship_kha_s_fighter_02_a_macro']" type="@weight">20</add>
+  <replace sel="/groups/group[@name='sca_pirate_l']/select[@macro='ship_arg_l_destroyer_01_a_macro']/@weight">2</replace>
+  <replace sel="/groups/group[@name='sca_pirate_l']/select[@macro='ship_arg_l_destroyer_01_b_macro']/@macro">ship_par_l_destroyer_01_a_macro</replace>
+  <replace sel="/groups/group[@name='sca_pirate_l']/select[@macro='ship_par_l_destroyer_01_a_macro']/@weight">2</replace>
+  <replace sel="/groups/group[@name='sca_pirate_l']/select[@macro='ship_tel_l_destroyer_01_a_macro']/@weight">100</replace>
+  <remove sel="/groups/group[@name='sca_pirate_l']/select[@macro='ship_tel_l_destroyer_01_b_macro']"/>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_arg_s_scout_01_a_macro']/@macro">ship_tel_m_bomber_01_a</replace>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_tel_m_bomber_01_a']/@weight">1</replace>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_arg_s_scout_01_b_macro']/@macro">ship_tel_m_frigate_01_a</replace>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_tel_m_frigate_01_a']/@weight">1</replace>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_tel_s_scout_01_b_macro']/@macro">ship_tel_s_scout_02_a_macro</replace>
+  <replace sel="/groups/group[@name='sca_pirate_sm']/select[@macro='ship_tel_s_fighter_01_b_macro']/@macro">ship_tel_s_fighter_02_a_macro</replace>
+  <remove sel="/groups/group[@name='sca_pirate_s']/select[@macro='ship_arg_s_scout_01_a_macro']"/>
+  <remove sel="/groups/group[@name='sca_pirate_s']/select[@macro='ship_arg_s_scout_01_b_macro']"/>
+  <replace sel="/groups/group[@name='sca_pirate_s']/select[@macro='ship_tel_s_scout_01_b_macro']/@macro">ship_tel_s_scout_02_a_macro</replace>
+  <replace sel="/groups/group[@name='sca_pirate_s']/select[@macro='ship_tel_s_fighter_01_b_macro']/@macro">ship_tel_s_fighter_02_a_macro</replace>
+  <add sel="/groups">
+    <!-- MIN -->
+  </add>
+  <add sel="/groups">
+    <group name="min_builder_xl">
+      <select macro="ship_tel_xl_builder_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_resupplier_xl">
+      <select macro="ship_tel_xl_resupplier_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_trader_container_l">
+      <select macro="ship_tel_l_trans_container_01_b_macro"/>
+      <select macro="ship_tel_l_trans_container_02_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_trader_container_m">
+      <select macro="ship_tel_m_trans_container_01_b_macro"/>
+      <select macro="ship_tel_m_trans_container_02_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_trader_container_s">
+      <select macro="ship_tel_s_trans_container_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_solid_l">
+      <select macro="ship_tel_l_miner_solid_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_liquid_l">
+      <select macro="ship_tel_l_miner_liquid_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_solid_m">
+      <select macro="ship_tel_m_miner_solid_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_liquid_m">
+      <select macro="ship_tel_m_miner_liquid_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_solid_s">
+      <select macro="ship_tel_s_miner_solid_01_a_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_solid_mixed">
+      <select macro="ship_tel_l_miner_solid_01_b_macro" weight="10"/>
+      <select macro="ship_tel_m_miner_solid_01_b_macro" weight="30"/>
+      <select macro="ship_tel_s_miner_solid_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_miner_liquid_mixed">
+      <select macro="ship_tel_l_miner_liquid_01_b_macro" weight="15"/>
+      <select macro="ship_tel_m_miner_liquid_01_b_macro" weight="35"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_carrier_xl">
+      <select macro="ship_tel_xl_carrier_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_destroyer_l">
+      <select macro="ship_tel_l_destroyer_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_frigate_m">
+      <select macro="ship_tel_m_frigate_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_gunboat_m">
+      <select macro="ship_tel_m_bomber_01_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_fighter_s">
+      <select macro="ship_tel_s_fighter_01_b_macro" weight="25"/>
+      <select macro="ship_tel_s_fighter_02_b_macro" weight="25"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="min_scout_s">
+      <select macro="ship_tel_s_scout_01_b_macro"/>
+      <select macro="ship_tel_s_scout_02_b_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <!-- FAF -->
+  </add>
+  <add sel="/groups">
+    <group name="faf_pirate_l">
+      <select macro="ship_spl_l_destroyer_01_a_macro"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="faf_pirate_m">
+      <select macro="ship_spl_m_frigate_01_a_macro" weight="5"/>
+      <select macro="ship_spl_m_corvette_01_a_macro" weight="5"/>
+      <select macro="ship_spl_m_corvette_01_b_macro" weight="50"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <!-- HAT -->
+  </add>
+  <add sel="/groups">
+    <group name="hat_pirate_l">
+      <select macro="ship_arg_l_destroyer_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="hat_pirate_m">
+      <select macro="ship_arg_m_frigate_01_a_macro" weight="20"/>
+      <select macro="ship_arg_m_bomber_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <!-- SCA -->
+  </add>
+  <add sel="/groups">
+    <group name="sca_pirate_l">
+      <select macro="ship_tel_l_destroyer_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="sca_pirate_m">
+      <select macro="ship_tel_m_frigate_01_a_macro" weight="20"/>
+      <select macro="ship_tel_m_bomber_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <!-- BUC -->
+  </add>
+  <add sel="/groups">
+    <group name="buc_pirate_l">
+      <select macro="ship_arg_l_destroyer_01_a_macro" weight="20"/>
+      <select macro="ship_par_l_destroyer_01_a_macro" weight="20"/>
+    </group>
+  </add>
+  <add sel="/groups">
+    <group name="buc_pirate_m">
+      <select macro="ship_arg_m_frigate_01_a_macro" weight="20"/>
+      <select macro="ship_arg_m_bomber_01_a_macro" weight="20"/>
+      <select macro="ship_par_m_frigate_01_a_macro" weight="20"/>
+      <select macro="ship_par_m_corvette_01_a_macro" weight="20"/>
+    </group>
+  </add>
 </diff>

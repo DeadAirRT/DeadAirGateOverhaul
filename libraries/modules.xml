@@ -1,96 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <replace sel="/modules/module[@id='prod_gen_advancedelectronics']/category[@ware='advancedelectronics']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_advancedelectronics']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_antimattercells']/category[@ware='antimattercells']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_antimatterconverters']/category[@ware='antimatterconverters']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_advancedcomposites']/category[@ware='advancedcomposites']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_claytronics']/category[@ware='claytronics']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_dronecomponents']/category[@ware='dronecomponents']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_dronecomponents']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_energycells']/category[@ware='energycells']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_engineparts']/category[@ware='engineparts']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_fieldcoils']/category[@ware='fieldcoils']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_fieldcoils']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_fieldcoils']/compatibilities/production[@ware='fieldcoils']/@chance">65</replace>
-  <replace sel="/modules/module[@id='prod_gen_hullparts']/category[@ware='hullparts']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_graphene']/category[@ware='graphene']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_microchips']/category[@ware='microchips']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_missilecomponents']/category[@ware='missilecomponents']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_missilecomponents']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_superfluidcoolant']/category[@ware='superfluidcoolant']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_plasmaconductors']/category[@ware='plasmaconductors']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_quantumtubes']/category[@ware='quantumtubes']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/category[@ware='refinedmetals']/@race">[argon, paranid, split]</replace>
-  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/category[@ware='refinedmetals']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/compatibilities/limits/@production">6</replace>
-  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/compatibilities/production[@ware='refinedmetals']/@chance">65</replace>
-  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/compatibilities/production[@ref='prod_gen_siliconwafers']/@chance">10</replace>
-  <replace sel="/modules/module[@id='prod_gen_scanningarrays']/category[@ware='scanningarrays']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_scanningarrays']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_shieldcomponents']/category[@ware='shieldcomponents']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_shieldcomponents']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_shieldcomponents']/compatibilities/production[@ware='shieldcomponents']/@chance">65</replace>
-  <replace sel="/modules/module[@id='prod_gen_siliconwafers']/category[@ware='siliconwafers']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_siliconwafers']/compatibilities/limits/@production">6</replace>
-  <replace sel="/modules/module[@id='prod_gen_siliconwafers']/compatibilities/production[@ware='siliconwafers']/@chance">65</replace>
-  <replace sel="/modules/module[@id='prod_gen_siliconwafers']/compatibilities/production[@ref='prod_gen_refinedmetals']/@chance">10</replace>
-  <replace sel="/modules/module[@id='prod_gen_smartchips']/category[@ware='smartchips']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_spices']/category[@ware='spices']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_turretcomponents']/category[@ware='turretcomponents']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_turretcomponents']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_gen_water']/category[@ware='water']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_weaponcomponents']/category[@ware='weaponcomponents']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_gen_weaponcomponents']/compatibilities/limits/@production">2</replace>
-  <replace sel="/modules/module[@id='prod_arg_meat']/category[@ware='meat']/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='prod_arg_medicalsupplies']/category[@ware='medicalsupplies']/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='prod_arg_foodrations']/category[@ware='foodrations']/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='prod_arg_spacefuel']/category[@ware='spacefuel']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_arg_wheat']/category[@ware='wheat']/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='prod_par_majadust']/category[@ware='majadust']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_par_majasnails']/category[@ware='majasnails']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_par_medicalsupplies']/category[@ware='medicalsupplies']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_par_sojabeans']/category[@ware='sojabeans']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_par_sojahusk']/category[@ware='sojahusk']/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_tel_spaceweed']/category[@ware='spaceweed']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
-  <add sel="/modules/module[@id='prod_tel_teladianium']/compatibilities/production[@ware='teladianium']" pos="before">
-    <limits production="6"/>
-  </add>
-  <add sel="/modules/module[@id='prod_tel_teladianium']/compatibilities">
-    <production ref="prod_gen_siliconwafers" chance="10"/>
-  </add>
-  <replace sel="/modules/module[@id='stor_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='dockarea_arg']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='dockarea_arg_hightech']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='dockarea_arg_lowtech']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='dockarea_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='dockarea_par_hightech']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='dockarea_par_lowtech']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='pier_base_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='pier_add_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='hab_arg']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='hab_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='def_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='claim_arg']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='claim_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='build_arg']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='build_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='equip_arg']/category/@faction">[antigone, argon, hatikvah]</replace>
-  <replace sel="/modules/module[@id='equip_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='conn_par']/category/@faction">[alliance, buccaneers, holyorder, paranid, trinity]</replace>
-  <replace sel="/modules/module[@id='prod_spl_medicalsupplies']/category[@ware='medicalsupplies']/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='prod_spl_scruffinfruits']/category[@ware='scruffinfruits']/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='prod_spl_cheltmeat']/category[@ware='cheltmeat']/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='stor_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='dockarea_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='dockarea_spl_hightech']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='dockarea_spl_lowtech']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='pier_base_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='pier_add_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='hab_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='def_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='claim_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='build_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='equip_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
-  <replace sel="/modules/module[@id='conn_spl']/category/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='prod_gen_advancedelectronics']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_antimattercells']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_antimatterconverters']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_advancedcomposites']/category[@faction='[argon, paranid, antigone, holyorder, trinity, buccaneers, hatikvah, alliance]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_claytronics']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_dronecomponents']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_energycells']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_engineparts']/category[@faction='[argon, paranid, antigone, holyorder, trinity, buccaneers, hatikvah, alliance]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_fieldcoils']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_hullparts']/category[@faction='[argon, paranid, antigone, holyorder, trinity, buccaneers, hatikvah, alliance]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_graphene']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_microchips']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_missilecomponents']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_superfluidcoolant']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_plasmaconductors']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_quantumtubes']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@race">[argon, paranid, split]</replace>
+  <replace sel="/modules/module[@id='prod_gen_refinedmetals']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_scanningarrays']/category[@faction='[argon, paranid, antigone, holyorder, trinity, buccaneers, hatikvah, alliance]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, paranid, split, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_shieldcomponents']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_siliconwafers']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_smartchips']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_spices']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_turretcomponents']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_water']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_gen_weaponcomponents']/category[@faction='[argon, paranid, teladi, antigone, holyorder, trinity, buccaneers, ministry, hatikvah, alliance, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_arg_spacefuel']/category[@faction='[argon, antigone, hatikvah]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_par_majadust']/category[@faction='[scaleplate, buccaneers]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_tel_spaceweed']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[alliance, antigone, argon, buccaneers, court, fallensplit, freesplit, hatikvah, holyorder, ministry, paranid, scaleplate, split, teladi, trinity]</replace>
+  <replace sel="/modules/module[@id='prod_spl_medicalsupplies']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='prod_spl_scruffinfruits']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='prod_spl_cheltmeat']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='stor_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='dockarea_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='dockarea_spl_hightech']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='dockarea_spl_lowtech']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='pier_base_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='pier_add_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='hab_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='def_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='claim_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='build_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='equip_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
+  <replace sel="/modules/module[@id='conn_spl']/category[@faction='[split, freesplit, court]']/@faction">[court, fallensplit, freesplit, split]</replace>
 </diff>

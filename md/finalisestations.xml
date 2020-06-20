@@ -1,6 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<diff name="FinaliseStations" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<replace sel="//library[@name='DefaultCalculateDocks']/actions/set_value[@name='$TradesPerHour'][@exact='20']/@exact">30</replace>
-<replace sel="//library[@name='DefaultCalculatePiers']/actions/set_value[@name='$TradesPerHour'][@exact='5']/@exact">10</replace>
-<replace sel="//cue[@name='ConstructionSequenceCompleted']/actions/do_if[@value='$ConstructionSequence']/set_value[@name='$BBoxSize']/@exact">$Station.size / 1.5</replace>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/mdscript/cues/cue[@name='God_DefaultFinaliseFactory']/cues/cue[@name='ConstructionSequenceCompleted']/actions/do_if[@value='$ConstructionSequence']/set_value[@exact='$Station.size / 2'][@name='$BBoxSize']/@exact">$Station.size * 1.1</replace>
+  <replace sel="/mdscript/cues/library[@name='DefaultCalculateDocks']/actions/set_value[@exact='3000'][@name='$TradeCapacity']/@exact">5000</replace>
+  <replace sel="/mdscript/cues/library[@name='DefaultCalculateDocks']/actions/set_value[@exact='20'][@name='$TradesPerHour']/@exact">15</replace>
+  <replace sel="/mdscript/cues/library[@name='DefaultCalculatePiers']/actions/set_value[@exact='17500'][@name='$TradeCapacity']/@exact">25000</replace>
 </diff>

@@ -1,25 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<diff name="Story_Split" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<remove sel="//cue[@name='Sink_Effect_Curbs_Stage1_NewFaction']/actions/signal_cue[@cue='md.FactionLogic.CourtFactionLogic']" />
-<remove sel="//cue[@name='Sink_Effect_Curbs_Stage1_NewFaction']/actions/set_faction_active[@faction='faction.court']" />
-<remove sel="//cue[@name='Sink_Effect_Zyarth_Stage1_RenameFaction']/actions/signal_cue[@cue='md.FactionLogic.CourtFactionLogic']" />
-<remove sel="//cue[@name='Sink_Effect_Zyarth_Stage1_RenameFaction']/actions/set_faction_active[@faction='faction.court']" />
-
-<replace sel="//cue[@name='Sink_Effect_Court_Jobs']/actions"><actions /></replace>
-<remove sel="//cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[3]" />
-<remove sel="//cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[2]" />
-<remove sel="//cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[1]" />
-
-<remove sel="//cue[@name='Sink_Effect_Zyarth_Stage2_TakeOverSectors']/actions/set_job_active" />
-
-<replace sel="//cue[@name='Start']/actions/find_sector[@name='$SplitSectors']">
-<find_sector name="$SplitSectors" multiple="true">
-	<match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" />
-</find_sector>
-</replace>
-<replace sel="//cue[@name='Start']/actions/find_sector[@name='$BaseSectors']">
-<find_sector name="$BaseSectors" multiple="true">
-	<match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" negate="true"/>
-</find_sector>
-</replace>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <add sel="/mdscript/cues/cue[@name='Start']/conditions">
+    <check_value value="player.module == 'x4ep1_gamestart_split1' or player.module == 'x4ep1_gamestart_split2'"/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='Start']/conditions">
+    <check_value value="false"/>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='Start']/actions/find_sector[@name='$SplitSectors']">
+    <find_sector name="$SplitSectors" multiple="true">
+      <match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]"/>
+    </find_sector>
+  </replace>
+  <remove sel="/mdscript/cues/cue[@name='Start']/actions/find_sector[@name='$BaseSectors']/@extension"/>
+  <add sel="/mdscript/cues/cue[@name='Start']/actions/find_sector[@name='$BaseSectors']">
+    <match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" negate="true"/>
+  </add>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active[@activate='true'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active[@activate='true'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active[@activate='true'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active[@activate='true'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active[@activate='true'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Court_Jobs']/actions/set_job_active"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Curbs_Stage1_NewFaction']/actions/signal_cue[@comment='.court(Court of Curbs)']"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Curbs_Stage1_NewFaction']/actions/set_faction_active[@faction='faction.court']"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[@activate='false'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active[@activate='false'][1]"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Curbs_Stage2_StopPolice']/actions/set_job_active"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Zyarth_Stage1_NewFaction']/cues/cue[@name='Sink_Effect_Zyarth_Stage1_RenameFaction']/actions/signal_cue"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Zyarth_Stage1_NewFaction']/cues/cue[@name='Sink_Effect_Zyarth_Stage1_RenameFaction']/actions/set_faction_active[@faction='faction.court']"/>
+  <remove sel="/mdscript/cues/cue[@name='Start']/cues/cue[@name='Sink_Effect_Zyarth_Stage2_TakeOverSectors']/actions/set_job_active"/>
 </diff>

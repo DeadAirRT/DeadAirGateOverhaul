@@ -1,6 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@lowerlimit">45</replace>
-  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@upperlimit">55</replace>
-  <remove sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@extremechance"/>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[3]">
+    <add_tradeware object="$controllable" ware="ware.spacefuel" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[1]">
+    <add_tradeware object="$controllable" ware="ware.nividium" allowbuy="true" allowsell="false" lockavgprice="false"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[1]">
+    <add_tradeware object="$controllable" ware="ware.majadust" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[2]">
+    <add_tradeware object="$controllable" ware="ware.spaceweed" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[3]">
+    <add_tradeware object="$controllable" ware="ware.spaceweed" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[3]">
+    <add_tradeware object="$controllable" ware="ware.majadust" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_elseif[3]">
+    <add_tradeware object="$controllable" ware="ware.spacefuel" allowbuy="true" allowsell="true" lockavgprice="true"/>
+  </add>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_if[@value='$controllable.canequipships']/add_default_production_wares/@lowerlimit">80</replace>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_if[@value='$controllable.canequipships']/add_default_production_wares/@upperlimit">85</replace>
+  <remove sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_if[@value='$controllable.canequipships']/add_default_production_wares/@extremechance"/>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@lowerlimit">60</replace>
+  <replace sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@upperlimit">75</replace>
+  <remove sel="/mdscript/cues/library[@name='InitStationActions']/actions/do_if[@value='$controllable?']/do_if[@value='@$gamestartstation'][2]/do_else/add_default_production_wares/@extremechance"/>
 </diff>

@@ -1,43 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <diff>
-<replace sel="//macros">
-<macros>
-  <!-- FIRST TEST HIGHWAY
-  <macro name="HighwayDAGOHW01_Cluster_07_Sector001_macro" class="highway">
-    <component ref="standardzonehighway" />
-    <connections>
-      <connection ref="entrypoint">
-        <offset>
-          <position x="9500" y="0" z="157500" />
-        </offset>
-      </connection>
-      <connection ref="exitpoint">
-        <offset>
-          <position x="112146.447" y="0" z="-115353.553" />
-        </offset>
-      </connection>
-    </connections>
-    <properties>
-      <boundaries>
-        <boundary class="splinetube">
-          <splineposition x="9500" y="0" z="157000" tx="0" ty="0" tz="-1" weight="0" inlength="0" outlength="37500" />
-		  <splineposition x="9500" y="0" z="82000" tx="0" ty="0" tz="-1" weight="0" inlength="37500" outlength="76514" />
-		  <splineposition x="59967" y="0" z="-62467" tx="1" ty="0" tz="-1" weight="0" inlength="76514" outlength="37500" />
-		  <splineposition x="112146.447" y="0" z="-115353.553" tx="1" ty="0" tz="-1" weight="0" inlength="37500" outlength="0" />
-		  <size r="200" />
-        </boundary>
-      </boundaries>
-      <controls>
-        <linear>
-          <time />
-        </linear>
-        <angular>
-          <roll />
-        </angular>
-      </controls>
-      <configuration ref="ringlocalhighwayconfiguration" ring="1" />
-    </properties>
-  </macro> -->
-</macros>
-</replace>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_04_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_04_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_04_Sector002_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_08_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_08_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_09_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_09_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_10_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_10_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway03_Cluster_11_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_11_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_12_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_12_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_13_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_13_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_14_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_14_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway03_Cluster_14_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_15_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_15_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_18_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_18_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway03_Cluster_18_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_19_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_20_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway04_Cluster_20_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_22_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_22_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_24_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_24_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway03_Cluster_24_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway04_Cluster_24_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_25_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_25_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_28_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_28_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_29_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_29_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_32_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway01_Cluster_34_Sector001_macro']"/>
+  <remove sel="/macros/macro[@name='Highway02_Cluster_34_Sector001_macro']"/>
 </diff>

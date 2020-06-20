@@ -127,7 +127,7 @@ NEUTRAL: <area sunlight="1" economy="0.25" security="0.1" />
     <area sunlight="1" economy="1" security="1"/>
   </add>
   <add sel="/defaults/dataset[@macro='Cluster_21_Sector002_macro']/properties">
-    <area sunlight="1" economy="1" security="1"/>
+    <area sunlight="1" economy="0.75" security="0.75"/>
   </add>
   <remove sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/identification[@name='{20003,220001}']/@system"/>
   <replace sel="/defaults/dataset[@macro='Cluster_22_macro']/properties/area/@security">0.75</replace>
@@ -158,7 +158,7 @@ NEUTRAL: <area sunlight="1" economy="0.25" security="0.1" />
     <area sunlight="1" economy="1" security="1"/>
   </add>
   <add sel="/defaults/dataset[@macro='Cluster_26_Sector002_macro']/properties">
-    <area sunlight="1" economy="1" security="1"/>
+    <area sunlight="1" economy="0.75" security="0.75"/>
   </add>
   <replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/area/@economy">0.75</replace>
   <replace sel="/defaults/dataset[@macro='Cluster_27_macro']/properties/area/@security">0.75</replace>
@@ -443,8 +443,8 @@ NEUTRAL: <area sunlight="1" economy="0.25" security="0.1" />
     <area sunlight="1" economy="1" security="1"/>
   </add>
   <replace sel="/defaults/dataset[@macro='Cluster_424_Sector001_macro']/properties/area/@sunlight">1</replace>
-  <replace sel="/defaults/dataset[@macro='Cluster_424_Sector001_macro']/properties/area/@economy">1</replace>
-  <replace sel="/defaults/dataset[@macro='Cluster_424_Sector001_macro']/properties/area/@security">1</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_424_Sector001_macro']/properties/area/@economy">0.75</replace>
+  <replace sel="/defaults/dataset[@macro='Cluster_424_Sector001_macro']/properties/area/@security">0.75</replace>
   <replace sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/area/@sunlight">1</replace>
   <replace sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/area/@economy">1</replace>
   <replace sel="/defaults/dataset[@macro='Cluster_424_Sector002_macro']/properties/area/@security">1</replace>

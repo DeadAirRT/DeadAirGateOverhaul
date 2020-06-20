@@ -1,66 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff name="FactionLogic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<add sel="//cue[@name='FactionLogicManagers']/cues">
-	<cue name="FallensplitFactionLogic" comment="">
-      <cues>
-        <cue name="FallensplitFactionLogic_Manager" ref="Manager">
-          <param name="Faction" value="faction.fallensplit"/>
-          <param name="BaseAggressionLevel" value="moodlevel.high"/>
-          <param name="BaseAvariceLevel" value="moodlevel.low"/>
-          <param name="BaseLawfulness" value="0.2"/>
-          <param name="PreferredHQSpaceMacro" value="macro.cluster_DA3FAF1_sector001_macro" comment=""/>
-          <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
-          <param name="SatelliteNetworkGoal" value="7"/>
-          <param name="LasertowerNetworkGoal" value="5"/>
-          <param name="MinefieldGoalPerSector" value="1" comment="[MGPS * Sectors, 12].min is the maximum amount of Minefields for this faction"/>
-          <param name="DebugChance" value="0"/>
-          <param name="DebugChance2" value="0"/>
-        </cue>
-      </cues>
-    </cue>
-</add>
-<remove sel="//cue[@name='FactionLogicManagers']/cues/cue[@name='FallenFamiliesFactionLogic']" />
-<replace sel="//cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']">
-	<cue name="SetupSplitDLC" version="3" comment="">
-      <actions>
-        <set_value name="md.$FactionData.{faction.split}" exact="table[]" />
-        <set_value name="md.$FactionData.{faction.freesplit}" exact="table[]" />
-        <set_value name="md.$FactionData.{faction.court}" exact="table[]" />
-		<set_value name="md.$FactionData.{faction.fallensplit}" exact="table[]" />
-      </actions>
-      <patch sinceversion="3">
-        <set_value name="SplitFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_405_sector001_macro"/>
-        <set_value name="FreeSplitFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_408_sector002_macro"/>
-        <set_value name="CourtFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_425_sector001_macro"/>
-		<set_value name="FallensplitFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_DA3FAF1_sector001_macro"/>
-      </patch>
-    </cue>
-</replace>
-<remove sel="//cue[@name='CourtFactionLogic']/conditions" />
-<remove sel="//cue[@name='BuccaneersFactionLogic']/conditions" />
-
-<!-- Clean up faction HQ stuff -->
-<!-- HQ TYPES -->
-<replace sel="//cue[@name='ArgonFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='HolyOrderFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='GodrealmOfTheParanidFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='TeladiComapanyFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='BuccaneersFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='ScalePlatePactFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation', 'piratebase']</replace>
-<replace sel="//cue[@name='AllianceOfTheWordFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='MinistryOfFinanceFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='SplitFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='FreeSplitFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<replace sel="//cue[@name='CourtFactionLogic']/cues/cue/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
-<!-- HQ LOCATIONS -->
-<replace sel="//cue[@name='BuccaneersFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_419_sector001_macro</replace>
-<replace sel="//cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2HAT1_sector001_macro</replace>
-<replace sel="//cue[@name='ScalePlatePactFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2SCA1_sector001_macro</replace>
-<replace sel="//cue[@name='AllianceOfTheWordFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2ALI1_sector001_macro</replace>
-<replace sel="//cue[@name='MinistryOfFinanceFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_02_sector001_macro</replace>
-<replace sel="//cue[@name='FreeSplitFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_411_sector001_macro</replace>
-<replace sel="//cue[@name='CourtFactionLogic']/cues/cue/param[@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA3CAB1_sector001_macro</replace>
-<!-- WE DON'T NEED TO CHECK XENON OR KHAAK -->
-<replace sel="//cue[@name='Find_Faction_Headquarters']/actions/set_value[@name='$HQNecessary']/@exact">($Faction.isactive) and ($Faction != faction.xenon) and ($Faction != faction.khaak)</replace>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='AntigoneFactionLogic']/cues/cue[@name='AntigoneFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue[@name='HatikvahFreeLeagueFactionLogic_Manager']/param[@value='macro.cluster_29_sector001_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2HAT1_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='HatikvahFreeLeagueFactionLogic']/cues/cue[@name='HatikvahFreeLeagueFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='TeladiComapanyFactionLogic']/cues/cue[@name='TeladiCompanyFactionLogic_Manager']/param[@value='macro.cluster_15_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_34_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='TeladiComapanyFactionLogic']/cues/cue[@name='TeladiCompanyFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='MinistryOfFinanceFactionLogic']/cues/cue[@name='MinistryOfFinanceFactionLogic_Manager']/param[@value='macro.cluster_34_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_02_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='MinistryOfFinanceFactionLogic']/cues/cue[@name='MinistryOfFinanceFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='ScalePlatePactFactionLogic']/cues/cue[@name='ScalePlatePactFactionLogic_Manager']/param[@value='macro.cluster_42_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2SCA1_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='ScalePlatePactFactionLogic']/cues/cue[@name='ScalePlatePactFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='AllianceOfTheWordFactionLogic']/cues/cue[@name='AllianceOfTheWordFactionLogic_Manager']/param[@value='macro.cluster_23_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA2ALI1_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='AllianceOfTheWordFactionLogic']/cues/cue[@name='AllianceOfTheWordFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <remove sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='BuccaneersFactionLogic']/conditions"/>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='BuccaneersFactionLogic']/cues/cue[@name='BuccaneersFactionLogic_Manager']/param[@value='macro.cluster_04_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_419_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='BuccaneersFactionLogic']/cues/cue[@name='BuccaneersFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='TrinityFactionLogic']/cues/cue[@name='TrinityFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <add sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']/actions">
+    <set_value name="md.$FactionData.{faction.fallensplit}" exact="table[]"/>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']/patch/set_value[@exact='macro.cluster_405_sector001_macro'][@name='SplitFactionLogic.$PreferredHQSpaceMacro']/@exact">macro.cluster_405_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']/patch/set_value[@exact='macro.cluster_408_sector002_macro'][@name='FreeSplitFactionLogic.$PreferredHQSpaceMacro']/@exact">macro.cluster_411_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']/patch/set_value[@exact='macro.cluster_425_sector001_macro'][@name='CourtFactionLogic.$PreferredHQSpaceMacro']/@exact">macro.cluster_DA3CAB1_macro</replace>
+  <add sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SetupSplitDLC']/patch">
+    <set_value name="FallenFamiliesFactionLogic.$PreferredHQSpaceMacro" exact="macro.cluster_DA3FAF1_macro"/>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SplitFactionLogic']/cues/cue[@name='SplitFactionLogic_Manager']/param[@value='macro.cluster_405_sector001_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_405_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='SplitFactionLogic']/cues/cue[@name='SplitFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='FreeSplitFactionLogic']/cues/cue[@name='FreeSplitFactionLogic_Manager']/param[@value='macro.cluster_408_sector002_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_411_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='FreeSplitFactionLogic']/cues/cue[@name='FreeSplitFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <remove sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='CourtFactionLogic']/conditions"/>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='CourtFactionLogic']/cues/cue[@name='CourtFactionLogic_Manager']/param[@value='macro.cluster_425_sector001_macro'][@name='PreferredHQSpaceMacro']/@value">macro.cluster_DA3CAB1_macro</replace>
+  <replace sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='CourtFactionLogic']/cues/cue[@name='CourtFactionLogic_Manager']/param[@name='PreferredHQTypes']/@value">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <add sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='FallenFamiliesFactionLogic']/cues/cue[@name='FallenFamiliesFactionLogic_Manager']">
+    <param name="PreferredHQSpaceMacro" value="macro.cluster_DA3FAF1_macro" comment=""/>
+  </add>
+  <add sel="/mdscript/cues/cue[@name='FactionLogicManagers']/cues/cue[@name='FallenFamiliesFactionLogic']/cues/cue[@name='FallenFamiliesFactionLogic_Manager']">
+    <param name="PreferredHQTypes" value="['shipbuilding', 'equipmentdock', 'tradestation']"/>
+  </add>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/actions/set_value[@exact='$Faction.isactive'][@name='$HQNecessary']/@exact">($Faction.isactive) and ($Faction != faction.xenon) and ($Faction != faction.khaak)</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/set_value[@exact='$Faction.isactive'][@name='$HQNecessary']/@exact">($Faction.isactive) and ($Faction != faction.xenon) and ($Faction != faction.khaak)</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.antigone']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.hatikvah']/set_value[@exact='macro.cluster_29_sector001_macro'][@name='$PreferredHQSpaceMacro']/@exact">macro.cluster_DA2HAT1_macro</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.hatikvah']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.alliance']/set_value[@exact='macro.cluster_23_macro'][@name='$PreferredHQSpaceMacro']/@exact">macro.cluster_DA2ALI1_macro</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.alliance']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.teladi']/set_value[@exact='macro.cluster_15_macro'][@name='$PreferredHQSpaceMacro']/@exact">macro.cluster_34_macro</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.teladi']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.ministry']/set_value[@exact='macro.cluster_34_macro'][@name='$PreferredHQSpaceMacro']/@exact">macro.cluster_02_macro</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.ministry']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.scaleplate']/set_value[@exact='macro.cluster_42_macro'][@name='$PreferredHQSpaceMacro']/@exact">macro.cluster_DA2SCA1_macro</replace>
+  <replace sel="/mdscript/cues/library[@name='Manager']/cues/cue[@name='Find_Faction_Headquarters']/patch[@sinceversion='5']/do_elseif[@value='$Faction == faction.scaleplate']/set_value[@name='$PreferredHQTypes']/@exact">['shipbuilding', 'equipmentdock', 'tradestation']</replace>
 </diff>

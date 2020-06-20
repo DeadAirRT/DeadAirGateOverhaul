@@ -21,12 +21,12 @@
 						<event_cue_signalled />
 					</conditions>
 					<actions>
-						<set_value name="$PirateFixDebugChance" exact="false" />
+						<set_value name="$PirateFixDebugChance" exact="true" />
 						<get_factions_by_tag result="$economicfactions" tag="tag.economic"/>
 						<get_factions_by_tag result="$visitorfactions" tag="tag.visitor"/>
 						<set_value name="$LocalSmugglerCoverFactions" exact="global.$smugglercoverfactions" />
 						<remove_from_list name="$economicfactions" list="$visitorfactions" multiple="true" />
-						<remove_from_list name="$economicfactions" list="[faction.civilian,faction.criminal,faction.holyorderfanatic,faction.khaak,faction.ownerless,faction.smuggler,faction.xenon,faction.visitor]" multiple="true" />
+						<remove_from_list name="$economicfactions" list="[faction.civilian,faction.criminal,faction.holyorderfanatic,faction.khaak,faction.ownerless,faction.smuggler,faction.xenon,faction.visitor,faction.player]" multiple="true" />
 						<do_all exact="$economicfactions.count" counter="$a">
 							<do_if value="($LocalSmugglerCoverFactions.indexof.{$economicfactions.{$a}} lt 1) and $economicfactions.{$a}.isactive">
 								<append_to_list name="global.$smugglercoverfactions" exact="$economicfactions.{$a}"/>

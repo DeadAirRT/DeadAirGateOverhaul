@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <diff name="FactionGoal_Invade_Space" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+<add sel="//cue[@name='Start']/actions/do_all/do_else/find_gate[count(@active)=0]" type="@active">true</add>
+<replace sel="//cue[@name='Start']/actions/find_cluster_in_range[@name='$LocalClusters']/@maxdistance">4</replace>
 <replace sel="//do_if[@value='$NumActiveInvasions gt 0 and $Faction != faction.xenon and $Faction != faction.khaak and $Faction != faction.scaleplate']/@value">$NumActiveInvasions gt 0 and $Faction != faction.xenon and $Faction != faction.khaak</replace>
 <replace sel="//do_if[@value='$Valid and $Faction != faction.khaak and $Faction != faction.hatikvah and $Faction != faction.scaleplate']/@value">$Valid and $Faction != faction.khaak</replace>
 <replace sel="//do_if[@value='$AdjacentSectors.{$i}.cluster == $TargetCluster']">
 		  <do_if value="$AdjacentSectors.{$i}.cluster == $TargetCluster">
-            <find_object name="$LocalEntryPoints" class="class.highwayentrygate" space="$AdjacentSectors.{$i}" destination="$Target" multiple="true"/>
-			<find_gate name="$LocalEntryPoints" append="true" destination="$Target" space="$AdjacentSectors.{$i}" multiple="true"/>
+            <find_object name="$LocalEntryPoints" class="class.highwayentrygate" space="$AdjacentSectors.{$i}" destination="$Target" multiple="true" active="true"/>
+			<find_gate name="$LocalEntryPoints" append="true" destination="$Target" space="$AdjacentSectors.{$i}" multiple="true" active="true"/>
           </do_if>
 </replace>
 </diff>

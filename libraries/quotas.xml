@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/quotas/actors/@stationlimit">30</replace>
+  <replace sel="/quotas/actors/@modulelimit">5</replace>
+</diff>

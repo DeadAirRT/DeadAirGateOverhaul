@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+<replace sel="//macros/macro/properties/storage/@unit">160</replace>
+</diff>
+<!--
+<macros>
+  <macro name="buildmodule_gen_equip_m_dockarea_01_macro" class="buildmodule">
+    <component ref="buildmodule_gen_equip_m_dockarea_01" />
+    <properties>
+      <identification name="{20104,61401}" shortname="{20104,61403}" description="{20104,61402}" />
+      <build>
+        <sets>
+          <set ref="factory" />
+          <set ref="headquarters_player" />
+          <set ref="piratebase" />
+        </sets>
+      </build>
+      <explosiondamage value="100000" />
+      <storage unit="80" />
+      <hull max="1020000" />
+      <secrecy level="3" />
+      <builder optimalprocessorunits="10" usemasstraffic="0" />
+      <equip classes="ship_m ship_s" />
+      <supply classes="ship_m ship_s" />
+      <workforce max="400" />
+      <sounds>
+        <ambient ref="platform_ambiance_01" />
+      </sounds>
+      <sound_occlusion inside="0.5" outside="0.5" />
+    </properties>
+    <connections>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro1">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro2">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro3">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro4">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro5">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro6">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_m_01_macro7">
+        <macro ref="dockingbay_arg_m_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro1">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro10">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro11">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro12">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro13">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro14">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro15">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro16">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro17">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro2">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro3">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro4">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro5">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro6">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro7">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro8">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_dockingbay_arg_s_01_macro9">
+        <macro ref="dockingbay_arg_s_01_macro" connection="position" />
+      </connection>
+      <connection ref="ConnectionFor_room_gen_m_buildmodule_01_macro">
+        <macro ref="room_gen_m_buildmodule_01_macro" connection="position" />
+      </connection>
+      <connection ref="con_dock_xs_01">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_dock_xs_02">
+        <macro ref="dock_gen_xs_ship_01_macro" connection="Connection_component" />
+      </connection>
+      <connection ref="con_shipstorage_m_01">
+        <macro ref="shipstorage_gen_m_02_macro" connection="object" />
+      </connection>
+      <connection ref="con_shipstorage_s_01">
+        <macro ref="shipstorage_gen_s_02_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_01" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_02" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_03" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_04" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_05" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_06" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_07" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_08" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+    </connections>
+  </macro>
+</macros>-->

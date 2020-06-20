@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+<replace sel="//macros/macro/properties/storage/@unit">60</replace>
+</diff>
+<!--
+<macros>
+  <macro name="buildmodule_xen_ships_xl_macro" class="buildmodule">
+    <component ref="buildmodule_xen_ships_xl" />
+    <properties>
+      <identification name="{20104,61201}" shortname="{20104,61203}" makerrace="xenon" description="{20104,61202}" />
+      <build>
+        <sets>
+          <set ref="shipyard_xenon" />
+        </sets>
+      </build>
+      <explosiondamage value="100000" />
+      <storage unit="30" />
+      <hull max="551000" />
+      <secrecy level="3" />
+      <builder classes="ship_xl" optimalprocessorunits="10" />
+      <equip classes="ship_xl" />
+      <supply classes="ship_xl" />
+      <ownership claim="1" />
+    </properties>
+    <connections>
+      <connection ref="connection_dockarea01">
+        <macro ref="dockingbay_gen_xl_inv_macro" connection="con_component01" />
+      </connection>
+      <connection name="buildprocessorconnection_01" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+    </connections>
+  </macro>
+</macros>-->

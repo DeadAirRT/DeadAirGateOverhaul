@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+
+</diff>
+<!--
+<macros>
+  <macro name="buildprocessor_gen_01_macro" class="buildprocessor">
+    <component ref="generic_buildprocessor" />
+  </macro>
+</macros>-->

@@ -1,9 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff name="Setup_DLC_Split" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
-<add sel="//library[@name='Start_Actions']/actions/get_ware_definition[@faction='faction.court']" pos="after">
-	<get_ware_definition result="md.$EquipmentTable.{faction.fallensplit}" faction="faction.fallensplit" flags="equipment" />
-</add>
-<replace sel="//library[@name='Start_Actions']/actions/append_list_elements[@name='md.$SplitFactions']/@other">[faction.split, faction.freesplit, faction.court, faction.fallensplit]</replace>
-<remove sel="//cue[@name='Setup']/actions/do_if[@value='player.galaxy.macro == macro.xu_ep2_universe_macro']" />
-<remove sel="/mdscript/cues/cue[@name='Setup']/actions/do_if[@value='global.$smugglercoverfactions?']/remove_from_list[@name='global.$smugglercoverfactions']"/>
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+  <replace sel="/mdscript/cues/cue[@name='Setup']/actions/do_if[@value='global.$smugglercoverfactions?']/remove_from_list[@name='global.$smugglercoverfactions']">
+    <do_if value="not global.$smugglercoverfactions.indexof.{faction.court}">
+      <append_to_list name="global.$smugglercoverfactions" exact="faction.court"/>
+    </do_if>
+  </replace>
+  <add sel="/mdscript/cues/cue[@name='Setup']/actions/do_if[@value='global.$smugglercoverfactions?']">
+    <do_if value="not global.$smugglercoverfactions.indexof.{faction.fallensplit}">
+      <append_to_list name="global.$smugglercoverfactions" exact="faction.fallensplit"/>
+    </do_if>
+  </add>
+  <remove sel="/mdscript/cues/cue[@name='Setup']/actions/do_if[@value='player.galaxy.macro == macro.xu_ep2_universe_macro']"/>
+  <add sel="/mdscript/cues/library[@name='Start_Actions']/actions">
+    <get_ware_definition result="md.$EquipmentTable.{faction.fallensplit}" faction="faction.fallensplit" flags="equipment"/>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Start_Actions']/actions">
+    <do_if value="not md.$FactionData.{faction.court}?">
+      <set_value name="md.$FactionData.{faction.court}" exact="table[]"/>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Start_Actions']/actions">
+    <do_if value="not md.$FactionData.{faction.fallensplit}?">
+      <set_value name="md.$FactionData.{faction.fallensplit}" exact="table[]"/>
+    </do_if>
+  </add>
+  <add sel="/mdscript/cues/library[@name='Start_Actions']/actions">
+    <append_list_elements name="md.$SplitFactions" other="[faction.fallensplit]"/>
+  </add>
+  <replace sel="/mdscript/cues/cue[@name='DLC_Split_Prelude']/actions/find_sector[@name='$SplitSectors']">
+    <find_sector name="$SplitSectors" multiple="true">
+      <match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]"/>
+    </find_sector>
+  </replace>
+  <remove sel="/mdscript/cues/cue[@name='DLC_Split_Prelude']/actions/find_sector[@name='$BaseSectors']/@extension"/>
+  <add sel="/mdscript/cues/cue[@name='DLC_Split_Prelude']/actions/find_sector[@name='$BaseSectors']">
+    <match owner="[faction.split, faction.freesplit, faction.court, faction.fallensplit]" negate="true"/>
+  </add>
 </diff>

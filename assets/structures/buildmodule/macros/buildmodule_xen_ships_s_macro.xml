@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+<replace sel="//macros/macro/properties/storage/@unit">60</replace>
+</diff>
+<!--
+<macros>
+  <macro name="buildmodule_xen_ships_s_macro" class="buildmodule">
+    <component ref="buildmodule_arg_ships_s" />
+    <properties>
+      <identification name="{20104,61001}" shortname="{20104,61003}" makerrace="xenon" description="{20104,61002}" />
+      <build>
+        <sets>
+          <set ref="shipyard_xenon" />
+        </sets>
+      </build>
+      <explosiondamage value="100000" />
+      <storage unit="30" />
+      <hull max="176000" />
+      <secrecy level="3" />
+      <builder classes="ship_s" optimalprocessorunits="5" usemasstraffic="0" />
+      <equip classes="ship_s" />
+      <supply classes="ship_s" />
+      <ownership claim="1" />
+    </properties>
+    <connections>
+      <connection name="buildprocessorconnection_01" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_02" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_03" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_04" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_05" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_06" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+    </connections>
+  </macro>
+</macros>-->

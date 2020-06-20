@@ -58,5 +58,26 @@
  <t id="207">Time until next invasion:</t>
  <t id="208">in minutes from now</t>
  <t id="209">%1 {1001,103}</t>
+ <t id="300">(Job Stuff)</t>
+ <t id="301">Weapon-Engine Importer</t>
+ <t id="302">Weapon-Engine Exporter</t>
+ <t id="303">Weapon-Engine Trader</t>
+ <t id="304">Hull-Tech Importer</t>
+ <t id="305">Hull-Tech Exporter</t>
+ <t id="306">Hull-Tech Trader</t>
+ <t id="307">Refined-Wares Importer</t>
+ <t id="308">Refined-Wares Exporter</t>
+ <t id="309">Refined-Wares Trader</t>
+ <t id="310">Defensive-Tech Importer</t>
+ <t id="311">Defensive-Tech Exporter</t>
+ <t id="312">Defensive-Tech Trader</t>
+ <t id="313">High-Tech Importer</t>
+ <t id="314">High-Tech Exporter</t>
+ <t id="315">{20204,401}(High-Tech Trader)</t>
+ <t id="316">xxx</t>
+ <t id="317">xxx</t>
+ <t id="318">xxx</t>
+ <t id="319">xxx</t>
+ <t id="320">xxx</t>
 </page>
 </language>

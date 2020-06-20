@@ -31,7 +31,7 @@
 				<set_value name="$DeadAirGlobal.$DeadAirJobNextInvasionsTime" exact="[(player.age),($DeadAirGlobal.$DeadAirJobInvasionsTime)min].max + ($DeadAirGlobal.$DeadAirJobInvasionsInterval)min" />
 			</do_if>
 			<do_if value="not $DeadAirActivateJobsDebug?">
-				<set_value name="$DeadAirActivateJobsDebug" exact="false" />
+				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
 			</do_if>
 			<do_if value="not $DeadAirGlobal.$DeadAirSupremacyJobList?">
 				<set_value name="$DeadAirGlobal.$DeadAirSupremacyJobList" exact="['argon_carrier_supremacy_fleet','antigone_carrier_supremacy_fleet','paranid_carrier_supremacy_fleet','holyorder_carrier_supremacy_fleet','teladi_carrier_supremacy_fleet',
@@ -67,7 +67,7 @@
 		</cue>
 		<cue name="FindJobsAndShips" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
 			<actions>
-				<set_value name="$DeadAirActivateJobsDebug" exact="false" />
+				<set_value name="$DeadAirActivateJobsDebug" exact="true" />
 				<get_factions_by_tag tag="tag.privateship" result="$PrivateShipFactionList" />
 				<do_all exact="$PrivateShipFactionList.count" counter="$a">
 					<!-- ALL DEADAIRJOBS -->
@@ -311,8 +311,7 @@
 			<conditions>
 				<event_cue_signalled />
 			</conditions>
-			<!-- temporary short delay for testing -->
-			<delay min="5s" max="5min" />
+			<delay min="1min" max="10min" />
 			<actions>
 				<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- GenerateAttackOrders -- Generating Attack Orders for Supremacy Fleet -- AttackingShip: %2 -- AttackedFaction %3 -- AttackedSector %4'.[player.age,
 					event.param.{1}.knownname,event.param.{2}.knownname,event.param.{3}.knownname]"
@@ -321,10 +320,25 @@
 				<set_value name="$AttackedFaction" exact="event.param.{2}" />
 				<set_value name="$AttackedSector" exact="event.param.{3}" />
 				<find_station name="$AttackedStations" space="$AttackedSector" multiple="true" owner="$AttackedFaction" />
+				<!-- neither of these works
+				<set_known object="$AttackingShip" known="true"/>
+				<set_object_radar_visible object="$AttackingShip" visible="true"/> -->
+				<!-- let's add squad_attack to AttackInRange instead
+				<create_order id="'Attack'" object="$AttackingShip" immediate="true">
+					<param name="primarytarget" value="$AttackedStations.{1}"/>
+					<param name="pursuetargets" value="true"/>
+					<param name="allowothertargets" value="true"/>
+				</create_order>-->
 				<do_all exact="$AttackedStations.count" counter="$h">
 					<set_value name="$AttackedStation" exact="$AttackedStations.{$h}" />
 					<create_order id="'AttackInRange'" object="$AttackingShip">
 						<param name="destination" value="[$AttackedSector,$AttackedStation.relativeposition.{$AttackedSector}]"/>
+					</create_order>
+					<create_order id="'Attack'" object="$AttackingShip">
+						<param name="primarytarget" value="$AttackedStation"/>
+						<param name="pursuetargets" value="true"/>
+						<param name="allowothertargets" value="true"/>
+						<param name="squad_attack" value="true"/>
 					</create_order>
 					<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- GenerateAttackOrders -- Attack Order Generated for Supremacy Fleet -- AttackingShip: %2 -- AttackedSector %3 -- AttackedStation %4 -- AttackedStationPosition %5'.[player.age,
 						$AttackingShip.knownname,$AttackedSector.knownname,$AttackedStation.knownname,$AttackedStation.relativeposition.{$AttackedSector}]"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+
+</diff>
+<!--
+<macros>
+  <macro name="buildmodule_gen_carrier_macro" class="buildmodule">
+    <component ref="generic_buildmodule" />
+    <properties>
+      <build />
+      <hull integrated="1" />
+      <secrecy level="3" />
+      <builder usemasstraffic="0" />
+      <supply classes="ship_m ship_s" />
+    </properties>
+    <connections>
+      <connection name="buildprocessorconnection_01" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_02" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+      <connection name="buildprocessorconnection_03" ref="buildprocessorconnection">
+        <macro ref="buildprocessor_gen_01_macro" connection="object" />
+      </connection>
+    </connections>
+  </macro>
+</macros>-->

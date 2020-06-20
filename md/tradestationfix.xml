@@ -57,16 +57,16 @@
 								<!-- Set up the trade lists to compare -->
 								<set_value name="$ArgonTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
 									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
-									ware.turretcomponents,ware.weaponcomponents,ware.foodrations,ware.spaceweed,ware.majadust,ware.nividium]"/>
+									ware.turretcomponents,ware.weaponcomponents,ware.foodrations,ware.spaceweed,ware.majadust,ware.spacefuel,ware.nividium]"/>
 								<set_value name="$ParanidTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
 									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
-									ware.turretcomponents,ware.weaponcomponents,ware.sojahusk,ware.spaceweed,ware.spacefuel,ware.nividium]"/>
+									ware.turretcomponents,ware.weaponcomponents,ware.sojahusk,ware.spaceweed,ware.majadust,ware.spacefuel,ware.nividium]"/>
 								<set_value name="$SplitTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
 									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
-									ware.turretcomponents,ware.weaponcomponents,ware.cheltmeat,ware.scruffinfruits,ware.nividium]"/>
+									ware.turretcomponents,ware.weaponcomponents,ware.cheltmeat,ware.scruffinfruits,ware.spaceweed,ware.majadust,ware.spacefuel,ware.nividium]"/>
 								<set_value name="$TeladiTradeStationWares" exact="[ware.medicalsupplies,ware.water,ware.advancedcomposites,ware.advancedelectronics,ware.antimatterconverters,ware.claytronics,
 									ware.dronecomponents,ware.energycells,ware.engineparts,ware.fieldcoils,ware.hullparts,ware.missilecomponents,ware.scanningarrays,ware.shieldcomponents,ware.smartchips,
-									ware.turretcomponents,ware.weaponcomponents,ware.nostropoil,ware.majadust,ware.spacefuel,ware.nividium]"/> 
+									ware.turretcomponents,ware.weaponcomponents,ware.nostropoil,ware.spaceweed,ware.majadust,ware.spacefuel,ware.nividium]"/> 
 								<!-- Figure out which race list we need -->
 								<do_if value="($TradeStation.trueowner == faction.teladi) or ($TradeStation.trueowner == faction.ministry) or ($TradeStation.trueowner == faction.scaleplate)">
 									<set_value name="$CorrectTradewaresList" exact="$TeladiTradeStationWares" />
@@ -101,7 +101,7 @@
 										</do_else>
 									</do_if>
 								</do_all>
-								<add_default_production_wares object="$TradeStation" lowerlimit="25" upperlimit="35" />
+								<add_default_production_wares object="$TradeStation" lowerlimit="60" upperlimit="75" />
 								<remove_value name="$ArgonTradeStationWares" />
 								<remove_value name="$ParanidTradeStationWares" />
 								<remove_value name="$SplitTradeStationWares" />

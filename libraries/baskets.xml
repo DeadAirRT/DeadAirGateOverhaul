@@ -43,6 +43,31 @@ ware.water					water
 ware.weaponcomponents		equipment				tech
 ware.wheat					argon_agriculture
 -->
+<!--
+argon_agriculture
+paranid_agriculture
+split_agriculture
+teladi_agriculture
+
+construction_stations		7
+energy						1
+equipment					13
+global_illegal				3
+refined_gas					4
+refined_mineral				3
+tech						11
+water						2
+
+Stations/Ships			x	claytronics, energycells, hullparts
+equipment					advancedcomposites, advancedelectronics, antimatterconverters, dronecomponents, energycells, engineparts, fieldcoils, missilecomponents, scanningarrays, shieldcomponents, smartchips, turretcomponents, weaponcomponents
+	weapons/engines		x	advancedelectronics, antimatterconverters, engineparts, turretcomponents, weaponcomponents
+	defensive			x	advancedcomposites, fieldcoils, plasmaconductors, shieldcomponents
+	tech				x	dronecomponents, microchips, missilecomponents, scanningarrays, smartchips, 
+Energy					x	energycells
+Refined					x	antimattercells, graphene, quantumtubes, refinedmetals, siliconwafers, superfluidcoolant, teladianium
+Food					x	cheltmeat, foodrations, majasnails, meat, medicalsupplies, nostropoil, scruffinfruits, sojabeans, sojahusk, spices, sunriseflowers, swampplant, water, wheat
+-->
+<!-- old baskets kept for compatibility -->
 <replace sel="//baskets/basket[@id='equipment']/wares">
     <wares>
       <ware ware="advancedcomposites" />
@@ -143,4 +168,96 @@ ware.wheat					argon_agriculture
 	  <ware ware="water" />
     </wares>
 </replace>
+<!-- New baskets -->
+<add sel="//baskets">
+	<basket id="DA_stationsships">
+      <wares>
+        <ware ware="claytronics" />
+		<ware ware="hullparts" />
+      </wares>
+    </basket>
+	<basket id="DA_weaponsengines">
+      <wares>
+        <ware ware="advancedelectronics" />
+		<ware ware="antimatterconverters" />
+		<ware ware="engineparts" />
+		<ware ware="turretcomponents" />
+		<ware ware="weaponcomponents" />
+      </wares>
+    </basket>
+	<basket id="DA_defensive">
+      <wares>
+        <ware ware="advancedcomposites" />
+		<ware ware="fieldcoils" />
+		<ware ware="plasmaconductors" />
+		<ware ware="shieldcomponents" />
+		<ware ware="claytronics" />
+      </wares>
+    </basket>
+	<basket id="DA_tech">
+      <wares>
+        <ware ware="dronecomponents" />
+		<ware ware="microchips" />
+		<ware ware="missilecomponents" />
+		<ware ware="scanningarrays" />
+		<ware ware="smartchips" />
+		<ware ware="hullparts" />
+      </wares>
+    </basket>
+	<basket id="DA_energy">
+      <wares>
+        <ware ware="energycells" />
+      </wares>
+    </basket>
+	<basket id="DA_refined">
+      <wares>
+        <ware ware="antimattercells" />
+		<ware ware="graphene" />
+		<ware ware="quantumtubes" />
+		<ware ware="refinedmetals" />
+		<ware ware="siliconwafers" />
+		<ware ware="superfluidcoolant" />
+		<ware ware="teladianium" />
+      </wares>
+    </basket>
+	<basket id="DA_food_argon">
+      <wares>
+        <ware ware="foodrations" />
+		<ware ware="meat" />
+		<ware ware="medicalsupplies" />
+		<ware ware="spices" />
+		<ware ware="water" />
+		<ware ware="wheat" />
+      </wares>
+    </basket>
+	<basket id="DA_food_paranid">
+      <wares>
+        <ware ware="majasnails" />
+		<ware ware="medicalsupplies" />
+		<ware ware="sojabeans" />
+		<ware ware="sojahusk" />
+		<ware ware="spices" />
+		<ware ware="water" />
+      </wares>
+    </basket>
+	<basket id="DA_food_teladi">
+      <wares>
+        <ware ware="medicalsupplies" />
+		<ware ware="nostropoil" />
+		<ware ware="spices" />
+		<ware ware="sunriseflowers" />
+		<ware ware="swampplant" />
+		<ware ware="water" />
+      </wares>
+    </basket>
+	<basket id="DA_food_split">
+      <wares>
+        <ware ware="cheltmeat" />
+		<ware ware="medicalsupplies" />
+		<ware ware="scruffinfruits" />
+		<ware ware="spices" />
+		<ware ware="water" />
+      </wares>
+    </basket>
+</add>
 </diff>

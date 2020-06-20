@@ -1,7 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <diff>
-	<replace sel="//macros">
-		<macros>
-		</macros>
-	</replace>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway003_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway004_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway005_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway006_Cluster_01_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_04_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_04_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_06_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_06_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_15_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_15_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_19_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_19_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_21_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_21_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_25_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_25_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_26_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_26_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_29_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_29_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_32_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_32_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_42_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_42_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway001_Cluster_50_macro']"/>
+  <remove sel="/macros/macro[@name='SuperHighway002_Cluster_50_macro']"/>
 </diff>

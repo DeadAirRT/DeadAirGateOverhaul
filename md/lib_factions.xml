@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
   <add sel="/mdscript/cues/cue[@name='Mission_Factions']/actions">
-    <append_to_list name="md.$All_Mission_Factions" list="[faction.split,faction.freesplit,faction.fallensplit,faction.court]"/>
+    <append_list_elements name="md.$All_Mission_Factions" other="[faction.split,faction.freesplit,faction.fallensplit,faction.court]"/>
   </add>
 </diff>

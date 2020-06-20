@@ -21,7 +21,7 @@
 						<event_cue_signalled />
 					</conditions>
 					<actions>
-						<set_value name="$PirateFixDebugChance" exact="true" />
+						<set_value name="$PirateFixDebugChance" exact="false" />
 						<get_factions_by_tag result="$economicfactions" tag="tag.economic"/>
 						<get_factions_by_tag result="$visitorfactions" tag="tag.visitor"/>
 						<set_value name="$LocalSmugglerCoverFactions" exact="global.$smugglercoverfactions" />

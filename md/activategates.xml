@@ -28,7 +28,7 @@
 				<set_value name="$DeadAirGlobal.$DeadAirGateNextActivationTime" exact="[(player.age),($DeadAirGlobal.$DeadAirGateActivationTime)min].max + ($DeadAirGlobal.$DeadAirGateActivationInterval)min" />
 			</do_if>
 			<do_if value="not $DeadAirActivateGatesDebug?">
-				<set_value name="$DeadAirActivateGatesDebug" exact="true" />
+				<set_value name="$DeadAirActivateGatesDebug" exact="false" />
 			</do_if>
 			<set_value name="$initcompleted" exact="true" />
 		</actions>
@@ -39,7 +39,7 @@
 		</cue>
 		<cue name="FindGates" instantiate="true" checktime="[player.age + 1min,15min].max" checkinterval="30min">
 			<actions>
-				<set_value name="$DeadAirActivateGatesDebug" exact="true" />
+				<set_value name="$DeadAirActivateGatesDebug" exact="false" />
 				<find_sector name="$Sectors" space="player.galaxy" multiple="true" />
 				<do_all exact="$Sectors.count" counter="$a">
 					<set_value name="$Sector" exact="$Sectors.{$a}" />
@@ -77,10 +77,14 @@
 							<set_value name="$ExitGate" exact="$Gate.exit" />
 							<do_if value="$Gate.isactive == false">
 								<set_object_active object="$Gate" activate="true"/>
+								<set_value name="$Message" exact="'%1 in %2 is now active'.[$Gate.knownname,$Gate.sector.knownname]" />
+								<show_notification priority="2" text="[[$Message,43,206,72]]" />
+								<write_to_logbook category="tips" title="$Message" highlighted="true" object="$Gate" interaction="showonmap"/>
 								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- Gate: %2 -- Gate Active: %3 -- Gate Destination Zone Macro: %4 -- Gate Exit: %5 -- Gate Exit Sector: %6 -- Gate IDCODE: %7 -- Gate Exit IDCODE %8 -- Gate Extension: %9'.[player.age,
 									$Gate.knownname,$Gate.isactive,$Gate.destination.macro,$Gate.exit.knownname,$Gate.exit.sector.knownname,$Gate.idcode,$Gate.exit.idcode,$Gate.extension]" 
 									context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
 								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$Gate" multiple="true" />
+								<remove_value name="$Message" />
 							</do_if>
 							<do_else>
 								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $Gate %2 .isactive, removing from list '.[player.age,$Gate.idcode]"
@@ -90,10 +94,14 @@
 							
 							<do_if value="$ExitGate.isactive == false">
 								<set_object_active object="$ExitGate" activate="true"/>
+								<set_value name="$Message" exact="'%1 in %2 is now active'.[$ExitGate.knownname,$ExitGate.sector.knownname]" />
+								<show_notification priority="2" text="[[$Message,43,206,72]]" />
+								<write_to_logbook category="tips" title="$Message" highlighted="true" object="$ExitGate" interaction="showonmap"/>
 								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- Gate: %2 -- Gate Active: %3 -- Gate Destination Zone Macro: %4 -- Gate Exit: %5 -- Gate Exit Sector: %6 -- Gate IDCODE: %7 -- Gate Exit IDCODE %8 -- Gate Extension: %9'.[player.age,
 									$ExitGate.knownname,$ExitGate.isactive,$ExitGate.destination.macro,$ExitGate.exit.knownname,$ExitGate.exit.sector.knownname,$ExitGate.idcode,$ExitGate.exit.idcode,$ExitGate.extension]" 
 									context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>
 								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$ExitGate" multiple="true" />
+								<remove_value name="$Message" />
 							</do_if>
 							<do_else>
 								<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $ExitGate %2 .isactive, removing from list '.[player.age,$ExitGate.idcode]"
@@ -101,6 +109,8 @@
 								<remove_from_list name="$DeadAirGlobal.$DeadAirGateList" exact="$ExitGate" multiple="true" />
 							</do_else>
 							
+							<remove_value name="$Gate" />
+							<remove_value name="$ExitGate" />
 							<set_value name="$DeadAirGlobal.$DeadAirGateNextActivationTime" exact="$DeadAirGateActivationLastTimeFired + ($DeadAirGlobal.$DeadAirGateActivationInterval)min" />
 							<debug_text text="'MOD: DeadAirGateOverhaul -- %1 -- ActivateGates -- $DeadAirGlobal.$DeadAirGateNextActivationTime %2'.[player.age,$DeadAirGlobal.$DeadAirGateNextActivationTime]"
 								context="false" filter="scripts" chance="if @$DeadAirActivateGatesDebug then ($DeadAirActivateGatesDebug * 100) else 0"/>

@@ -1,25 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <diff>
-  <replace sel="/ships/ship[@id='argon_builder_xl']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_resupplier_xl']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_trader_container_l']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_trader_container_m']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_trader_container_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_solid_l']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_liquid_l']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_solid_m']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_liquid_m']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_solid_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_solid_mixed']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_miner_liquid_mixed']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_carrier_xl']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_destroyer_l']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_frigate_m']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_gunboat_m']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_fighter_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_fighter_heavy_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_fighter_light_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='argon_scout_s']/category[@faction='[argon, hatikvah]']/@faction">[argon, hatikvah, buccaneers]</replace>
+  <remove sel="/ships/ship[@id='argon_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='argon_miner_liquid_mixed']"/>
+  <replace sel="/ships/ship[@id='argon_carrier_xl']/category[@faction='[argon, hatikvah]']/@tags">[military, carrier, battleship, mission, xl]</replace>
+  <replace sel="/ships/ship[@id='argon_destroyer_l']/category[@faction='[argon, hatikvah]']/@tags">[military, destroyer, mission, l]</replace>
+  <replace sel="/ships/ship[@id='argon_frigate_m']/category[@faction='[argon, hatikvah]']/@tags">[military, medium, frigate, gunboat, mission]</replace>
+  <remove sel="/ships/ship[@id='argon_gunboat_m']"/>
   <replace sel="/ships/ship[@id='antigone_builder_xl']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_resupplier_xl']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_trader_container_l']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
@@ -30,34 +16,29 @@
   <replace sel="/ships/ship[@id='antigone_miner_solid_m']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_miner_liquid_m']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_miner_solid_s']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
-  <replace sel="/ships/ship[@id='antigone_miner_solid_mixed']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
-  <replace sel="/ships/ship[@id='antigone_miner_liquid_mixed']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
+  <remove sel="/ships/ship[@id='antigone_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='antigone_miner_liquid_mixed']"/>
+  <replace sel="/ships/ship[@id='antigone_carrier_xl']/category[@faction='[antigone, hatikvah]']/@tags">[military, carrier, battleship, mission, xl]</replace>
   <replace sel="/ships/ship[@id='antigone_carrier_xl']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
+  <replace sel="/ships/ship[@id='antigone_destroyer_l']/category[@faction='[antigone, hatikvah]']/@tags">[military, destroyer, mission, l]</replace>
   <replace sel="/ships/ship[@id='antigone_destroyer_l']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
+  <replace sel="/ships/ship[@id='antigone_frigate_m']/category[@faction='[antigone, hatikvah]']/@tags">[military, medium, frigate, gunboat, mission]</replace>
   <replace sel="/ships/ship[@id='antigone_frigate_m']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
-  <replace sel="/ships/ship[@id='antigone_gunboat_m']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
+  <remove sel="/ships/ship[@id='antigone_gunboat_m']"/>
   <replace sel="/ships/ship[@id='antigone_fighter_s']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_fighter_heavy_s']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_fighter_light_s']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
   <replace sel="/ships/ship[@id='antigone_scout_s']/category[@faction='[antigone, hatikvah]']/@faction">[antigone]</replace>
-  <replace sel="/ships/ship[@id='paranid_builder_xl']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_resupplier_xl']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_trader_container_l']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_trader_container_m']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_trader_container_s']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_solid_l']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_liquid_l']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_solid_m']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_liquid_m']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_solid_s']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_solid_mixed']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_miner_liquid_mixed']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_carrier_xl']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_destroyer_l']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_frigate_m']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_corvette_m']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_fighter_s']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
-  <replace sel="/ships/ship[@id='paranid_scout_s']/category[@faction='[paranid, alliance]']/@faction">[paranid, alliance, buccaneers]</replace>
+  <replace sel="/ships/ship[@id='xenon_carrier_xl']/category[@faction='[xenon]']/@tags">[military, carrier, battleship, mission, xl]</replace>
+  <replace sel="/ships/ship[@id='xenon_destroyer_xl']/category[@faction='[xenon]']/@tags">[military, destroyer, mission, l]</replace>
+  <replace sel="/ships/ship[@id='xenon_frigate_m']/category[@faction='[xenon]']/@tags">[military, medium, frigate, gunboat, mission]</replace>
+  <remove sel="/ships/ship[@id='xenon_gunboat_m']"/>
+  <remove sel="/ships/ship[@id='paranid_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='paranid_miner_liquid_mixed']"/>
+  <replace sel="/ships/ship[@id='paranid_carrier_xl']/category[@faction='[paranid, alliance]']/@tags">[military, carrier, battleship, mission, xl]</replace>
+  <replace sel="/ships/ship[@id='paranid_destroyer_l']/category[@faction='[paranid, alliance]']/@tags">[military, destroyer, mission, l]</replace>
+  <replace sel="/ships/ship[@id='paranid_frigate_m']/category[@faction='[paranid, alliance]']/@tags">[military, medium, frigate, corvette, mission]</replace>
+  <remove sel="/ships/ship[@id='paranid_corvette_m']"/>
   <replace sel="/ships/ship[@id='holyorder_builder_xl']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_resupplier_xl']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_trader_container_l']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
@@ -68,39 +49,64 @@
   <replace sel="/ships/ship[@id='holyorder_miner_solid_m']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_miner_liquid_m']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_miner_solid_s']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
-  <replace sel="/ships/ship[@id='holyorder_miner_solid_mixed']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
-  <replace sel="/ships/ship[@id='holyorder_miner_liquid_mixed']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
+  <remove sel="/ships/ship[@id='holyorder_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='holyorder_miner_liquid_mixed']"/>
+  <replace sel="/ships/ship[@id='holyorder_carrier_xl']/category[@faction='[holyorder, alliance]']/@tags">[military, carrier, battleship, mission, xl]</replace>
   <replace sel="/ships/ship[@id='holyorder_carrier_xl']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
+  <replace sel="/ships/ship[@id='holyorder_destroyer_l']/category[@faction='[holyorder, alliance]']/@tags">[military, destroyer, mission, l]</replace>
   <replace sel="/ships/ship[@id='holyorder_destroyer_l']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
+  <replace sel="/ships/ship[@id='holyorder_frigate_m']/category[@faction='[holyorder, alliance]']/@tags">[military, medium, frigate, corvette, mission]</replace>
   <replace sel="/ships/ship[@id='holyorder_frigate_m']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
-  <replace sel="/ships/ship[@id='holyorder_corvette_m']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
+  <remove sel="/ships/ship[@id='holyorder_corvette_m']"/>
+  <remove sel="/ships/ship[@id='holyorder_corvette_m_elite']"/>
   <replace sel="/ships/ship[@id='holyorder_fighter_s']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_fighter_light_s']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_fighter_heavy_s']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
   <replace sel="/ships/ship[@id='holyorder_scout_s']/category[@faction='[holyorder, alliance]']/@faction">[holyorder]</replace>
-  <replace sel="/ships/ship[@id='teladi_builder_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_resupplier_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_trader_container_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_trader_container_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_trader_container_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_solid_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_liquid_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_solid_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_liquid_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_solid_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_solid_mixed']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_miner_liquid_mixed']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_carrier_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_destroyer_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_frigate_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_gunboat_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_fighter_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='teladi_scout_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[scaleplate, teladi]</replace>
-  <replace sel="/ships/ship[@id='ministry_trader_container_m']/@group">min_trader_container_m</replace>
-  <replace sel="/ships/ship[@id='hat_plunderer']/@id">hat_plunderer_l</replace>
-  <replace sel="/ships/ship[@id='hat_plunderer_l']/@group">hat_pirate_l</replace>
-  <replace sel="/ships/ship[@id='hat_scavenger']/@id">hat_plunderer_m</replace>
-  <replace sel="/ships/ship[@id='hat_plunderer_m']/@group">hat_pirate_m</replace>
+  <remove sel="/ships/ship[@id='tri_builder_xl']"/>
+  <remove sel="/ships/ship[@id='tri_resupplier_xl']"/>
+  <remove sel="/ships/ship[@id='tri_trader_container_l']"/>
+  <remove sel="/ships/ship[@id='tri_trader_container_m']"/>
+  <remove sel="/ships/ship[@id='tri_trader_container_s']"/>
+  <remove sel="/ships/ship[@id='tri_miner_solid_l']"/>
+  <remove sel="/ships/ship[@id='tri_miner_liquid_l']"/>
+  <remove sel="/ships/ship[@id='tri_miner_solid_m']"/>
+  <remove sel="/ships/ship[@id='tri_miner_liquid_m']"/>
+  <remove sel="/ships/ship[@id='tri_miner_solid_s']"/>
+  <remove sel="/ships/ship[@id='tri_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='tri_miner_liquid_mixed']"/>
+  <remove sel="/ships/ship[@id='tri_carrier_xl']"/>
+  <remove sel="/ships/ship[@id='tri_destroyer_l']"/>
+  <remove sel="/ships/ship[@id='tri_frigate_m']"/>
+  <remove sel="/ships/ship[@id='tri_corvette_m']"/>
+  <remove sel="/ships/ship[@id='tri_fighter_s']"/>
+  <remove sel="/ships/ship[@id='tri_fighter_heavy_s']"/>
+  <remove sel="/ships/ship[@id='tri_fighter_light_s']"/>
+  <remove sel="/ships/ship[@id='tri_scout_s']"/>
+  <replace sel="/ships/ship[@id='teladi_builder_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_resupplier_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_trader_container_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_trader_container_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_trader_container_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_miner_solid_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_miner_liquid_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_miner_solid_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_miner_liquid_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_miner_solid_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <remove sel="/ships/ship[@id='teladi_miner_solid_mixed']"/>
+  <remove sel="/ships/ship[@id='teladi_miner_liquid_mixed']"/>
+  <replace sel="/ships/ship[@id='teladi_carrier_xl']/category[@faction='[teladi, ministry, scaleplate]']/@tags">[military, carrier, battleship, mission, xl]</replace>
+  <replace sel="/ships/ship[@id='teladi_carrier_xl']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_destroyer_l']/category[@faction='[teladi, ministry, scaleplate]']/@tags">[military, destroyer, mission, l]</replace>
+  <replace sel="/ships/ship[@id='teladi_destroyer_l']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_frigate_m']/category[@faction='[teladi, ministry, scaleplate]']/@tags">[military, medium, frigate, gunboat, mission]</replace>
+  <replace sel="/ships/ship[@id='teladi_frigate_m']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <remove sel="/ships/ship[@id='teladi_gunboat_m']"/>
+  <replace sel="/ships/ship[@id='teladi_fighter_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <replace sel="/ships/ship[@id='teladi_scout_s']/category[@faction='[teladi, ministry, scaleplate]']/@faction">[teladi, scaleplate]</replace>
+  <remove sel="/ships/ship[@id='ministry_trader_container_m']"/>
+  <remove sel="/ships/ship[@id='hat_plunderer']"/>
+  <remove sel="/ships/ship[@id='hat_scavenger']"/>
   <remove sel="/ships/ship[@id='hat_gunboat']"/>
   <remove sel="/ships/ship[@id='hat_mixed_sm']"/>
   <remove sel="/ships/ship[@id='hat_escort_s']"/>
@@ -111,9 +117,8 @@
   <remove sel="/ships/ship[@id='hat_miner_solid_s']"/>
   <remove sel="/ships/ship[@id='hat_miner_solid_mixed']"/>
   <remove sel="/ships/ship[@id='hat_miner_liquid_mixed']"/>
-  <replace sel="/ships/ship[@id='sca_plunderer']/@id">sca_plunderer_l</replace>
-  <replace sel="/ships/ship[@id='sca_scavenger']/@id">sca_plunderer_m</replace>
-  <replace sel="/ships/ship[@id='sca_plunderer_m']/@group">sca_pirate_m</replace>
+  <remove sel="/ships/ship[@id='sca_plunderer']"/>
+  <remove sel="/ships/ship[@id='sca_scavenger']"/>
   <remove sel="/ships/ship[@id='sca_mixed_sm']"/>
   <remove sel="/ships/ship[@id='sca_escort_s']"/>
   <remove sel="/ships/ship[@id='buc_guerilla_m']"/>
@@ -131,10 +136,205 @@
   <remove sel="/ships/ship[@id='buc_fighter_heavy_s']"/>
   <remove sel="/ships/ship[@id='buc_fighter_light_s']"/>
   <remove sel="/ships/ship[@id='buc_scout_s']"/>
-  <replace sel="/ships/ship[@id='split_scout_s']/category[@faction='[split, freesplit, fallensplit]']/@faction">[split, freesplit, fallensplit, court]</replace>
-  <replace sel="/ships/ship[@id='court_frigate_m']/category[@faction='court']/@faction">[freesplit, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_builder_xl']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_resupplier_xl']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_trader_container_l']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_trader_container_m']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_trader_container_s']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_solid_l']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_liquid_l']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_solid_m']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_liquid_m']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_solid_s']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_miner_solid_mixed']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <remove sel="/ships/ship[@id='split_miner_solid_mixed']/owner[@exact='split']"/>
+  <replace sel="/ships/ship[@id='split_miner_liquid_mixed']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <remove sel="/ships/ship[@id='split_miner_liquid_mixed']/owner[@exact='split']"/>
+  <replace sel="/ships/ship[@id='split_carrier_xl']/category[@faction='[split, freesplit, fallensplit, court]']/@tags">[military, carrier, battleship, mission, xl]</replace>
+  <replace sel="/ships/ship[@id='split_carrier_xl']/category[@faction='[split, freesplit, fallensplit, court]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_scout_s']/category[@faction='[split, freesplit, fallensplit]']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_destroyer_l']/category[@faction='split']/@tags">[military, destroyer, mission, l]</replace>
+  <replace sel="/ships/ship[@id='split_destroyer_l']/category[@faction='split']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_military_m']/@id">split_frigate_m</replace>
+  <replace sel="/ships/ship[@id='split_frigate_m'][@group='spl_military_m']/@group">spl_frigate_m</replace>
+  <replace sel="/ships/ship[@id='split_frigate_m'][@group='spl_frigate_m'][1]/category[@faction='split']/@tags">[military, medium, frigate, corvette, mission]</replace>
+  <replace sel="/ships/ship[@id='split_frigate_m'][@group='spl_frigate_m'][1]/category[@faction='split']/@faction">[split, fallensplit, court]</replace>
+  <remove sel="/ships/ship[@id='split_frigate_m'][@group='spl_frigate_m'][2]"/>
+  <remove sel="/ships/ship[@id='split_corvette_m']"/>
+  <replace sel="/ships/ship[@id='split_fighter_s']/category[@faction='split']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_fighter_heavy_s']/category[@faction='split']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_fighter_heavy_s']/people/@ref">split_military_crew</replace>
+  <replace sel="/ships/ship[@id='split_fighter_light_s']/category[@faction='split']/@faction">[split, fallensplit, court]</replace>
+  <replace sel="/ships/ship[@id='split_fighter_light_s']/people/@ref">split_military_crew</replace>
+  <remove sel="/ships/ship[@id='freesplit_destroyer_l']"/>
+  <remove sel="/ships/ship[@id='freesplit_corvette_m']"/>
+  <remove sel="/ships/ship[@id='freesplit_fighter_s']"/>
+  <remove sel="/ships/ship[@id='freesplit_fighter_heavy_s']"/>
+  <remove sel="/ships/ship[@id='freesplit_fighter_light_s']"/>
+  <remove sel="/ships/ship[@id='court_destroyer_l']"/>
+  <remove sel="/ships/ship[@id='court_military_m']"/>
+  <remove sel="/ships/ship[@id='court_frigate_m']"/>
+  <remove sel="/ships/ship[@id='court_corvette_m']"/>
+  <remove sel="/ships/ship[@id='court_fighter_s']"/>
+  <remove sel="/ships/ship[@id='court_fighter_heavy_s']"/>
+  <remove sel="/ships/ship[@id='court_fighter_light_s']"/>
   <add sel="/ships">
-    <!-- MIN -->
+    <ship id="buccaneers_builder_xl" group="buc_builder_xl">
+      <category tags="[builder, mission]" faction="[buccaneers]" size="ship_xl"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <drop ref="ship_large_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_resupplier_xl" group="buc_resupplier_xl">
+      <category tags="[resupplier, mission]" faction="[buccaneers]" size="ship_xl"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <drop ref="ship_large_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_trader_container_l" group="buc_trader_container_l">
+      <category tags="[trader, container, mission]" faction="[buccaneers]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_trader_container_m" group="buc_trader_container_m">
+      <category tags="[trader, container, mission]" faction="[buccaneers]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_trader_container_s" group="buc_trader_container_s">
+      <category tags="[trader, container, mission]" faction="[buccaneers]" size="ship_s"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_small_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_miner_solid_l" group="buc_miner_solid_l">
+      <category tags="[miner, solid, mission]" faction="[buccaneers]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_miner_liquid_l" group="buc_miner_liquid_l">
+      <category tags="[miner, liquid, mission]" faction="[buccaneers]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="gases"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_miner_solid_m" group="buc_miner_solid_m">
+      <category tags="[miner, solid, mission]" faction="[buccaneers]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_miner_liquid_m" group="buc_miner_liquid_m">
+      <category tags="[miner, liquid, mission]" faction="[buccaneers]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="gases"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_miner_solid_s" group="buc_miner_solid_s">
+      <category tags="[miner, solid, mission]" faction="[buccaneers]" size="ship_s"/>
+      <pilot>
+        <select faction="buccaneers" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_small_civilian"/>
+      <people ref="paranid_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_carrier_xl" group="buc_carrier_xl">
+      <category tags="[military, carrier, battleship, mission, xl]" faction="[buccaneers]" size="ship_xl"/>
+      <pilot>
+        <select faction="buccaneers" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_large_military"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_destroyer_l" group="buc_destroyer_l">
+      <category tags="[military, destroyer, mission, l]" faction="[buccaneers]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_large_military"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_frigate_m" group="buc_frigate_m">
+      <category tags="[military, medium, frigate, corvette, gunboat, mission]" faction="[buccaneers]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_fighter_s" group="buc_fighter_s">
+      <category tags="[military, fighter, heavy, light, selection, mission]" faction="[buccaneers]" size="ship_s"/>
+      <pilot>
+        <select faction="buccaneers" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="buccaneers_scout_s" group="buc_scout_s">
+      <category tags="[military, scout, light, mission]" faction="[buccaneers]" size="ship_s"/>
+      <pilot>
+        <select faction="buccaneers" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
   </add>
   <add sel="/ships">
     <ship id="ministry_builder_xl" group="min_builder_xl">
@@ -143,7 +343,6 @@
         <select faction="ministry" tags="traderpilot"/>
       </pilot>
       <drop ref="ship_large_civilian"/>
-      <!--TODO @Owen #EntityTypes Implement a people defaults so we don't have to copy and paste the same stuff into every definition. Ship::Defaults?-->
       <people ref="teladi_freighter_crew"/>
     </ship>
   </add>
@@ -165,6 +364,17 @@
       </pilot>
       <basket basket="all_container"/>
       <drop ref="ship_large_civilian"/>
+      <people ref="teladi_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="ministry_trader_container_m" group="min_trader_container_m">
+      <category tags="[trader, container, mission]" faction="[ministry]" size="ship_m"/>
+      <pilot>
+        <select faction="ministry" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_medium_civilian"/>
       <people ref="teladi_freighter_crew"/>
     </ship>
   </add>
@@ -235,32 +445,8 @@
     </ship>
   </add>
   <add sel="/ships">
-    <ship id="ministry_miner_solid_mixed" group="min_miner_solid_mixed">
-      <category tags="[miner, solid, mixed]" faction="[ministry]"/>
-      <owner exact="ministry" overridenpc="true"/>
-      <pilot>
-        <select faction="ministry" tags="traderpilot"/>
-      </pilot>
-      <basket basket="minerals"/>
-      <drop ref="ship_medium_civilian"/>
-      <people ref="teladi_freighter_crew"/>
-    </ship>
-  </add>
-  <add sel="/ships">
-    <ship id="ministry_miner_liquid_mixed" group="min_miner_liquid_mixed">
-      <category tags="[miner, liquid, mixed]" faction="[ministry]"/>
-      <owner exact="ministry" overridenpc="true"/>
-      <pilot>
-        <select faction="ministry" tags="traderpilot"/>
-      </pilot>
-      <basket basket="gases"/>
-      <drop ref="ship_medium_civilian"/>
-      <people ref="teladi_freighter_crew"/>
-    </ship>
-  </add>
-  <add sel="/ships">
     <ship id="ministry_carrier_xl" group="min_carrier_xl">
-      <category tags="[military, carrier, mission]" faction="[ministry]" size="ship_xl"/>
+      <category tags="[military, carrier, battleship, mission, xl]" faction="[ministry]" size="ship_xl"/>
       <pilot>
         <select faction="ministry" tags="fighterpilot"/>
       </pilot>
@@ -270,7 +456,7 @@
   </add>
   <add sel="/ships">
     <ship id="ministry_destroyer_l" group="min_destroyer_l">
-      <category tags="[military, destroyer, mission]" faction="[ministry]" size="ship_l"/>
+      <category tags="[military, destroyer, mission, l]" faction="[ministry]" size="ship_l"/>
       <pilot>
         <select faction="ministry" tags="fighterpilot"/>
       </pilot>
@@ -280,17 +466,7 @@
   </add>
   <add sel="/ships">
     <ship id="ministry_frigate_m" group="min_frigate_m">
-      <category tags="[military, medium, frigate, mission]" faction="[ministry]" size="ship_m"/>
-      <pilot>
-        <select faction="ministry" tags="fighterpilot"/>
-      </pilot>
-      <drop ref="ship_small_military"/>
-      <people ref="teladi_military_crew"/>
-    </ship>
-  </add>
-  <add sel="/ships">
-    <ship id="ministry_gunboat_m" group="min_gunboat_m">
-      <category tags="[military, medium, gunboat, mission]" faction="[ministry]" size="ship_m"/>
+      <category tags="[military, medium, frigate, gunboat, mission]" faction="[ministry]" size="ship_m"/>
       <pilot>
         <select faction="ministry" tags="fighterpilot"/>
       </pilot>
@@ -316,6 +492,206 @@
       </pilot>
       <drop ref="ship_small_military"/>
       <people ref="teladi_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_builder_xl" group="frf_builder_xl">
+      <category tags="[builder, mission]" faction="[freesplit]" size="ship_xl"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <drop ref="ship_large_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_resupplier_xl" group="frf_resupplier_xl">
+      <category tags="[resupplier, mission]" faction="[freesplit]" size="ship_xl"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <drop ref="ship_large_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_trader_container_l" group="frf_trader_container_l">
+      <category tags="[trader, container, mission]" faction="[freesplit]" size="ship_l"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_trader_container_m" group="frf_trader_container_m">
+      <category tags="[trader, container, mission]" faction="[freesplit]" size="ship_m"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_trader_container_s" group="frf_trader_container_s">
+      <category tags="[trader, container, mission]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="all_container"/>
+      <drop ref="ship_small_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_solid_l" group="frf_miner_solid_l">
+      <category tags="[miner, solid, mission]" faction="[freesplit]" size="ship_l"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_liquid_l" group="frf_miner_liquid_l">
+      <category tags="[miner, liquid, mission]" faction="[freesplit]" size="ship_l"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="gases"/>
+      <drop ref="ship_large_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_solid_m" group="frf_miner_solid_m">
+      <category tags="[miner, solid, mission]" faction="[freesplit]" size="ship_m"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_liquid_m" group="frf_miner_liquid_m">
+      <category tags="[miner, liquid, mission]" faction="[freesplit]" size="ship_m"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="gases"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_solid_s" group="frf_miner_solid_s">
+      <category tags="[miner, solid, mission]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_small_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_solid_mixed" group="frf_miner_solid_mixed">
+      <category tags="[miner, solid, mixed]" faction="[freesplit]"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="minerals"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_miner_liquid_mixed" group="frf_miner_liquid_mixed">
+      <category tags="[miner, liquid, mixed]" faction="[freesplit]"/>
+      <pilot>
+        <select faction="freesplit" tags="traderpilot"/>
+      </pilot>
+      <basket basket="gases"/>
+      <drop ref="ship_medium_civilian"/>
+      <people ref="split_freighter_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_carrier_xl" group="frf_carrier_xl">
+      <category tags="[military, carrier, battleship, mission, xl]" faction="[freesplit]" size="ship_xl"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_large_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_scout_s" group="frf_scout_s">
+      <category tags="[military, scout, light, mission]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_destroyer_l" group="frf_destroyer_l">
+      <category tags="[military, destroyer, mission, l]" faction="[freesplit]" size="ship_l"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_large_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_frigate_m" group="frf_frigate_m">
+      <category tags="[military, medium, frigate, corvette, mission]" faction="[freesplit]" size="ship_m"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_fighter_s" group="frf_fighter_s">
+      <category tags="[military, fighter, selection, mission, police]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_fighter_heavy_s" group="frf_fighter_heavy_s">
+      <category tags="[military, fighter, heavy, mission]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="split_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="freesplit_fighter_light_s" group="frf_fighter_light_s">
+      <category tags="[military, fighter, light, mission]" faction="[freesplit]" size="ship_s"/>
+      <pilot>
+        <select faction="freesplit" tags="fighterpilot"/>
+      </pilot>
+      <drop ref="ship_small_military"/>
+      <people ref="split_military_crew"/>
     </ship>
   </add>
   <add sel="/ships">
@@ -402,49 +778,89 @@
   <add sel="/ships">
     <ship id="faf_plunderer_l" group="faf_pirate_l">
       <category tags="[military, plunderer, mission]" faction="[fallensplit]" size="ship_l"/>
-      <owner exact="fallensplit" overridenpc="true"/>
       <pilot>
         <select faction="fallensplit" tags="commander"/>
       </pilot>
       <basket basket="pirate_container"/>
       <drop ref="ship_large_military"/>
-      <people ref="freesplit_veteran_military_crew"/>
+      <people ref="split_military_crew"/>
     </ship>
   </add>
   <add sel="/ships">
     <ship id="faf_plunderer_m" group="faf_pirate_m">
       <category tags="[military, plunderer, mission]" faction="[fallensplit]" size="ship_m"/>
-      <owner exact="fallensplit" overridenpc="true"/>
       <pilot>
         <select faction="fallensplit" tags="commander"/>
       </pilot>
       <basket basket="pirate_container"/>
       <drop ref="ship_small_military"/>
-      <people ref="freesplit_military_crew"/>
+      <people ref="split_military_crew"/>
     </ship>
   </add>
   <add sel="/ships">
     <ship id="buc_plunderer_l" group="buc_pirate_l">
       <category tags="[military, plunderer, mission]" faction="[buccaneers]" size="ship_l"/>
-      <owner exact="buccaneers" overridenpc="true"/>
       <pilot>
         <select faction="buccaneers" tags="commander"/>
       </pilot>
       <basket basket="pirate_container"/>
       <drop ref="ship_large_military"/>
-      <people ref="freesplit_veteran_military_crew"/>
+      <people ref="paranid_military_crew"/>
     </ship>
   </add>
   <add sel="/ships">
     <ship id="buc_plunderer_m" group="buc_pirate_m">
       <category tags="[military, plunderer, mission]" faction="[buccaneers]" size="ship_m"/>
-      <owner exact="buccaneers" overridenpc="true"/>
       <pilot>
         <select faction="buccaneers" tags="commander"/>
       </pilot>
       <basket basket="pirate_container"/>
       <drop ref="ship_small_military"/>
-      <people ref="freesplit_military_crew"/>
+      <people ref="paranid_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="sca_plunderer_l" group="sca_pirate_l">
+      <category tags="[military, plunderer, mission]" faction="[scaleplate]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="commander"/>
+      </pilot>
+      <basket basket="pirate_container"/>
+      <drop ref="ship_large_military"/>
+      <people ref="teladi_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="sca_plunderer_m" group="sca_pirate_m">
+      <category tags="[military, plunderer, mission]" faction="[scaleplate]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="commander"/>
+      </pilot>
+      <basket basket="pirate_container"/>
+      <drop ref="ship_small_military"/>
+      <people ref="teladi_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="hat_plunderer_l" group="hat_pirate_l">
+      <category tags="[military, plunderer, mission]" faction="[hatikvah]" size="ship_l"/>
+      <pilot>
+        <select faction="buccaneers" tags="commander"/>
+      </pilot>
+      <basket basket="pirate_container"/>
+      <drop ref="ship_large_military"/>
+      <people ref="argon_military_crew"/>
+    </ship>
+  </add>
+  <add sel="/ships">
+    <ship id="hat_plunderer_m" group="hat_pirate_m">
+      <category tags="[military, plunderer, mission]" faction="[hatikvah]" size="ship_m"/>
+      <pilot>
+        <select faction="buccaneers" tags="commander"/>
+      </pilot>
+      <basket basket="pirate_container"/>
+      <drop ref="ship_small_military"/>
+      <people ref="argon_military_crew"/>
     </ship>
   </add>
 </diff>

@@ -1,4 +1,6 @@
 # DeadAirGate Overhaul
+## ABANDONED
+- Due to engine restrictions, upkeep workload, and other factors. I have decided to stop development of this mod. The last known version of X4 this was working with debug free, was around 3.2. I have started different projects that aim to provide a more modular approach with higher vanilla and mod compatibility. Thank you for the support and hope you continue to enjoy my work.
 
 ## Adds 105 new sectors
 - Major factions are split into 7 core systems and multiple border systems
